@@ -11,6 +11,7 @@
 #import "BSNewViewController.h"
 #import "BSFriendTrendsViewController.h"
 #import "BSMeViewController.h"
+#import "BSTabBar.h"
 
 @interface BSTabBarController ()
 
@@ -44,6 +45,8 @@
     [self setupWithViewController:[[BSFriendTrendsViewController alloc] init] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
 
     [self setupWithViewController:[[BSMeViewController alloc] init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+
+    [self setValue:[[BSTabBar alloc] init] forKey:@"tabBar"];
 }
 
 /**
