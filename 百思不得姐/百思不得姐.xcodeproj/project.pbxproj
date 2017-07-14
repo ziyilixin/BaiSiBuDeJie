@@ -19,6 +19,7 @@
 		54565C551F186784007513A0 /* BSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C541F186784007513A0 /* BSMeViewController.m */; };
 		54565C971F189F61007513A0 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C961F189F61007513A0 /* BSTabBar.m */; };
 		54565C9A1F18A81B007513A0 /* UIView+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C991F18A81B007513A0 /* UIView+BSExtension.m */; };
+		54565C9E1F18BC77007513A0 /* UIBarButtonItem+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C9D1F18BC77007513A0 /* UIBarButtonItem+BSExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		54565C981F18A81B007513A0 /* UIView+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSExtension.h"; sourceTree = "<group>"; };
 		54565C991F18A81B007513A0 /* UIView+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSExtension.m"; sourceTree = "<group>"; };
 		54565C9B1F18A858007513A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		54565C9C1F18BC77007513A0 /* UIBarButtonItem+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BSExtension.h"; sourceTree = "<group>"; };
+		54565C9D1F18BC77007513A0 /* UIBarButtonItem+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BSExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 				54565C961F189F61007513A0 /* BSTabBar.m */,
 				54565C981F18A81B007513A0 /* UIView+BSExtension.h */,
 				54565C991F18A81B007513A0 /* UIView+BSExtension.m */,
+				54565C9C1F18BC77007513A0 /* UIBarButtonItem+BSExtension.h */,
+				54565C9D1F18BC77007513A0 /* UIBarButtonItem+BSExtension.m */,
 				54565C9B1F18A858007513A0 /* PrefixHeader.pch */,
 				54565C121F185106007513A0 /* Supporting Files */,
 			);
@@ -302,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54565C491F185AE0007513A0 /* BSTabBarController.m in Sources */,
+				54565C9E1F18BC77007513A0 /* UIBarButtonItem+BSExtension.m in Sources */,
 				54565C521F186775007513A0 /* BSFriendTrendsViewController.m in Sources */,
 				54565C551F186784007513A0 /* BSMeViewController.m in Sources */,
 				54565C171F185106007513A0 /* AppDelegate.m in Sources */,
