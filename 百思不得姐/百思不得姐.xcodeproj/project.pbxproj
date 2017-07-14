@@ -13,6 +13,7 @@
 		54565C1F1F185106007513A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54565C1E1F185106007513A0 /* Assets.xcassets */; };
 		54565C2D1F185106007513A0 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C2C1F185106007513A0 /* _____Tests.m */; };
 		54565C381F185106007513A0 /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C371F185106007513A0 /* _____UITests.m */; };
+		54565C491F185AE0007513A0 /* BSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C481F185AE0007513A0 /* BSTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		54565C331F185106007513A0 /* 百思不得姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54565C371F185106007513A0 /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		54565C391F185106007513A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54565C471F185AE0007513A0 /* BSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBarController.h; sourceTree = "<group>"; };
+		54565C481F185AE0007513A0 /* BSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 			children = (
 				54565C151F185106007513A0 /* AppDelegate.h */,
 				54565C161F185106007513A0 /* AppDelegate.m */,
+				54565C471F185AE0007513A0 /* BSTabBarController.h */,
+				54565C481F185AE0007513A0 /* BSTabBarController.m */,
 				54565C181F185106007513A0 /* ViewController.h */,
 				54565C191F185106007513A0 /* ViewController.m */,
 				54565C121F185106007513A0 /* Supporting Files */,
@@ -196,6 +201,7 @@
 		54565C071F185106007513A0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BS;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = WCF;
 				TargetAttributes = {
@@ -268,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54565C491F185AE0007513A0 /* BSTabBarController.m in Sources */,
 				54565C1A1F185106007513A0 /* ViewController.m in Sources */,
 				54565C171F185106007513A0 /* AppDelegate.m in Sources */,
 				54565C141F185106007513A0 /* main.m in Sources */,
