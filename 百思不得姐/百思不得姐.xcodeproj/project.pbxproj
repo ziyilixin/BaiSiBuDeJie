@@ -18,6 +18,7 @@
 		54565C521F186775007513A0 /* BSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C511F186775007513A0 /* BSFriendTrendsViewController.m */; };
 		54565C551F186784007513A0 /* BSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C541F186784007513A0 /* BSMeViewController.m */; };
 		54565C971F189F61007513A0 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C961F189F61007513A0 /* BSTabBar.m */; };
+		54565C9A1F18A81B007513A0 /* UIView+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C991F18A81B007513A0 /* UIView+BSExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,9 @@
 		54565C541F186784007513A0 /* BSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeViewController.m; sourceTree = "<group>"; };
 		54565C951F189F61007513A0 /* BSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBar.h; sourceTree = "<group>"; };
 		54565C961F189F61007513A0 /* BSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBar.m; sourceTree = "<group>"; };
+		54565C981F18A81B007513A0 /* UIView+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSExtension.h"; sourceTree = "<group>"; };
+		54565C991F18A81B007513A0 /* UIView+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSExtension.m"; sourceTree = "<group>"; };
+		54565C9B1F18A858007513A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,9 @@
 				54565C541F186784007513A0 /* BSMeViewController.m */,
 				54565C951F189F61007513A0 /* BSTabBar.h */,
 				54565C961F189F61007513A0 /* BSTabBar.m */,
+				54565C981F18A81B007513A0 /* UIView+BSExtension.h */,
+				54565C991F18A81B007513A0 /* UIView+BSExtension.m */,
+				54565C9B1F18A858007513A0 /* PrefixHeader.pch */,
 				54565C121F185106007513A0 /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -299,6 +306,7 @@
 				54565C551F186784007513A0 /* BSMeViewController.m in Sources */,
 				54565C171F185106007513A0 /* AppDelegate.m in Sources */,
 				54565C4C1F18673F007513A0 /* BSEssenceViewController.m in Sources */,
+				54565C9A1F18A81B007513A0 /* UIView+BSExtension.m in Sources */,
 				54565C141F185106007513A0 /* main.m in Sources */,
 				54565C971F189F61007513A0 /* BSTabBar.m in Sources */,
 				54565C4F1F18675D007513A0 /* BSNewViewController.m in Sources */,
@@ -433,6 +441,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = G99Y2JY74W;
+				GCC_PREFIX_HEADER = "百思不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -447,6 +456,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = G99Y2JY74W;
+				GCC_PREFIX_HEADER = "百思不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

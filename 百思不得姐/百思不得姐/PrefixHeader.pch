@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  百思不得姐
+//
+//  Created by WCF on 2017/7/14.
+//  Copyright © 2017年 WCF. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+BSExtension.h"
+
+#endif /* PrefixHeader_pch */
