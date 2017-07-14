@@ -1,24 +1,23 @@
 //
-//  ViewController.m
+//  BSEssenceViewController.m
 //  百思不得姐
 //
 //  Created by WCF on 2017/7/14.
 //  Copyright © 2017年 WCF. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "BSEssenceViewController.h"
 
-@interface ViewController ()
+@interface BSEssenceViewController ()
 
 @end
 
-@implementation ViewController
+@implementation BSEssenceViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor redColor];
+    
 }
-
 
 @end

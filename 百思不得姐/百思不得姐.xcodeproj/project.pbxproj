@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		54565C141F185106007513A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C131F185106007513A0 /* main.m */; };
 		54565C171F185106007513A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C161F185106007513A0 /* AppDelegate.m */; };
-		54565C1A1F185106007513A0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C191F185106007513A0 /* ViewController.m */; };
 		54565C1F1F185106007513A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54565C1E1F185106007513A0 /* Assets.xcassets */; };
 		54565C2D1F185106007513A0 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C2C1F185106007513A0 /* _____Tests.m */; };
 		54565C381F185106007513A0 /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C371F185106007513A0 /* _____UITests.m */; };
 		54565C491F185AE0007513A0 /* BSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C481F185AE0007513A0 /* BSTabBarController.m */; };
+		54565C4C1F18673F007513A0 /* BSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C4B1F18673F007513A0 /* BSEssenceViewController.m */; };
+		54565C4F1F18675D007513A0 /* BSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C4E1F18675D007513A0 /* BSNewViewController.m */; };
+		54565C521F186775007513A0 /* BSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C511F186775007513A0 /* BSFriendTrendsViewController.m */; };
+		54565C551F186784007513A0 /* BSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C541F186784007513A0 /* BSMeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +41,6 @@
 		54565C131F185106007513A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		54565C151F185106007513A0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54565C161F185106007513A0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		54565C181F185106007513A0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		54565C191F185106007513A0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		54565C1E1F185106007513A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54565C231F185106007513A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54565C281F185106007513A0 /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +51,14 @@
 		54565C391F185106007513A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54565C471F185AE0007513A0 /* BSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBarController.h; sourceTree = "<group>"; };
 		54565C481F185AE0007513A0 /* BSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBarController.m; sourceTree = "<group>"; };
+		54565C4A1F18673F007513A0 /* BSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceViewController.h; sourceTree = "<group>"; };
+		54565C4B1F18673F007513A0 /* BSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceViewController.m; sourceTree = "<group>"; };
+		54565C4D1F18675D007513A0 /* BSNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNewViewController.h; sourceTree = "<group>"; };
+		54565C4E1F18675D007513A0 /* BSNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNewViewController.m; sourceTree = "<group>"; };
+		54565C501F186775007513A0 /* BSFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSFriendTrendsViewController.h; sourceTree = "<group>"; };
+		54565C511F186775007513A0 /* BSFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSFriendTrendsViewController.m; sourceTree = "<group>"; };
+		54565C531F186784007513A0 /* BSMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeViewController.h; sourceTree = "<group>"; };
+		54565C541F186784007513A0 /* BSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +113,14 @@
 				54565C161F185106007513A0 /* AppDelegate.m */,
 				54565C471F185AE0007513A0 /* BSTabBarController.h */,
 				54565C481F185AE0007513A0 /* BSTabBarController.m */,
-				54565C181F185106007513A0 /* ViewController.h */,
-				54565C191F185106007513A0 /* ViewController.m */,
+				54565C4A1F18673F007513A0 /* BSEssenceViewController.h */,
+				54565C4B1F18673F007513A0 /* BSEssenceViewController.m */,
+				54565C4D1F18675D007513A0 /* BSNewViewController.h */,
+				54565C4E1F18675D007513A0 /* BSNewViewController.m */,
+				54565C501F186775007513A0 /* BSFriendTrendsViewController.h */,
+				54565C511F186775007513A0 /* BSFriendTrendsViewController.m */,
+				54565C531F186784007513A0 /* BSMeViewController.h */,
+				54565C541F186784007513A0 /* BSMeViewController.m */,
 				54565C121F185106007513A0 /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -275,9 +290,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				54565C491F185AE0007513A0 /* BSTabBarController.m in Sources */,
-				54565C1A1F185106007513A0 /* ViewController.m in Sources */,
+				54565C521F186775007513A0 /* BSFriendTrendsViewController.m in Sources */,
+				54565C551F186784007513A0 /* BSMeViewController.m in Sources */,
 				54565C171F185106007513A0 /* AppDelegate.m in Sources */,
+				54565C4C1F18673F007513A0 /* BSEssenceViewController.m in Sources */,
 				54565C141F185106007513A0 /* main.m in Sources */,
+				54565C4F1F18675D007513A0 /* BSNewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

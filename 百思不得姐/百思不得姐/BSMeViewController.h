@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BSMeViewController.h
 //  百思不得姐
 //
 //  Created by WCF on 2017/7/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface BSMeViewController : UIViewController
 
 @end
-

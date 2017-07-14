@@ -7,6 +7,10 @@
 //
 
 #import "BSTabBarController.h"
+#import "BSEssenceViewController.h"
+#import "BSNewViewController.h"
+#import "BSFriendTrendsViewController.h"
+#import "BSMeViewController.h"
 
 @interface BSTabBarController ()
 
@@ -33,34 +37,26 @@
     [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
     [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
 
-    UIViewController *oneVC = [[UIViewController alloc] init];
-    oneVC.tabBarItem.title = @"精华";
-    oneVC.tabBarItem.image = [UIImage imageNamed:@"tabBar_essence_icon"];
-    oneVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_essence_click_icon"];
-    oneVC.view.backgroundColor = [UIColor redColor];
-    [self addChildViewController:oneVC];
+    [self setupWithViewController:[[BSEssenceViewController alloc] init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
 
-    UIViewController *twoVC = [[UIViewController alloc] init];
-    twoVC.tabBarItem.title = @"新帖";
-    twoVC.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
-    twoVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_new_click_icon"];
-    twoVC.view.backgroundColor = [UIColor grayColor];
-    [self addChildViewController:twoVC];
+    [self setupWithViewController:[[BSNewViewController alloc] init] title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
 
-    UIViewController *threeVC = [[UIViewController alloc] init];
-    threeVC.tabBarItem.title = @"关注";
-    threeVC.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
-    threeVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon"];
-    threeVC.view.backgroundColor = [UIColor blueColor];
-    [self addChildViewController:threeVC];
+    [self setupWithViewController:[[BSFriendTrendsViewController alloc] init] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
 
-    UIViewController *fourVC = [[UIViewController alloc] init];
-    fourVC.tabBarItem.title = @"我";
-    fourVC.tabBarItem.image = [UIImage imageNamed:@"tabBar_me_icon"];
-    fourVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_me_click_icon"];
-    fourVC.view.backgroundColor = [UIColor purpleColor];
-    [self addChildViewController:fourVC];
+    [self setupWithViewController:[[BSMeViewController alloc] init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+}
 
+/**
+ * 初始化子控制器
+ */
+
+- (void)setupWithViewController:(UIViewController *)VC title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
+{
+    VC.tabBarItem.title = title;
+    VC.tabBarItem.image = [UIImage imageNamed:image];
+    VC.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
+    VC.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
+    [self addChildViewController:VC];
 }
 
 @end
