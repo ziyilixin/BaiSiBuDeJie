@@ -11,4 +11,12 @@
 
 #import "UIView+BSExtension.h"
 
+#ifdef DEBUG 
+#define BSLog(...) NSLog(__VA_ARGS__)
+#else
+#define BSLog(...)
+#endif
+
+#define BSLogFunc BSLog(@"%s",__func__)
+
 #endif /* PrefixHeader_pch */

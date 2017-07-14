@@ -17,7 +17,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
+    //设置导航栏标题
+    self.navigationItem.title = @"我的关注";
+
+    //设置导航栏左边的按钮
+    UIButton *friendButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [friendButton setBackgroundImage:[UIImage imageNamed:@"friendsRecommentIcon"] forState:UIControlStateNormal];
+    [friendButton setBackgroundImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] forState:UIControlStateHighlighted];
+    friendButton.size = friendButton.currentBackgroundImage.size;
+    [friendButton addTarget:self action:@selector(friendClick) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:friendButton];
+}
+
+- (void)friendClick
+{
+    BSLogFunc;
 }
 
 @end

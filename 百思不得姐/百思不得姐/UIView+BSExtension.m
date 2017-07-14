@@ -38,6 +38,13 @@
     self.frame = frame;
 }
 
+- (void)setSize:(CGSize)size
+{
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+}
+
 - (CGFloat)width
 {
     return self.frame.size.width;
@@ -56,6 +63,11 @@
 - (CGFloat)y
 {
     return self.frame.origin.y;
+}
+
+- (CGSize)size
+{
+    return self.frame.size;
 }
 
 @end
