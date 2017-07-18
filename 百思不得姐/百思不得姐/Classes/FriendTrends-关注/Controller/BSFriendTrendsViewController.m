@@ -7,6 +7,7 @@
 //
 
 #import "BSFriendTrendsViewController.h"
+#import "BSRecommendViewController.h"
 
 @interface BSFriendTrendsViewController ()
 
@@ -28,7 +29,8 @@
 
 - (void)friendClick
 {
-    BSLogFunc;
+    BSRecommendViewController *recommandVC = [[BSRecommendViewController alloc] init];
+    [self.navigationController pushViewController:recommandVC animated:YES];
 }
 
 @end
