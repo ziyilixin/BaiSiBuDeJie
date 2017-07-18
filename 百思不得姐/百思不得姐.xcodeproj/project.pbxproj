@@ -20,7 +20,6 @@
 		54565CD01F18CD05007513A0 /* BSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CC21F18CD05007513A0 /* BSTabBarController.m */; };
 		54565CD21F18CD05007513A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CC41F18CD05007513A0 /* main.m */; };
 		54565CD31F18CD05007513A0 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CC81F18CD05007513A0 /* BSTabBar.m */; };
-		54565CD51F18CEF5007513A0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54565CD41F18CEF5007513A0 /* Info.plist */; };
 		54565CD81F18E415007513A0 /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CD71F18E415007513A0 /* BSNavigationController.m */; };
 		54E2F6441F1E58EE00CEE98D /* BSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E2F6431F1E58EE00CEE98D /* BSFriendTrendsViewController.xib */; };
 /* End PBXBuildFile section */
@@ -459,7 +458,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				54E2F6441F1E58EE00CEE98D /* BSFriendTrendsViewController.xib in Resources */,
-				54565CD51F18CEF5007513A0 /* Info.plist in Resources */,
 				54565C1F1F185106007513A0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
