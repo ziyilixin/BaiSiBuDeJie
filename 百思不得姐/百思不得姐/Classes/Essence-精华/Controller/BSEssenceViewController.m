@@ -7,7 +7,6 @@
 //
 
 #import "BSEssenceViewController.h"
-#import "BSTestViewController.h"
 
 @interface BSEssenceViewController ()
 
@@ -30,12 +29,6 @@
 - (void)tagClick
 {
     BSLogFunc;
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    BSTestViewController *testVC = [[BSTestViewController alloc] init];
-    [self.navigationController pushViewController:testVC animated:YES];
 }
 
 @end

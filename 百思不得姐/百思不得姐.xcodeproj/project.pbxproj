@@ -22,7 +22,7 @@
 		54565CD31F18CD05007513A0 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CC81F18CD05007513A0 /* BSTabBar.m */; };
 		54565CD51F18CEF5007513A0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54565CD41F18CEF5007513A0 /* Info.plist */; };
 		54565CD81F18E415007513A0 /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CD71F18E415007513A0 /* BSNavigationController.m */; };
-		54565CDB1F18E663007513A0 /* BSTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CDA1F18E663007513A0 /* BSTestViewController.m */; };
+		54E2F6441F1E58EE00CEE98D /* BSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E2F6431F1E58EE00CEE98D /* BSFriendTrendsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,8 +74,7 @@
 		54565CD41F18CEF5007513A0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54565CD61F18E415007513A0 /* BSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNavigationController.h; sourceTree = "<group>"; };
 		54565CD71F18E415007513A0 /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
-		54565CD91F18E663007513A0 /* BSTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTestViewController.h; sourceTree = "<group>"; };
-		54565CDA1F18E663007513A0 /* BSTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTestViewController.m; sourceTree = "<group>"; };
+		54E2F6431F1E58EE00CEE98D /* BSFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSFriendTrendsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +218,7 @@
 			children = (
 				54565CA81F18CD05007513A0 /* BSFriendTrendsViewController.h */,
 				54565CA91F18CD05007513A0 /* BSFriendTrendsViewController.m */,
+				54E2F6431F1E58EE00CEE98D /* BSFriendTrendsViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,8 +313,6 @@
 				54565CBA1F18CD05007513A0 /* AppDelegate.m */,
 				54565CC41F18CD05007513A0 /* main.m */,
 				54565CC51F18CD05007513A0 /* PrefixHeader.pch */,
-				54565CD91F18E663007513A0 /* BSTestViewController.h */,
-				54565CDA1F18E663007513A0 /* BSTestViewController.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -460,6 +458,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54E2F6441F1E58EE00CEE98D /* BSFriendTrendsViewController.xib in Resources */,
 				54565CD51F18CEF5007513A0 /* Info.plist in Resources */,
 				54565C1F1F185106007513A0 /* Assets.xcassets in Resources */,
 			);
@@ -487,7 +486,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				54565CC91F18CD05007513A0 /* BSEssenceViewController.m in Sources */,
-				54565CDB1F18E663007513A0 /* BSTestViewController.m in Sources */,
 				54565CCE1F18CD05007513A0 /* UIBarButtonItem+BSExtension.m in Sources */,
 				54565CD81F18E415007513A0 /* BSNavigationController.m in Sources */,
 				54565CCA1F18CD05007513A0 /* BSFriendTrendsViewController.m in Sources */,
@@ -722,6 +720,7 @@
 				54565C3E1F185106007513A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54565C3F1F185106007513A0 /* Build configuration list for PBXNativeTarget "百思不得姐Tests" */ = {
 			isa = XCConfigurationList;
@@ -730,6 +729,7 @@
 				54565C411F185106007513A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54565C421F185106007513A0 /* Build configuration list for PBXNativeTarget "百思不得姐UITests" */ = {
 			isa = XCConfigurationList;
@@ -738,6 +738,7 @@
 				54565C441F185106007513A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
