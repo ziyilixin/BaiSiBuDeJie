@@ -14,4 +14,8 @@
 @property (nonatomic,copy) NSString *name;
 
 @property (nonatomic,strong) NSMutableArray *users;
+/** 总数*/
+@property (nonatomic,assign) NSInteger total;
+/** 当前页数*/
+@property (nonatomic,assign) NSInteger currentPage;
 @end
