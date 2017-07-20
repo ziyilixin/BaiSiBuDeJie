@@ -9,20 +9,30 @@
 #import "BSRecommendViewController.h"
 #import <AFNetworking.h>
 #import <SVProgressHUD.h>
+#import "BSRecommendCategory.h"
+#import <MJExtension.h>
+#import "BSRecommendCategoryCell.h"
 
-@interface BSRecommendViewController ()
-
+@interface BSRecommendViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
+@property (nonatomic,strong) NSArray *categories;
 @end
 
 @implementation BSRecommendViewController
+
+static NSString * const categoryId = @"category";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
+    [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSRecommendCategoryCell class]) bundle:nil] forCellReuseIdentifier:categoryId];
+
     self.navigationItem.title = @"推荐关注";
 
     self.view.backgroundColor = BSGlobalBg;
+
+
 
     //显示指示器
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
@@ -37,10 +47,28 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //隐藏指示器
         [SVProgressHUD dismiss];
-        BSLog(@"%@",responseObject);
+
+        self.categories = [BSRecommendCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        [self.categoryTableView reloadData];
+
+        [self.categoryTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
+
+
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
     }];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.categories.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BSRecommendCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:categoryId];
+    cell.category = self.categories[indexPath.row];
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {

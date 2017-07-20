@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		544182501F20444F00AE35A1 /* BSRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5441824F1F20444F00AE35A1 /* BSRecommendCategory.m */; };
+		544182541F2045B200AE35A1 /* BSRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 544182521F2045B200AE35A1 /* BSRecommendCategoryCell.m */; };
+		544182551F2045B200AE35A1 /* BSRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544182531F2045B200AE35A1 /* BSRecommendCategoryCell.xib */; };
 		54565C1F1F185106007513A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54565C1E1F185106007513A0 /* Assets.xcassets */; };
 		54565C2D1F185106007513A0 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C2C1F185106007513A0 /* _____Tests.m */; };
 		54565C381F185106007513A0 /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565C371F185106007513A0 /* _____UITests.m */; };
@@ -48,6 +51,11 @@
 /* Begin PBXFileReference section */
 		0C822E6A8100C00FA58B20BB /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
 		177C68AB4DF1865274ACE6F8 /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5441824E1F20444F00AE35A1 /* BSRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendCategory.h; sourceTree = "<group>"; };
+		5441824F1F20444F00AE35A1 /* BSRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendCategory.m; sourceTree = "<group>"; };
+		544182511F2045B200AE35A1 /* BSRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendCategoryCell.h; sourceTree = "<group>"; };
+		544182521F2045B200AE35A1 /* BSRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendCategoryCell.m; sourceTree = "<group>"; };
+		544182531F2045B200AE35A1 /* BSRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommendCategoryCell.xib; sourceTree = "<group>"; };
 		54565C0F1F185106007513A0 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54565C1E1F185106007513A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54565C281F185106007513A0 /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,6 +250,8 @@
 		54565CAA1F18CD05007513A0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5441824E1F20444F00AE35A1 /* BSRecommendCategory.h */,
+				5441824F1F20444F00AE35A1 /* BSRecommendCategory.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +259,9 @@
 		54565CAB1F18CD05007513A0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				544182511F2045B200AE35A1 /* BSRecommendCategoryCell.h */,
+				544182521F2045B200AE35A1 /* BSRecommendCategoryCell.m */,
+				544182531F2045B200AE35A1 /* BSRecommendCategoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -496,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54E2F6441F1E58EE00CEE98D /* BSFriendTrendsViewController.xib in Resources */,
+				544182551F2045B200AE35A1 /* BSRecommendCategoryCell.xib in Resources */,
 				54E2F6491F1E616D00CEE98D /* BSRecommendViewController.xib in Resources */,
 				54565C1F1F185106007513A0 /* Assets.xcassets in Resources */,
 			);
@@ -570,6 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				544182541F2045B200AE35A1 /* BSRecommendCategoryCell.m in Sources */,
 				54E2F6481F1E616D00CEE98D /* BSRecommendViewController.m in Sources */,
 				54565CC91F18CD05007513A0 /* BSEssenceViewController.m in Sources */,
 				54565CCE1F18CD05007513A0 /* UIBarButtonItem+BSExtension.m in Sources */,
@@ -577,6 +592,7 @@
 				54565CCA1F18CD05007513A0 /* BSFriendTrendsViewController.m in Sources */,
 				54565CCC1F18CD05007513A0 /* BSNewViewController.m in Sources */,
 				54565CD01F18CD05007513A0 /* BSTabBarController.m in Sources */,
+				544182501F20444F00AE35A1 /* BSRecommendCategory.m in Sources */,
 				54565CCF1F18CD05007513A0 /* UIView+BSExtension.m in Sources */,
 				54565CCB1F18CD05007513A0 /* BSMeViewController.m in Sources */,
 				54565CD21F18CD05007513A0 /* main.m in Sources */,
