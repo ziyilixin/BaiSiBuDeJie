@@ -7,14 +7,10 @@
 //
 
 #import "BSRecommendViewController.h"
-#import <AFNetworking.h>
-#import <SVProgressHUD.h>
 #import "BSRecommendCategory.h"
-#import <MJExtension.h>
 #import "BSRecommendCategoryCell.h"
 #import "BSRecommendUser.h"
 #import "BSRecommendUserCell.h"
-#import <MJRefresh.h>
 
 #define BSSelectedCategory self.categories[self.categoryTableView.indexPathForSelectedRow.row]
 

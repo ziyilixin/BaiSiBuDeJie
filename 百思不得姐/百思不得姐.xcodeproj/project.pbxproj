@@ -27,6 +27,11 @@
 		54565CD21F18CD05007513A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CC41F18CD05007513A0 /* main.m */; };
 		54565CD31F18CD05007513A0 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CC81F18CD05007513A0 /* BSTabBar.m */; };
 		54565CD81F18E415007513A0 /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CD71F18E415007513A0 /* BSNavigationController.m */; };
+		549B02801F2598BE008EE7EA /* BSRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B027F1F2598BE008EE7EA /* BSRecommendTagsViewController.m */; };
+		549B02831F259B2E008EE7EA /* BSRecommendTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B02821F259B2E008EE7EA /* BSRecommendTags.m */; };
+		549B02871F259C6A008EE7EA /* BSRecommendTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B02851F259C6A008EE7EA /* BSRecommendTagsCell.m */; };
+		549B02881F259C6A008EE7EA /* BSRecommendTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 549B02861F259C6A008EE7EA /* BSRecommendTagsCell.xib */; };
+		549B028B1F25A13D008EE7EA /* BSTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B028A1F25A13D008EE7EA /* BSTestView.m */; };
 		54E2F6441F1E58EE00CEE98D /* BSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E2F6431F1E58EE00CEE98D /* BSFriendTrendsViewController.xib */; };
 		54E2F6481F1E616D00CEE98D /* BSRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F6461F1E616D00CEE98D /* BSRecommendViewController.m */; };
 		54E2F6491F1E616D00CEE98D /* BSRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E2F6471F1E616D00CEE98D /* BSRecommendViewController.xib */; };
@@ -95,6 +100,15 @@
 		54565CD41F18CEF5007513A0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54565CD61F18E415007513A0 /* BSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNavigationController.h; sourceTree = "<group>"; };
 		54565CD71F18E415007513A0 /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
+		549B027E1F2598BE008EE7EA /* BSRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendTagsViewController.h; sourceTree = "<group>"; };
+		549B027F1F2598BE008EE7EA /* BSRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendTagsViewController.m; sourceTree = "<group>"; };
+		549B02811F259B2E008EE7EA /* BSRecommendTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendTags.h; sourceTree = "<group>"; };
+		549B02821F259B2E008EE7EA /* BSRecommendTags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendTags.m; sourceTree = "<group>"; };
+		549B02841F259C6A008EE7EA /* BSRecommendTagsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendTagsCell.h; sourceTree = "<group>"; };
+		549B02851F259C6A008EE7EA /* BSRecommendTagsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendTagsCell.m; sourceTree = "<group>"; };
+		549B02861F259C6A008EE7EA /* BSRecommendTagsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommendTagsCell.xib; sourceTree = "<group>"; };
+		549B02891F25A13D008EE7EA /* BSTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTestView.h; sourceTree = "<group>"; };
+		549B028A1F25A13D008EE7EA /* BSTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTestView.m; sourceTree = "<group>"; };
 		54E2F6431F1E58EE00CEE98D /* BSFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSFriendTrendsViewController.xib; sourceTree = "<group>"; };
 		54E2F6451F1E616D00CEE98D /* BSRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendViewController.h; sourceTree = "<group>"; };
 		54E2F6461F1E616D00CEE98D /* BSRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendViewController.m; sourceTree = "<group>"; };
@@ -214,6 +228,8 @@
 			children = (
 				54565CA21F18CD05007513A0 /* BSEssenceViewController.h */,
 				54565CA31F18CD05007513A0 /* BSEssenceViewController.m */,
+				549B027E1F2598BE008EE7EA /* BSRecommendTagsViewController.h */,
+				549B027F1F2598BE008EE7EA /* BSRecommendTagsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -221,6 +237,8 @@
 		54565CA41F18CD05007513A0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				549B02811F259B2E008EE7EA /* BSRecommendTags.h */,
+				549B02821F259B2E008EE7EA /* BSRecommendTags.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,6 +246,11 @@
 		54565CA51F18CD05007513A0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				549B02841F259C6A008EE7EA /* BSRecommendTagsCell.h */,
+				549B02851F259C6A008EE7EA /* BSRecommendTagsCell.m */,
+				549B02861F259C6A008EE7EA /* BSRecommendTagsCell.xib */,
+				549B02891F25A13D008EE7EA /* BSTestView.h */,
+				549B028A1F25A13D008EE7EA /* BSTestView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -525,6 +548,7 @@
 				5441825D1F2058B400AE35A1 /* BSRecommendUserCell.xib in Resources */,
 				544182551F2045B200AE35A1 /* BSRecommendCategoryCell.xib in Resources */,
 				54E2F6491F1E616D00CEE98D /* BSRecommendViewController.xib in Resources */,
+				549B02881F259C6A008EE7EA /* BSRecommendTagsCell.xib in Resources */,
 				54565C1F1F185106007513A0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,16 +623,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				5441825C1F2058B400AE35A1 /* BSRecommendUserCell.m in Sources */,
+				549B02831F259B2E008EE7EA /* BSRecommendTags.m in Sources */,
 				544182541F2045B200AE35A1 /* BSRecommendCategoryCell.m in Sources */,
 				54E2F6481F1E616D00CEE98D /* BSRecommendViewController.m in Sources */,
 				54565CC91F18CD05007513A0 /* BSEssenceViewController.m in Sources */,
 				54565CCE1F18CD05007513A0 /* UIBarButtonItem+BSExtension.m in Sources */,
+				549B02871F259C6A008EE7EA /* BSRecommendTagsCell.m in Sources */,
 				54565CD81F18E415007513A0 /* BSNavigationController.m in Sources */,
 				54565CCA1F18CD05007513A0 /* BSFriendTrendsViewController.m in Sources */,
+				549B02801F2598BE008EE7EA /* BSRecommendTagsViewController.m in Sources */,
 				54565CCC1F18CD05007513A0 /* BSNewViewController.m in Sources */,
 				54565CD01F18CD05007513A0 /* BSTabBarController.m in Sources */,
 				544182501F20444F00AE35A1 /* BSRecommendCategory.m in Sources */,
 				54565CCF1F18CD05007513A0 /* UIView+BSExtension.m in Sources */,
+				549B028B1F25A13D008EE7EA /* BSTestView.m in Sources */,
 				544182581F20577600AE35A1 /* BSRecommendUser.m in Sources */,
 				54565CCB1F18CD05007513A0 /* BSMeViewController.m in Sources */,
 				54565CD21F18CD05007513A0 /* main.m in Sources */,

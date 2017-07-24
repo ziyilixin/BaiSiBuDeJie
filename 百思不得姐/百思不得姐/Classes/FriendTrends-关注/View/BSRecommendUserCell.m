@@ -7,7 +7,6 @@
 //
 
 #import "BSRecommendUserCell.h"
-#import <UIImageView+WebCache.h>
 #import "BSRecommendUser.h"
 
 @interface BSRecommendUserCell ()
@@ -29,7 +28,16 @@
 
     [self.headImg sd_setImageWithURL:[NSURL URLWithString:user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     self.screenNameLab.text = user.screen_name;
-    self.fansCountLab.text = [NSString stringWithFormat:@"%zd人关注",user.fans_count];
+
+    NSString *fansNumber = nil;
+    if (user.fans_count < 10000) {
+        fansNumber = [NSString stringWithFormat:@"%zd人关注",user.fans_count];
+    }
+    else {
+        fansNumber = [NSString stringWithFormat:@"%.1f万人关注",user.fans_count/10000.0];
+    }
+
+    self.fansCountLab.text = fansNumber;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

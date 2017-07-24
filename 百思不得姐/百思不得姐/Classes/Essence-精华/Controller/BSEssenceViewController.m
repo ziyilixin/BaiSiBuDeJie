@@ -7,6 +7,8 @@
 //
 
 #import "BSEssenceViewController.h"
+#import "BSRecommendTagsViewController.h"
+#import "BSTestView.h"
 
 @interface BSEssenceViewController ()
 
@@ -16,6 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    BSTestView *testView = [BSTestView testView];
+    testView.backgroundColor = [UIColor redColor];
+    testView.frame = CGRectMake(100, 100, 20, 50);
+    [self.view addSubview:testView];
 
     //设置导航栏标题
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
@@ -28,7 +35,8 @@
 
 - (void)tagClick
 {
-    BSLogFunc;
+    BSRecommendTagsViewController *tagsVC = [[BSRecommendTagsViewController alloc] init];
+    [self.navigationController pushViewController:tagsVC animated:YES];
 }
 
 @end
