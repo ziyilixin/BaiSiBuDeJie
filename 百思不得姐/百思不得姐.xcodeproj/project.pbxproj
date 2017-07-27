@@ -36,6 +36,9 @@
 		54E2F6481F1E616D00CEE98D /* BSRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F6461F1E616D00CEE98D /* BSRecommendViewController.m */; };
 		54E2F6491F1E616D00CEE98D /* BSRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E2F6471F1E616D00CEE98D /* BSRecommendViewController.xib */; };
 		54E2F64B1F1E63C000CEE98D /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F64A1F1E63C000CEE98D /* Foundation+Log.m */; };
+		54E482491F29C2FF00292E84 /* BSLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E482471F29C2FF00292E84 /* BSLoginRegisterViewController.m */; };
+		54E4824A1F29C2FF00292E84 /* BSLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E482481F29C2FF00292E84 /* BSLoginRegisterViewController.xib */; };
+		54E4824D1F29C7E900292E84 /* BSVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E4824C1F29C7E900292E84 /* BSVerticalButton.m */; };
 		EEE285A80606911C4551F17D /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 177C68AB4DF1865274ACE6F8 /* libPods-百思不得姐.a */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +117,11 @@
 		54E2F6461F1E616D00CEE98D /* BSRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendViewController.m; sourceTree = "<group>"; };
 		54E2F6471F1E616D00CEE98D /* BSRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommendViewController.xib; sourceTree = "<group>"; };
 		54E2F64A1F1E63C000CEE98D /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		54E482461F29C2FF00292E84 /* BSLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLoginRegisterViewController.h; sourceTree = "<group>"; };
+		54E482471F29C2FF00292E84 /* BSLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLoginRegisterViewController.m; sourceTree = "<group>"; };
+		54E482481F29C2FF00292E84 /* BSLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		54E4824B1F29C7E900292E84 /* BSVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVerticalButton.h; sourceTree = "<group>"; };
+		54E4824C1F29C7E900292E84 /* BSVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVerticalButton.m; sourceTree = "<group>"; };
 		E3BFDDBBE44FDD6BE96B3A73 /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -274,6 +282,9 @@
 				54E2F6451F1E616D00CEE98D /* BSRecommendViewController.h */,
 				54E2F6461F1E616D00CEE98D /* BSRecommendViewController.m */,
 				54E2F6471F1E616D00CEE98D /* BSRecommendViewController.xib */,
+				54E482461F29C2FF00292E84 /* BSLoginRegisterViewController.h */,
+				54E482471F29C2FF00292E84 /* BSLoginRegisterViewController.m */,
+				54E482481F29C2FF00292E84 /* BSLoginRegisterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -298,6 +309,8 @@
 				544182591F2058B400AE35A1 /* BSRecommendUserCell.h */,
 				5441825A1F2058B400AE35A1 /* BSRecommendUserCell.m */,
 				5441825B1F2058B400AE35A1 /* BSRecommendUserCell.xib */,
+				54E4824B1F29C7E900292E84 /* BSVerticalButton.h */,
+				54E4824C1F29C7E900292E84 /* BSVerticalButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -549,6 +562,7 @@
 				544182551F2045B200AE35A1 /* BSRecommendCategoryCell.xib in Resources */,
 				54E2F6491F1E616D00CEE98D /* BSRecommendViewController.xib in Resources */,
 				549B02881F259C6A008EE7EA /* BSRecommendTagsCell.xib in Resources */,
+				54E4824A1F29C2FF00292E84 /* BSLoginRegisterViewController.xib in Resources */,
 				54565C1F1F185106007513A0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,6 +640,7 @@
 				549B02831F259B2E008EE7EA /* BSRecommendTags.m in Sources */,
 				544182541F2045B200AE35A1 /* BSRecommendCategoryCell.m in Sources */,
 				54E2F6481F1E616D00CEE98D /* BSRecommendViewController.m in Sources */,
+				54E482491F29C2FF00292E84 /* BSLoginRegisterViewController.m in Sources */,
 				54565CC91F18CD05007513A0 /* BSEssenceViewController.m in Sources */,
 				54565CCE1F18CD05007513A0 /* UIBarButtonItem+BSExtension.m in Sources */,
 				549B02871F259C6A008EE7EA /* BSRecommendTagsCell.m in Sources */,
@@ -633,6 +648,7 @@
 				54565CCA1F18CD05007513A0 /* BSFriendTrendsViewController.m in Sources */,
 				549B02801F2598BE008EE7EA /* BSRecommendTagsViewController.m in Sources */,
 				54565CCC1F18CD05007513A0 /* BSNewViewController.m in Sources */,
+				54E4824D1F29C7E900292E84 /* BSVerticalButton.m in Sources */,
 				54565CD01F18CD05007513A0 /* BSTabBarController.m in Sources */,
 				544182501F20444F00AE35A1 /* BSRecommendCategory.m in Sources */,
 				54565CCF1F18CD05007513A0 /* UIView+BSExtension.m in Sources */,

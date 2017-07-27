@@ -8,6 +8,7 @@
 
 #import "BSFriendTrendsViewController.h"
 #import "BSRecommendViewController.h"
+#import "BSLoginRegisterViewController.h"
 
 @interface BSFriendTrendsViewController ()
 
@@ -31,6 +32,11 @@
 {
     BSRecommendViewController *recommandVC = [[BSRecommendViewController alloc] init];
     [self.navigationController pushViewController:recommandVC animated:YES];
+}
+
+- (IBAction)loginRegister:(id)sender {
+    BSLoginRegisterViewController *loginRegisterVC = [[BSLoginRegisterViewController alloc] init];
+    [self presentViewController:loginRegisterVC animated:YES completion:nil];
 }
 
 @end
