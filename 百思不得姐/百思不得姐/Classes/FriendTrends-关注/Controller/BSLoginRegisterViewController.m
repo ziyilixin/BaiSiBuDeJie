@@ -10,7 +10,6 @@
 
 @interface BSLoginRegisterViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
-
 @end
 
 @implementation BSLoginRegisterViewController
