@@ -12,7 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BSLoginRegisterViewController">
             <connections>
-                <outlet property="phoneTextField" destination="Bfr-eq-i6Y" id="uAL-7y-ib1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -47,16 +46,16 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_rgister_textfield_bg" translatesAutoresizingMaskIntoConstraints="NO" id="bIC-Y3-XtD">
                                     <rect key="frame" x="0.0" y="0.0" width="266" height="92"/>
                                 </imageView>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bfr-eq-i6Y">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bfr-eq-i6Y" customClass="BSTextField">
                                     <rect key="frame" x="10" y="0.0" width="246" height="46"/>
                                     <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zyh-vW-Qxb">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zyh-vW-Qxb" customClass="BSTextField">
                                     <rect key="frame" x="10" y="46" width="246" height="46"/>
                                     <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                             </subviews>
@@ -145,7 +144,7 @@
                             <state key="highlighted" image="login_sina_icon_click"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeY-ES-Kth" customClass="BSVerticalButton">
-                            <rect key="frame" x="23" y="27" width="70" height="95"/>
+                            <rect key="frame" x="20" y="27" width="70" height="95"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="70" id="Obj-vu-AXp"/>
                                 <constraint firstAttribute="height" constant="95" id="jEg-uR-Nya"/>
@@ -155,7 +154,7 @@
                             <state key="highlighted" image="login_QQ_icon_click"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJQ-JI-4hv" customClass="BSVerticalButton">
-                            <rect key="frame" x="283" y="27" width="70" height="95"/>
+                            <rect key="frame" x="285" y="27" width="70" height="95"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="70" id="K1h-Eq-3HV"/>
                                 <constraint firstAttribute="height" constant="95" id="yiV-QA-CIZ"/>
@@ -168,11 +167,11 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="gGJ-CQ-ak6" firstAttribute="centerX" secondItem="wXB-9O-0Wh" secondAttribute="centerX" id="1n2-hw-N6c"/>
-                        <constraint firstItem="tJQ-JI-4hv" firstAttribute="leading" secondItem="UF8-k9-h6G" secondAttribute="trailing" constant="60" id="6Zl-QY-5vJ"/>
+                        <constraint firstAttribute="trailing" secondItem="tJQ-JI-4hv" secondAttribute="trailing" constant="20" id="4Pl-zu-fWb"/>
                         <constraint firstItem="UF8-k9-h6G" firstAttribute="top" secondItem="gGJ-CQ-ak6" secondAttribute="bottom" constant="10" id="BXv-hb-v3W"/>
                         <constraint firstItem="gGJ-CQ-ak6" firstAttribute="leading" secondItem="Uzt-79-hoE" secondAttribute="trailing" constant="5" id="CoX-rP-1k8"/>
-                        <constraint firstItem="UF8-k9-h6G" firstAttribute="leading" secondItem="BeY-ES-Kth" secondAttribute="trailing" constant="60" id="KHm-HS-zSx"/>
                         <constraint firstItem="BeY-ES-Kth" firstAttribute="top" secondItem="UF8-k9-h6G" secondAttribute="top" id="ML8-8x-XR3"/>
+                        <constraint firstItem="BeY-ES-Kth" firstAttribute="leading" secondItem="wXB-9O-0Wh" secondAttribute="leading" constant="20" id="Nfx-MF-LJn"/>
                         <constraint firstItem="Uzt-79-hoE" firstAttribute="centerY" secondItem="gGJ-CQ-ak6" secondAttribute="centerY" id="Sld-Mv-TbH"/>
                         <constraint firstAttribute="height" constant="150" id="aiS-aa-M0t"/>
                         <constraint firstItem="489-RN-A1U" firstAttribute="centerY" secondItem="gGJ-CQ-ak6" secondAttribute="centerY" id="hm9-iJ-9kt"/>

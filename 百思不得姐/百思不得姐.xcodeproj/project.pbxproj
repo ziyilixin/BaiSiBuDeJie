@@ -39,6 +39,7 @@
 		54E482491F29C2FF00292E84 /* BSLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E482471F29C2FF00292E84 /* BSLoginRegisterViewController.m */; };
 		54E4824A1F29C2FF00292E84 /* BSLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E482481F29C2FF00292E84 /* BSLoginRegisterViewController.xib */; };
 		54E4824D1F29C7E900292E84 /* BSVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E4824C1F29C7E900292E84 /* BSVerticalButton.m */; };
+		54E482501F29E76300292E84 /* BSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E4824F1F29E76300292E84 /* BSTextField.m */; };
 		EEE285A80606911C4551F17D /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 177C68AB4DF1865274ACE6F8 /* libPods-百思不得姐.a */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +123,8 @@
 		54E482481F29C2FF00292E84 /* BSLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSLoginRegisterViewController.xib; sourceTree = "<group>"; };
 		54E4824B1F29C7E900292E84 /* BSVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVerticalButton.h; sourceTree = "<group>"; };
 		54E4824C1F29C7E900292E84 /* BSVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVerticalButton.m; sourceTree = "<group>"; };
+		54E4824E1F29E76300292E84 /* BSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextField.h; sourceTree = "<group>"; };
+		54E4824F1F29E76300292E84 /* BSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextField.m; sourceTree = "<group>"; };
 		E3BFDDBBE44FDD6BE96B3A73 /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -311,6 +314,8 @@
 				5441825B1F2058B400AE35A1 /* BSRecommendUserCell.xib */,
 				54E4824B1F29C7E900292E84 /* BSVerticalButton.h */,
 				54E4824C1F29C7E900292E84 /* BSVerticalButton.m */,
+				54E4824E1F29E76300292E84 /* BSTextField.h */,
+				54E4824F1F29E76300292E84 /* BSTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -650,6 +655,7 @@
 				54565CCC1F18CD05007513A0 /* BSNewViewController.m in Sources */,
 				54E4824D1F29C7E900292E84 /* BSVerticalButton.m in Sources */,
 				54565CD01F18CD05007513A0 /* BSTabBarController.m in Sources */,
+				54E482501F29E76300292E84 /* BSTextField.m in Sources */,
 				544182501F20444F00AE35A1 /* BSRecommendCategory.m in Sources */,
 				54565CCF1F18CD05007513A0 /* UIView+BSExtension.m in Sources */,
 				549B028B1F25A13D008EE7EA /* BSTestView.m in Sources */,
