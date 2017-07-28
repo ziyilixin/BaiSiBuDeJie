@@ -9,7 +9,8 @@
 #import "BSLoginRegisterViewController.h"
 
 @interface BSLoginRegisterViewController ()
-
+/** 登录框距离控制器View左边的间距 */
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginViewLeftMargin;
 @end
 
 @implementation BSLoginRegisterViewController
@@ -20,10 +21,30 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)back:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (IBAction)showLoginOrRegister:(UIButton *)button {
+
+    //退出键盘
+    [self.view endEditing:YES];
+
+    if (self.loginViewLeftMargin.constant == 0) {//显示注册页面
+        self.loginViewLeftMargin.constant = - self.view.width;
+        button.selected = YES;
+    }
+    else {//显示登录页面
+        self.loginViewLeftMargin.constant = 0;
+        button.selected = NO;
+    }
+
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.view layoutIfNeeded];
+    }];
+
+}
+
 
 /**
  * 设置当前控制器对应的状态栏为白色

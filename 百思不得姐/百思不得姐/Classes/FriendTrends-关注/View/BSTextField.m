@@ -7,32 +7,10 @@
 //
 
 #import "BSTextField.h"
-#import <objc/runtime.h>
 
 static NSString * const BSPlaceHolderColorKeyPath = @"_placeholderLabel.textColor";
 
 @implementation BSTextField
-
-+ (void)initialize
-{
-    [self getIvars];
-}
-
-+ (void)getIvars
-{
-    unsigned int count = 0;
-    //拷贝出所有成员变量的值
-    Ivar *ivars = class_copyIvarList([UITextField class], &count);
-    for (int i = 0; i < count; i++) {
-        //取出成员变量
-        Ivar ivar = ivars[i];
-        //打印成员变量名字
-        BSLog(@"%s %s",ivar_getName(ivar),ivar_getTypeEncoding(ivar));
-    }
-
-    //释放
-    free(ivars);
-}
 
 - (void)awakeFromNib
 {
