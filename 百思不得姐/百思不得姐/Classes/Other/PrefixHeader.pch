@@ -29,4 +29,6 @@
 #import <MJRefresh.h>
 #import <UIImageView+WebCache.h>
 
+#import "BSConst.h"
+
 #endif /* PrefixHeader_pch */

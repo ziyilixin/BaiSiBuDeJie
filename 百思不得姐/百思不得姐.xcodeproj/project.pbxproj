@@ -35,6 +35,7 @@
 		54565CD31F18CD05007513A0 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CC81F18CD05007513A0 /* BSTabBar.m */; };
 		54565CD81F18E415007513A0 /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CD71F18E415007513A0 /* BSNavigationController.m */; };
 		549AEF8C1F35BE4800E68D43 /* BSTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 549AEF8B1F35BE4800E68D43 /* BSTopic.m */; };
+		549AEF921F35D0B200E68D43 /* BSConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 549AEF911F35D0B200E68D43 /* BSConst.m */; };
 		549B02801F2598BE008EE7EA /* BSRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B027F1F2598BE008EE7EA /* BSRecommendTagsViewController.m */; };
 		549B02831F259B2E008EE7EA /* BSRecommendTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B02821F259B2E008EE7EA /* BSRecommendTags.m */; };
 		549B02871F259C6A008EE7EA /* BSRecommendTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B02851F259C6A008EE7EA /* BSRecommendTagsCell.m */; };
@@ -126,6 +127,8 @@
 		54565CD71F18E415007513A0 /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
 		549AEF8A1F35BE4800E68D43 /* BSTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopic.h; sourceTree = "<group>"; };
 		549AEF8B1F35BE4800E68D43 /* BSTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopic.m; sourceTree = "<group>"; };
+		549AEF901F35D0B200E68D43 /* BSConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSConst.h; sourceTree = "<group>"; };
+		549AEF911F35D0B200E68D43 /* BSConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSConst.m; sourceTree = "<group>"; };
 		549B027E1F2598BE008EE7EA /* BSRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendTagsViewController.h; sourceTree = "<group>"; };
 		549B027F1F2598BE008EE7EA /* BSRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendTagsViewController.m; sourceTree = "<group>"; };
 		549B02811F259B2E008EE7EA /* BSRecommendTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendTags.h; sourceTree = "<group>"; };
@@ -427,6 +430,8 @@
 				54565CC41F18CD05007513A0 /* main.m */,
 				54E2F64A1F1E63C000CEE98D /* Foundation+Log.m */,
 				54565CC51F18CD05007513A0 /* PrefixHeader.pch */,
+				549AEF901F35D0B200E68D43 /* BSConst.h */,
+				549AEF911F35D0B200E68D43 /* BSConst.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -701,6 +706,7 @@
 				54565CD21F18CD05007513A0 /* main.m in Sources */,
 				54E2F64B1F1E63C000CEE98D /* Foundation+Log.m in Sources */,
 				544781E61F33667C00947A9F /* BSPictureViewController.m in Sources */,
+				549AEF921F35D0B200E68D43 /* BSConst.m in Sources */,
 				54565CD31F18CD05007513A0 /* BSTabBar.m in Sources */,
 				544781E91F336A6600947A9F /* BSWordViewController.m in Sources */,
 				54565CCD1F18CD05007513A0 /* AppDelegate.m in Sources */,

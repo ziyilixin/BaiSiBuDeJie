@@ -35,10 +35,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //初始化表格
+    [self setUpTableView];
 
     //设置刷新
     [self setUpRefresh];
+}
 
+- (void)setUpTableView
+{
+    //设置内边距
+    CGFloat bottom = self.tabBarController.tabBar.height;
+    CGFloat top = BSTitlesViewH + BSTitlesViewY;
+    self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    //设置滚动条的内边距
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
 }
 
 /**
@@ -51,7 +63,7 @@
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
     [self.tableView.mj_header beginRefreshing];
 
-    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopic)];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopic)];
 }
 
 - (void)loadNewTopics
@@ -105,8 +117,8 @@
     params[@"c"] = @"data";
     params[@"type"] = @"29";
     params[@"maxtime"] = self.maxtime;
-    NSInteger page = self.page;
-    params[@"page"] = @(page + 1);
+    NSInteger page = (self.page + 1);
+    params[@"page"] = @(page);
     self.params = params;
 
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -126,7 +138,7 @@
         //结束刷新
         [self.tableView.mj_footer endRefreshing];
 
-        self.page++;
+        self.page = page;
 
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (self.params != params) return;
@@ -139,6 +151,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    self.tableView.mj_footer.hidden = (self.topics.count == 0);
     return self.topics.count;
 }
 
