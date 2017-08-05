@@ -15,8 +15,8 @@
 #define BSSelectedCategory self.categories[self.categoryTableView.indexPathForSelectedRow.row]
 
 @interface BSRecommendViewController ()<UITableViewDataSource,UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
-@property (weak, nonatomic) IBOutlet UITableView *userTableView;
+@property (weak, nonatomic) IBOutlet UITableView *categoryTableView;//类目
+@property (weak, nonatomic) IBOutlet UITableView *userTableView;//用户
 @property (nonatomic,strong) NSArray *categories;
 @property (nonatomic,strong) AFHTTPSessionManager *manager;
 @property (nonatomic,strong) NSMutableDictionary *params;

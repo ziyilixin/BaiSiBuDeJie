@@ -34,6 +34,7 @@
 		54565CD21F18CD05007513A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CC41F18CD05007513A0 /* main.m */; };
 		54565CD31F18CD05007513A0 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CC81F18CD05007513A0 /* BSTabBar.m */; };
 		54565CD81F18E415007513A0 /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CD71F18E415007513A0 /* BSNavigationController.m */; };
+		549AEF8C1F35BE4800E68D43 /* BSTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 549AEF8B1F35BE4800E68D43 /* BSTopic.m */; };
 		549B02801F2598BE008EE7EA /* BSRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B027F1F2598BE008EE7EA /* BSRecommendTagsViewController.m */; };
 		549B02831F259B2E008EE7EA /* BSRecommendTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B02821F259B2E008EE7EA /* BSRecommendTags.m */; };
 		549B02871F259C6A008EE7EA /* BSRecommendTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B02851F259C6A008EE7EA /* BSRecommendTagsCell.m */; };
@@ -123,6 +124,8 @@
 		54565CD41F18CEF5007513A0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54565CD61F18E415007513A0 /* BSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNavigationController.h; sourceTree = "<group>"; };
 		54565CD71F18E415007513A0 /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
+		549AEF8A1F35BE4800E68D43 /* BSTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopic.h; sourceTree = "<group>"; };
+		549AEF8B1F35BE4800E68D43 /* BSTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopic.m; sourceTree = "<group>"; };
 		549B027E1F2598BE008EE7EA /* BSRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendTagsViewController.h; sourceTree = "<group>"; };
 		549B027F1F2598BE008EE7EA /* BSRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendTagsViewController.m; sourceTree = "<group>"; };
 		549B02811F259B2E008EE7EA /* BSRecommendTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendTags.h; sourceTree = "<group>"; };
@@ -277,6 +280,8 @@
 			children = (
 				549B02811F259B2E008EE7EA /* BSRecommendTags.h */,
 				549B02821F259B2E008EE7EA /* BSRecommendTags.m */,
+				549AEF8A1F35BE4800E68D43 /* BSTopic.h */,
+				549AEF8B1F35BE4800E68D43 /* BSTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -686,6 +691,7 @@
 				54E4824D1F29C7E900292E84 /* BSVerticalButton.m in Sources */,
 				54565CD01F18CD05007513A0 /* BSTabBarController.m in Sources */,
 				54E482501F29E76300292E84 /* BSTextField.m in Sources */,
+				549AEF8C1F35BE4800E68D43 /* BSTopic.m in Sources */,
 				545062121F30CD0100D29706 /* BSPushGuideView.m in Sources */,
 				544182501F20444F00AE35A1 /* BSRecommendCategory.m in Sources */,
 				54565CCF1F18CD05007513A0 /* UIView+BSExtension.m in Sources */,
