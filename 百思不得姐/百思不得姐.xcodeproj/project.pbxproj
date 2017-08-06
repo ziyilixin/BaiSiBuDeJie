@@ -34,6 +34,8 @@
 		54565CD21F18CD05007513A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CC41F18CD05007513A0 /* main.m */; };
 		54565CD31F18CD05007513A0 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CC81F18CD05007513A0 /* BSTabBar.m */; };
 		54565CD81F18E415007513A0 /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CD71F18E415007513A0 /* BSNavigationController.m */; };
+		5485F9D71F36FFB0008AD53D /* BSTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5485F9D51F36FFB0008AD53D /* BSTopicCell.m */; };
+		5485F9D81F36FFB0008AD53D /* BSTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5485F9D61F36FFB0008AD53D /* BSTopicCell.xib */; };
 		549AEF8C1F35BE4800E68D43 /* BSTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 549AEF8B1F35BE4800E68D43 /* BSTopic.m */; };
 		549AEF921F35D0B200E68D43 /* BSConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 549AEF911F35D0B200E68D43 /* BSConst.m */; };
 		549B02801F2598BE008EE7EA /* BSRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B027F1F2598BE008EE7EA /* BSRecommendTagsViewController.m */; };
@@ -125,6 +127,9 @@
 		54565CD41F18CEF5007513A0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54565CD61F18E415007513A0 /* BSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNavigationController.h; sourceTree = "<group>"; };
 		54565CD71F18E415007513A0 /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
+		5485F9D41F36FFB0008AD53D /* BSTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicCell.h; sourceTree = "<group>"; };
+		5485F9D51F36FFB0008AD53D /* BSTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicCell.m; sourceTree = "<group>"; };
+		5485F9D61F36FFB0008AD53D /* BSTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicCell.xib; sourceTree = "<group>"; };
 		549AEF8A1F35BE4800E68D43 /* BSTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopic.h; sourceTree = "<group>"; };
 		549AEF8B1F35BE4800E68D43 /* BSTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopic.m; sourceTree = "<group>"; };
 		549AEF901F35D0B200E68D43 /* BSConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSConst.h; sourceTree = "<group>"; };
@@ -295,6 +300,9 @@
 				549B02841F259C6A008EE7EA /* BSRecommendTagsCell.h */,
 				549B02851F259C6A008EE7EA /* BSRecommendTagsCell.m */,
 				549B02861F259C6A008EE7EA /* BSRecommendTagsCell.xib */,
+				5485F9D41F36FFB0008AD53D /* BSTopicCell.h */,
+				5485F9D51F36FFB0008AD53D /* BSTopicCell.m */,
+				5485F9D61F36FFB0008AD53D /* BSTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -600,6 +608,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5485F9D81F36FFB0008AD53D /* BSTopicCell.xib in Resources */,
 				54E2F6441F1E58EE00CEE98D /* BSFriendTrendsViewController.xib in Resources */,
 				5441825D1F2058B400AE35A1 /* BSRecommendUserCell.xib in Resources */,
 				545062141F30CD0B00D29706 /* BSPushGuideView.xib in Resources */,
@@ -708,6 +717,7 @@
 				544781E61F33667C00947A9F /* BSPictureViewController.m in Sources */,
 				549AEF921F35D0B200E68D43 /* BSConst.m in Sources */,
 				54565CD31F18CD05007513A0 /* BSTabBar.m in Sources */,
+				5485F9D71F36FFB0008AD53D /* BSTopicCell.m in Sources */,
 				544781E91F336A6600947A9F /* BSWordViewController.m in Sources */,
 				54565CCD1F18CD05007513A0 /* AppDelegate.m in Sources */,
 				544781DD1F33645500947A9F /* BSAllViewController.m in Sources */,

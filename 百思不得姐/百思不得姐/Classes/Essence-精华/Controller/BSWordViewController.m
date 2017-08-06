@@ -8,6 +8,7 @@
 
 #import "BSWordViewController.h"
 #import "BSTopic.h"
+#import "BSTopicCell.h"
 
 @interface BSWordViewController ()
 /** 帖子数据 */
@@ -19,6 +20,8 @@
 /** 页码 */
 @property (nonatomic,assign) NSInteger page;
 @end
+
+static NSString * const topicCellId = @"topic";
 
 @implementation BSWordViewController
 
@@ -51,6 +54,11 @@
     self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
     //设置滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSTopicCell class]) bundle:nil] forCellReuseIdentifier:topicCellId];
 }
 
 /**
@@ -156,16 +164,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
-    BSTopic *topic = self.topics[indexPath.row];
-    cell.textLabel.text = topic.name;
-    cell.detailTextLabel.text = topic.text;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    BSTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:topicCellId];
+    cell.topic = self.topics[indexPath.row];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 200.0;
 }
 
 @end

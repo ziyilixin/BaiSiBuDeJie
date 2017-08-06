@@ -49,18 +49,23 @@
 - (void)addChildViewController
 {
     BSAllViewController *allVC = [[BSAllViewController alloc] init];
+    allVC.navigationItem.title = @"全部";
     [self addChildViewController:allVC];
 
     BSVideoViewController *videoVC = [[BSVideoViewController alloc] init];
+    videoVC.navigationItem.title = @"视频";
     [self addChildViewController:videoVC];
 
     BSVoiceViewController *voiceVC = [[BSVoiceViewController alloc] init];
+    voiceVC.navigationItem.title = @"声音";
     [self addChildViewController:voiceVC];
 
     BSPictureViewController *pictureVC = [[BSPictureViewController alloc] init];
+    pictureVC.navigationItem.title = @"图片";
     [self addChildViewController:pictureVC];
 
     BSWordViewController *wordVC = [[BSWordViewController alloc] init];
+    wordVC.navigationItem.title = @"帖子";
     [self addChildViewController:wordVC];
 
 }
@@ -108,16 +113,16 @@
     self.indicatorView = indicatorView;
 
     //内部的子控件
-    NSArray *titles = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
-    CGFloat width = titlesView.width/titles.count;
+    CGFloat width = titlesView.width/self.childViewControllers.count;
     CGFloat height = titlesView.height;
-    for (NSInteger i = 0; i < titles.count; i++) {
+    for (NSInteger i = 0; i < self.childViewControllers.count; i++) {
         UIButton *button = [[UIButton alloc] init];
         button.tag = i;
         button.width = width;
         button.height = height;
         button.x = i * width;
-        [button setTitle:titles[i] forState:UIControlStateNormal];
+        UIViewController *viewVC = self.childViewControllers[i];
+        [button setTitle:viewVC.navigationItem.title forState:UIControlStateNormal];
         [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];
         button.titleLabel.font = [UIFont systemFontOfSize:14.0];

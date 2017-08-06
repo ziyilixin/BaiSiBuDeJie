@@ -8,6 +8,11 @@
 
 #import "BSPushGuideView.h"
 
+@interface BSPushGuideView ()
+
+
+@end
+
 @implementation BSPushGuideView
 
 + (instancetype)guideView

@@ -41,10 +41,6 @@ static NSString * const userId = @"user";
 
     //设置tableView
     [self setupTableView];
-
-
-
-
     
     //设置刷新
     [self setupRefresh];
