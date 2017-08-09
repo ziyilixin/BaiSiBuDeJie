@@ -56,6 +56,49 @@
     [self setUpButton:self.shareButton count:topic.repost placeHolder:@"分享"];
     [self setUpButton:self.commentButton count:topic.comment placeHolder:@"评论"];
 
+//    [self testDate:topic.create_time];
+    [self testDate2:topic.create_time];
+
+}
+
+- (void)testDate2:(NSString *)createTime
+{
+
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+
+    //当前时间
+    NSDate *now = [NSDate date];
+    //发帖时间
+    NSDate *create = [formatter dateFromString:createTime];
+    BSLog(@"%@",[now deltaFrom:create]);
+
+//    //比较时间
+//    NSCalendarUnit unit = NSCalendarUnitDay|NSCalendarUnitMonth|NSCalendarUnitYear|NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond;
+//    NSDateComponents *cmps = [calendar components:unit fromDate:create toDate:now options:0];
+//    BSLog(@"%@,%@",now,create);
+//    BSLog(@"%zd,%zd,%zd,%zd,%zd,%zd",cmps.year,cmps.month,cmps.day,cmps.hour,cmps.minute,cmps.second);
+
+//    //获得NSDate的每个元素
+//    NSInteger year = [calendar component:NSCalendarUnitYear fromDate:now];
+//    NSInteger month = [calendar component:NSCalendarUnitMonth fromDate:now];
+//    NSInteger day = [calendar component:NSCalendarUnitDay fromDate:now];
+//    NSDateComponents *comps = [calendar components:NSCalendarUnitDay|NSCalendarUnitMonth|NSCalendarUnitYear fromDate:now];
+//    BSLog(@"%zd,%zd,%zd",comps.year,comps.month,comps.day);
+
+}
+
+- (void)testDate:(NSString *)createTime
+{
+    //当前时间
+    NSDate *now = [NSDate date];
+    //发帖时间
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    NSDate *create = [formatter dateFromString:createTime];
+
+    NSTimeInterval delta = [now timeIntervalSinceDate:create];
+    BSLog(@"%f",delta);
 }
 
 - (void)setUpButton:(UIButton *)button count:(NSInteger)count placeHolder:(NSString *)placeHolder

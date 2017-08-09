@@ -34,6 +34,7 @@
 		54565CD21F18CD05007513A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CC41F18CD05007513A0 /* main.m */; };
 		54565CD31F18CD05007513A0 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CC81F18CD05007513A0 /* BSTabBar.m */; };
 		54565CD81F18E415007513A0 /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CD71F18E415007513A0 /* BSNavigationController.m */; };
+		54827D921F3B618D00081047 /* NSDate+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 54827D911F3B618D00081047 /* NSDate+BSExtension.m */; };
 		5485F9D71F36FFB0008AD53D /* BSTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5485F9D51F36FFB0008AD53D /* BSTopicCell.m */; };
 		5485F9D81F36FFB0008AD53D /* BSTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5485F9D61F36FFB0008AD53D /* BSTopicCell.xib */; };
 		549AEF8C1F35BE4800E68D43 /* BSTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 549AEF8B1F35BE4800E68D43 /* BSTopic.m */; };
@@ -127,6 +128,8 @@
 		54565CD41F18CEF5007513A0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54565CD61F18E415007513A0 /* BSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNavigationController.h; sourceTree = "<group>"; };
 		54565CD71F18E415007513A0 /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
+		54827D901F3B618D00081047 /* NSDate+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BSExtension.h"; sourceTree = "<group>"; };
+		54827D911F3B618D00081047 /* NSDate+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BSExtension.m"; sourceTree = "<group>"; };
 		5485F9D41F36FFB0008AD53D /* BSTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicCell.h; sourceTree = "<group>"; };
 		5485F9D51F36FFB0008AD53D /* BSTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicCell.m; sourceTree = "<group>"; };
 		5485F9D61F36FFB0008AD53D /* BSTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicCell.xib; sourceTree = "<group>"; };
@@ -451,6 +454,8 @@
 				54565CBD1F18CD05007513A0 /* UIBarButtonItem+BSExtension.m */,
 				54565CBE1F18CD05007513A0 /* UIView+BSExtension.h */,
 				54565CBF1F18CD05007513A0 /* UIView+BSExtension.m */,
+				54827D901F3B618D00081047 /* NSDate+BSExtension.h */,
+				54827D911F3B618D00081047 /* NSDate+BSExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -720,6 +725,7 @@
 				5485F9D71F36FFB0008AD53D /* BSTopicCell.m in Sources */,
 				544781E91F336A6600947A9F /* BSWordViewController.m in Sources */,
 				54565CCD1F18CD05007513A0 /* AppDelegate.m in Sources */,
+				54827D921F3B618D00081047 /* NSDate+BSExtension.m in Sources */,
 				544781DD1F33645500947A9F /* BSAllViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
