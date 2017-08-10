@@ -26,6 +26,13 @@
                             <constraint firstAttribute="width" constant="35" id="NOj-Si-6RP"/>
                         </constraints>
                     </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_AddV_authen" translatesAutoresizingMaskIntoConstraints="NO" id="A69-vA-IBH">
+                        <rect key="frame" x="36" y="36" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="4U3-5C-z7J"/>
+                            <constraint firstAttribute="width" constant="14" id="cfR-h8-mzB"/>
+                        </constraints>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbU-eb-dz6" userLabel="昵称">
                         <rect key="frame" x="55" y="10" width="37.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -148,6 +155,7 @@
                 <constraints>
                     <constraint firstItem="sbU-eb-dz6" firstAttribute="leading" secondItem="NQB-QO-tRX" secondAttribute="trailing" constant="10" id="0CW-o7-Ma2"/>
                     <constraint firstItem="Fsn-XV-GHS" firstAttribute="top" secondItem="sbU-eb-dz6" secondAttribute="top" id="3ne-CD-rPz"/>
+                    <constraint firstItem="A69-vA-IBH" firstAttribute="trailing" secondItem="NQB-QO-tRX" secondAttribute="trailing" constant="5" id="8JW-pF-7wJ"/>
                     <constraint firstItem="sbU-eb-dz6" firstAttribute="top" secondItem="NQB-QO-tRX" secondAttribute="top" id="Oif-qn-00t"/>
                     <constraint firstAttribute="trailing" secondItem="Fsn-XV-GHS" secondAttribute="trailing" constant="10" id="Xf1-AV-wWu"/>
                     <constraint firstItem="NQB-QO-tRX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="b8O-b6-cz9"/>
@@ -157,6 +165,7 @@
                     <constraint firstItem="NQB-QO-tRX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="nN1-Mi-rEW"/>
                     <constraint firstAttribute="trailing" secondItem="EI1-PI-8J2" secondAttribute="trailing" id="oDP-Gg-giU"/>
                     <constraint firstItem="EI1-PI-8J2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sOY-Fg-cs6"/>
+                    <constraint firstItem="A69-vA-IBH" firstAttribute="bottom" secondItem="NQB-QO-tRX" secondAttribute="bottom" constant="5" id="wpi-Vo-gQK"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -166,12 +175,14 @@
                 <outlet property="headImageView" destination="NQB-QO-tRX" id="W7v-Pz-Lxb"/>
                 <outlet property="nickaNameLabel" destination="sbU-eb-dz6" id="fPA-XU-tc6"/>
                 <outlet property="shareButton" destination="PNf-KN-Ufm" id="EDf-II-0lj"/>
+                <outlet property="sinavImageView" destination="A69-vA-IBH" id="k6Y-Fy-cvU"/>
                 <outlet property="timeLabel" destination="60m-Bf-Mk1" id="daB-VW-qYX"/>
             </connections>
             <point key="canvasLocation" x="34" y="79.5"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Profile_AddV_authen" width="14" height="14"/>
         <image name="cell-button-line" width="1" height="29"/>
         <image name="cell-content-line" width="299" height="1"/>
         <image name="cellFollowClickIcon" width="19" height="20"/>
