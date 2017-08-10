@@ -125,8 +125,9 @@ static NSString * const topicCellId = @"topic";
     params[@"c"] = @"data";
     params[@"type"] = @"29";
     params[@"maxtime"] = self.maxtime;
-    NSInteger page = (self.page + 1);
+    NSInteger page = self.page + 1;
     params[@"page"] = @(page);
+    params[@"maxtime"] = self.maxtime;
     self.params = params;
 
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
