@@ -14,7 +14,7 @@
 /** 头像 */
 @property (nonatomic,copy) NSString *profile_image;
 /** 发帖时间 */
-@property (nonatomic,copy) NSString *create_time;
+@property (nonatomic,copy) NSString *created_at;
 /** 文字内容 */
 @property (nonatomic,copy) NSString *text;
 /** 订的数量 */

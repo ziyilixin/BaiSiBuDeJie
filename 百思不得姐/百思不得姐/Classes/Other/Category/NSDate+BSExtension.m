@@ -52,7 +52,7 @@
     NSDate *selfDate = [formatter dateFromString:[formatter stringFromDate:self]];
 
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:NSCalendarUnitDay|NSCalendarUnitMonth|NSCalendarUnitYear fromDate:nowDate toDate:selfDate options:0];
+    NSDateComponents *components = [calendar components:NSCalendarUnitDay|NSCalendarUnitMonth|NSCalendarUnitYear fromDate:selfDate toDate:nowDate options:0];
     return components.year == 0
     && components.month == 0
     && components.day == 1;

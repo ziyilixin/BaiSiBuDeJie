@@ -1,16 +1,16 @@
 //
-//  BSWordViewController.m
+//  BSTopicViewController.m
 //  百思不得姐
 //
 //  Created by WCF on 2017/8/3.
 //  Copyright © 2017年 WCF. All rights reserved.
 //
 
-#import "BSWordViewController.h"
+#import "BSTopicViewController.h"
 #import "BSTopic.h"
 #import "BSTopicCell.h"
 
-@interface BSWordViewController ()
+@interface BSTopicViewController ()
 /** 帖子数据 */
 @property (nonatomic,strong) NSMutableArray *topics;
 
@@ -23,7 +23,7 @@
 
 static NSString * const topicCellId = @"topic";
 
-@implementation BSWordViewController
+@implementation BSTopicViewController
 
 /**
  * 懒加载
@@ -38,7 +38,7 @@ static NSString * const topicCellId = @"topic";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     //初始化表格
     [self setUpTableView];
 
@@ -83,7 +83,7 @@ static NSString * const topicCellId = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @"29";
+    params[@"type"] = @(self.type);
     self.params = params;
 
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {

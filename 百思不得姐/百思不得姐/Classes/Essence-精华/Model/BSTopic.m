@@ -9,14 +9,14 @@
 #import "BSTopic.h"
 
 @implementation BSTopic
-- (NSString *)create_time
+- (NSString *)created_at
 {
     //日期格式化类
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     //设置日期格式(y:年,M:月,d:日,H:时,m:分,s:秒)
     formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     //帖子的创建时间
-    NSDate *createDate = [formatter dateFromString:_create_time];
+    NSDate *createDate = [formatter dateFromString:_created_at];
     
     if ([createDate isThisYear]) { //今年
         if ([createDate isToday]) { //今天
@@ -41,7 +41,7 @@
         }
     }
     else { //非今年
-        return _create_time;
+        return _created_at;
     }
 }
 @end

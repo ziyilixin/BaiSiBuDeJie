@@ -8,11 +8,7 @@
 
 #import "BSEssenceViewController.h"
 #import "BSRecommendTagsViewController.h"
-#import "BSAllViewController.h"
-#import "BSVideoViewController.h"
-#import "BSVoiceViewController.h"
-#import "BSPictureViewController.h"
-#import "BSWordViewController.h"
+#import "BSTopicViewController.h"
 
 @interface BSEssenceViewController ()<UIScrollViewDelegate>
 /** 底部的红色指示器 */
@@ -48,24 +44,29 @@
  */
 - (void)addChildViewController
 {
-    BSAllViewController *allVC = [[BSAllViewController alloc] init];
+    BSTopicViewController *allVC = [[BSTopicViewController alloc] init];
     allVC.navigationItem.title = @"全部";
+    allVC.type = BSTopicTypeAll;
     [self addChildViewController:allVC];
 
-    BSVideoViewController *videoVC = [[BSVideoViewController alloc] init];
+    BSTopicViewController *videoVC = [[BSTopicViewController alloc] init];
     videoVC.navigationItem.title = @"视频";
+    videoVC.type = BSTopicTypeVideo;
     [self addChildViewController:videoVC];
 
-    BSVoiceViewController *voiceVC = [[BSVoiceViewController alloc] init];
+    BSTopicViewController *voiceVC = [[BSTopicViewController alloc] init];
     voiceVC.navigationItem.title = @"声音";
+    voiceVC.type = BSTopicTypeVoice;
     [self addChildViewController:voiceVC];
 
-    BSPictureViewController *pictureVC = [[BSPictureViewController alloc] init];
+    BSTopicViewController *pictureVC = [[BSTopicViewController alloc] init];
     pictureVC.navigationItem.title = @"图片";
+    pictureVC.type = BSTopicTypePicture;
     [self addChildViewController:pictureVC];
 
-    BSWordViewController *wordVC = [[BSWordViewController alloc] init];
+    BSTopicViewController *wordVC = [[BSTopicViewController alloc] init];
     wordVC.navigationItem.title = @"帖子";
+    wordVC.type = BSTopicTypeWord;
     [self addChildViewController:wordVC];
 
 }
@@ -205,7 +206,6 @@
     
     //点击按钮
     NSInteger index = scrollView.contentOffset.x/scrollView.width;
-    BSLog(@"---%@---",self.titlesView.subviews);
     [self titleClick:self.titlesView.subviews[index]];
 }
 

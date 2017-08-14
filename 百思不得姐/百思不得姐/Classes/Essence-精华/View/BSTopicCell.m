@@ -50,7 +50,7 @@
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     self.sinavImageView.hidden = !topic.isSina_v;
     self.nickaNameLabel.text = topic.name;
-    self.timeLabel.text = topic.create_time;
+    self.timeLabel.text = topic.created_at;
 
     [self setUpButton:self.dingButton count:topic.ding placeHolder:@"顶"];
     [self setUpButton:self.caiButton count:topic.cai placeHolder:@"踩"];
