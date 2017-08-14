@@ -6,7 +6,7 @@
 //  Copyright © 2017年 WCF. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface BSTopic : NSObject
 /** 名称 */
@@ -27,4 +27,6 @@
 @property (nonatomic,assign) NSInteger comment;
 /** 是否为新浪加V用户 */
 @property (nonatomic,assign,getter = isSina_v) BOOL sina_v;
+/** cell的高度 */
+@property (nonatomic, assign, readonly) CGFloat cellHeight;
 @end

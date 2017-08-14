@@ -174,14 +174,7 @@ static NSString * const topicCellId = @"topic";
 {
     //取出帖子模型
     BSTopic *topic = self.topics[indexPath.row];
-
-    //文字的最大尺寸
-    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4*BSTopicCellMargin, MAXFLOAT);
-    CGFloat textH = [topic.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
-    //cell的高度
-    CGFloat cellH = BSTopicCellTextY + textH + BSTopicCellBottomBarH + 2*BSTopicCellMargin;
-
-    return cellH;
+    return topic.cellHeight;
 }
 
 @end
