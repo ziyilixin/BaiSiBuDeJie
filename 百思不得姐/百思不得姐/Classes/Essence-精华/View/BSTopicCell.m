@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;//分享
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;//评论
 @property (weak, nonatomic) IBOutlet UIImageView *sinavImageView;
+@property (weak, nonatomic) IBOutlet UILabel *text_Label;
 @end
 
 @implementation BSTopicCell
@@ -34,11 +35,10 @@
 
 - (void)setFrame:(CGRect)frame
 {
-    static CGFloat margin = 10;
-    frame.origin.x = margin;
-    frame.size.width -= 2*margin;
-    frame.size.height -= margin;
-    frame.origin.y += margin;
+    frame.origin.x = BSTopicCellMargin;
+    frame.size.width -= 2*BSTopicCellMargin;
+    frame.size.height -= BSTopicCellMargin;
+    frame.origin.y += BSTopicCellMargin;
 
     [super setFrame:frame];
 }
@@ -56,6 +56,8 @@
     [self setUpButton:self.caiButton count:topic.cai placeHolder:@"踩"];
     [self setUpButton:self.shareButton count:topic.repost placeHolder:@"分享"];
     [self setUpButton:self.commentButton count:topic.comment placeHolder:@"评论"];
+
+    self.text_Label.text = topic.text;
 }
 
 - (void)setUpButton:(UIButton *)button count:(NSInteger)count placeHolder:(NSString *)placeHolder
