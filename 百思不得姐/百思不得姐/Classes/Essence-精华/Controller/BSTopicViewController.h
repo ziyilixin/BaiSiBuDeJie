@@ -8,14 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum {
-    BSTopicTypeAll = 1,
-    BSTopicTypePicture = 10,
-    BSTopicTypeWord = 29,
-    BSTopicTypeVoice = 31,
-    BSTopicTypeVideo = 41,
-} BSTopicType;
-
 @interface BSTopicViewController : UITableViewController
+/** 帖子类型(交给子类去实现) */
 @property (nonatomic,assign) BSTopicType type;
 @end

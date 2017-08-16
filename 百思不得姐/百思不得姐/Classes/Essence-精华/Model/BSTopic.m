@@ -7,11 +7,23 @@
 //
 
 #import "BSTopic.h"
+#import <MJExtension.h>
 
 @implementation BSTopic
 {
     CGFloat _cellHeight;
+    CGRect _pictureF;
 }
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{
+             @"small_image":@"image0",
+             @"middle_image":@"image1",
+             @"large_image":@"image2",
+             };
+}
+
 - (NSString *)created_at
 {
     //日期格式化类
@@ -51,12 +63,35 @@
 - (CGFloat)cellHeight
 {
     if (!_cellHeight) {
-        BSLogFunc;
         //文字的最大尺寸
-        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4*BSTopicCellMargin, MAXFLOAT);
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * BSTopicCellMargin, MAXFLOAT);
+        //计算文字的高度
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
+
         //cell的高度
-        _cellHeight = BSTopicCellTextY + textH + BSTopicCellBottomBarH + 2*BSTopicCellMargin;
+        //文字部分的高度
+        _cellHeight = BSTopicCellTextY + textH + BSTopicCellMargin;
+
+        // 根据段子的类型来计算cell的高度
+        if (self.type == BSTopicTypePicture) {
+            //图片显示的宽度
+            CGFloat pictureW = maxSize.width;
+            //图片显示的高度
+            CGFloat pictureH = pictureW * self.height / self.width;
+
+            //计算图片控件的frame
+            CGFloat pictureX = BSTopicCellMargin;
+            CGFloat pictureY = BSTopicCellTextY + textH + BSTopicCellMargin;
+            _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+
+            _cellHeight += pictureH + BSTopicCellMargin;
+        }
+        else if (self.type == BSTopicTypeVoice) { //声音帖子
+
+        }
+
+        //底部工具条的gaodu
+        _cellHeight += BSTopicCellBottomBarH + BSTopicCellMargin;
     }
     return _cellHeight;
 }

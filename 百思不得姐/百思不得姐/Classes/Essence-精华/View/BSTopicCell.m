@@ -8,6 +8,7 @@
 
 #import "BSTopicCell.h"
 #import "BSTopic.h"
+#import "BSTopicPictureView.h"
 
 @interface BSTopicCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;//头像
@@ -19,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;//评论
 @property (weak, nonatomic) IBOutlet UIImageView *sinavImageView;
 @property (weak, nonatomic) IBOutlet UILabel *text_Label;
+/** 图片帖子中间的内容 */
+@property (nonatomic,weak) BSTopicPictureView *pictureView;
 @end
 
 @implementation BSTopicCell
@@ -31,6 +34,16 @@
     backGroundView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = backGroundView;
 
+}
+
+- (BSTopicPictureView *)pictureView
+{
+    if (!_pictureView) {
+        BSTopicPictureView *pictureView = [BSTopicPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
 }
 
 - (void)setFrame:(CGRect)frame
@@ -56,8 +69,18 @@
     [self setUpButton:self.caiButton count:topic.cai placeHolder:@"踩"];
     [self setUpButton:self.shareButton count:topic.repost placeHolder:@"分享"];
     [self setUpButton:self.commentButton count:topic.comment placeHolder:@"评论"];
-
+    
     self.text_Label.text = topic.text;
+
+    //根据模型类型(帖子类型)添加对应的内容到cell的中间
+    if (topic.type == BSTopicTypePicture) {// 图片帖子
+        self.pictureView.topic = topic;
+        self.pictureView.frame = topic.pictureF;
+    }
+    else if (topic.type == BSTopicTypeVoice) {//声音帖子
+
+    }
+
 }
 
 - (void)setUpButton:(UIButton *)button count:(NSInteger)count placeHolder:(NSString *)placeHolder

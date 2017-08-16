@@ -7,8 +7,15 @@
 //
 
 #import "BSRecommendCategory.h"
+#import <MJExtension.h>
 
 @implementation BSRecommendCategory
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"ID":@"id"};
+}
+
 - (NSMutableArray *)users
 {
     if (!_users) {
