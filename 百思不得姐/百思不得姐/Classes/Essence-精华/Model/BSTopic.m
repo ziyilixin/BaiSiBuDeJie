@@ -64,7 +64,7 @@
 {
     if (!_cellHeight) {
         // 文字的最大尺寸
-        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * BSTopicCellMargin, MAXFLOAT);
+        CGSize maxSize = CGSizeMake(kScreenW - 4 * BSTopicCellMargin, MAXFLOAT);
         // 计算文字的高度
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
 

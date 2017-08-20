@@ -23,25 +23,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    CGFloat screenW = [UIScreen mainScreen].bounds.size.width;
-    CGFloat screenH = [UIScreen mainScreen].bounds.size.height;
-
     UIImageView *imageView = [[UIImageView alloc] init];
     imageView.userInteractionEnabled = YES;
     [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)]];
     [self.scrollView addSubview:imageView];
     self.imageView = imageView;
 
-    CGFloat pictureW = screenW;
+    CGFloat pictureW = kScreenW;
     CGFloat pictureH = pictureW * self.topic.height / self.topic.width;
 
-    if (pictureH > screenH) {
+    if (pictureH > kScreenH) {
         self.imageView.frame = CGRectMake(0, 0, pictureW, pictureH);
         self.scrollView.contentSize = CGSizeMake(0, pictureH);
     }
     else {
         self.imageView.size = CGSizeMake(pictureW, pictureH);
-        self.imageView.centerY = screenH * 0.5;
+        self.imageView.centerY = kScreenH * 0.5;
     }
 
     //马上显示当前图片的下载进度
