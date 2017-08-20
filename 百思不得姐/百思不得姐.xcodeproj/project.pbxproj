@@ -31,6 +31,9 @@
 		54565CD21F18CD05007513A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CC41F18CD05007513A0 /* main.m */; };
 		54565CD31F18CD05007513A0 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CC81F18CD05007513A0 /* BSTabBar.m */; };
 		54565CD81F18E415007513A0 /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CD71F18E415007513A0 /* BSNavigationController.m */; };
+		5480AD8E1F484D7A0060F274 /* BSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480AD8D1F484D7A0060F274 /* BSProgressView.m */; };
+		5480AD921F4850D10060F274 /* BSShowPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480AD901F4850D10060F274 /* BSShowPictureController.m */; };
+		5480AD931F4850D10060F274 /* BSShowPictureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5480AD911F4850D10060F274 /* BSShowPictureController.xib */; };
 		54827D921F3B618D00081047 /* NSDate+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 54827D911F3B618D00081047 /* NSDate+BSExtension.m */; };
 		5485F9D71F36FFB0008AD53D /* BSTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5485F9D51F36FFB0008AD53D /* BSTopicCell.m */; };
 		5485F9D81F36FFB0008AD53D /* BSTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5485F9D61F36FFB0008AD53D /* BSTopicCell.xib */; };
@@ -119,6 +122,11 @@
 		54565CD41F18CEF5007513A0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54565CD61F18E415007513A0 /* BSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNavigationController.h; sourceTree = "<group>"; };
 		54565CD71F18E415007513A0 /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
+		5480AD8C1F484D7A0060F274 /* BSProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSProgressView.h; sourceTree = "<group>"; };
+		5480AD8D1F484D7A0060F274 /* BSProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSProgressView.m; sourceTree = "<group>"; };
+		5480AD8F1F4850D10060F274 /* BSShowPictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSShowPictureController.h; sourceTree = "<group>"; };
+		5480AD901F4850D10060F274 /* BSShowPictureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSShowPictureController.m; sourceTree = "<group>"; };
+		5480AD911F4850D10060F274 /* BSShowPictureController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSShowPictureController.xib; sourceTree = "<group>"; };
 		54827D901F3B618D00081047 /* NSDate+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BSExtension.h"; sourceTree = "<group>"; };
 		54827D911F3B618D00081047 /* NSDate+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BSExtension.m"; sourceTree = "<group>"; };
 		5485F9D41F36FFB0008AD53D /* BSTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicCell.h; sourceTree = "<group>"; };
@@ -267,6 +275,9 @@
 				549B027F1F2598BE008EE7EA /* BSRecommendTagsViewController.m */,
 				54D7B5921F41F77900B0541D /* BSTopicViewController.h */,
 				54D7B5931F41F77900B0541D /* BSTopicViewController.m */,
+				5480AD8F1F4850D10060F274 /* BSShowPictureController.h */,
+				5480AD901F4850D10060F274 /* BSShowPictureController.m */,
+				5480AD911F4850D10060F274 /* BSShowPictureController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -294,6 +305,8 @@
 				544002D21F4357BF00BABF1C /* BSTopicPictureView.h */,
 				544002D31F4357BF00BABF1C /* BSTopicPictureView.m */,
 				544002D51F4357CA00BABF1C /* BSTopicPictureView.xib */,
+				5480AD8C1F484D7A0060F274 /* BSProgressView.h */,
+				5480AD8D1F484D7A0060F274 /* BSProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -559,7 +572,7 @@
 				TargetAttributes = {
 					54565C0E1F185106007513A0 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = G99Y2JY74W;
+						DevelopmentTeam = T74F43753A;
 						ProvisioningStyle = Automatic;
 					};
 					54565C271F185106007513A0 = {
@@ -602,6 +615,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5485F9D81F36FFB0008AD53D /* BSTopicCell.xib in Resources */,
+				5480AD931F4850D10060F274 /* BSShowPictureController.xib in Resources */,
 				54E2F6441F1E58EE00CEE98D /* BSFriendTrendsViewController.xib in Resources */,
 				5441825D1F2058B400AE35A1 /* BSRecommendUserCell.xib in Resources */,
 				545062141F30CD0B00D29706 /* BSPushGuideView.xib in Resources */,
@@ -683,6 +697,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5480AD8E1F484D7A0060F274 /* BSProgressView.m in Sources */,
 				544002D41F4357BF00BABF1C /* BSTopicPictureView.m in Sources */,
 				5441825C1F2058B400AE35A1 /* BSRecommendUserCell.m in Sources */,
 				549B02831F259B2E008EE7EA /* BSRecommendTags.m in Sources */,
@@ -692,6 +707,7 @@
 				54565CC91F18CD05007513A0 /* BSEssenceViewController.m in Sources */,
 				54565CCE1F18CD05007513A0 /* UIBarButtonItem+BSExtension.m in Sources */,
 				549B02871F259C6A008EE7EA /* BSRecommendTagsCell.m in Sources */,
+				5480AD921F4850D10060F274 /* BSShowPictureController.m in Sources */,
 				54565CD81F18E415007513A0 /* BSNavigationController.m in Sources */,
 				54565CCA1F18CD05007513A0 /* BSFriendTrendsViewController.m in Sources */,
 				549B02801F2598BE008EE7EA /* BSRecommendTagsViewController.m in Sources */,
@@ -844,7 +860,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = G99Y2JY74W;
+				DEVELOPMENT_TEAM = T74F43753A;
 				GCC_PREFIX_HEADER = "百思不得姐/Classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -860,7 +876,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = G99Y2JY74W;
+				DEVELOPMENT_TEAM = T74F43753A;
 				GCC_PREFIX_HEADER = "百思不得姐/Classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

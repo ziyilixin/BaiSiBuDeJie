@@ -44,6 +44,11 @@
  */
 - (void)addChildViewController
 {
+    BSTopicViewController *pictureVC = [[BSTopicViewController alloc] init];
+    pictureVC.navigationItem.title = @"图片";
+    pictureVC.type = BSTopicTypePicture;
+    [self addChildViewController:pictureVC];
+
     BSTopicViewController *allVC = [[BSTopicViewController alloc] init];
     allVC.navigationItem.title = @"全部";
     allVC.type = BSTopicTypeAll;
@@ -59,10 +64,6 @@
     voiceVC.type = BSTopicTypeVoice;
     [self addChildViewController:voiceVC];
 
-    BSTopicViewController *pictureVC = [[BSTopicViewController alloc] init];
-    pictureVC.navigationItem.title = @"图片";
-    pictureVC.type = BSTopicTypePicture;
-    [self addChildViewController:pictureVC];
 
     BSTopicViewController *wordVC = [[BSTopicViewController alloc] init];
     wordVC.navigationItem.title = @"帖子";

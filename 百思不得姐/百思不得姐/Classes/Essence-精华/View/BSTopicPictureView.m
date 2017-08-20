@@ -8,12 +8,14 @@
 
 #import "BSTopicPictureView.h"
 #import "BSTopic.h"
+#import "BSProgressView.h"
+#import "BSShowPictureController.h"
 
 @interface BSTopicPictureView ()
 @property (weak, nonatomic) IBOutlet UIImageView *pictureImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *gifImageView;
 @property (weak, nonatomic) IBOutlet UIButton *seeBigButton;
-@property (weak, nonatomic) IBOutlet DALabeledCircularProgressView *progressView;
+@property (nonatomic, weak) BSProgressView *progressView;
 @end
 
 @implementation BSTopicPictureView
@@ -27,28 +29,49 @@
     [super awakeFromNib];
     self.autoresizingMask = UIViewAutoresizingNone;
 
-    self.progressView.roundedCorners = 2;
-    self.progressView.progressLabel.textColor = [UIColor whiteColor];
+    self.pictureImageView.userInteractionEnabled = YES;
+    [self.pictureImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPicture)]];
+}
+
+- (void)showPicture
+{
+    BSShowPictureController *showPictureVC = [[BSShowPictureController alloc] init];
+    showPictureVC.topic = self.topic;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:showPictureVC animated:YES completion:nil];
 }
 
 - (void)setTopic:(BSTopic *)topic
 {
     _topic = topic;
 
-    /**
-     在不知道图片扩展名的情况下, 如何知道图片的真实类型?
-     * 取出图片数据的第一个字节, 就可以判断出图片的真实类型
-     */
-    
+    //立马显示最新的进度值(防止因为网速慢, 导致显示的是其他图片的下载进度)
+    [self.progressView setProgress:topic.pictureProgress animated:NO];
+
     //设置图片
     [self.pictureImageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         self.progressView.hidden = NO;
-        CGFloat progress = 1.0 * receivedSize / expectedSize;
-        [self.progressView setProgress:progress animated:NO];
-        NSString *text = [NSString stringWithFormat:@"%.0f%%", progress * 100];
-        self.progressView.progressLabel.text = [text stringByReplacingOccurrencesOfString:@"-" withString:@""];
+        topic.pictureProgress = 1.0 * receivedSize / expectedSize;
+        [self.progressView setProgress:topic.pictureProgress animated:NO];
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.progressView.hidden = YES;
+
+        //如果是大图片，才需要绘图处理
+        if (topic.isBigPicture == NO) return;
+
+        //开启图形上下文
+        UIGraphicsBeginImageContextWithOptions(topic.pictureF.size, YES, 0.0);
+
+        //将下载完成的图片绘制到图形上下文
+        CGFloat width = topic.pictureF.size.width;
+        CGFloat height = topic.pictureF.size.width * image.size.height / image.size.width;
+        [image drawInRect:CGRectMake(0, 0, width, height)];
+
+        //获得图片
+        self.pictureImageView.image = UIGraphicsGetImageFromCurrentImageContext();
+
+        //结束图形上下文
+        UIGraphicsEndImageContext();
+
     }];
 
 
@@ -59,11 +82,9 @@
     // 判断是否显示"点击查看全图"
     if (topic.bigPicture) {// 大图
         self.seeBigButton.hidden = NO;
-        self.pictureImageView.contentMode = UIViewContentModeScaleAspectFill;
     }
     else {//非大图
         self.seeBigButton.hidden = YES;
-        self.pictureImageView.contentMode = UIViewContentModeScaleToFill;
     }
     
 }

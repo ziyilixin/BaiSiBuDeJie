@@ -63,40 +63,37 @@
 - (CGFloat)cellHeight
 {
     if (!_cellHeight) {
-        //文字的最大尺寸
+        // 文字的最大尺寸
         CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * BSTopicCellMargin, MAXFLOAT);
-        //计算文字的高度
-        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
+        // 计算文字的高度
+        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
 
-        //cell的高度
-        //文字部分的高度
+        // cell的高度
+        // 文字部分的高度
         _cellHeight = BSTopicCellTextY + textH + BSTopicCellMargin;
 
         // 根据段子的类型来计算cell的高度
-        if (self.type == BSTopicTypePicture) {
-            //图片显示的宽度
+        if (self.type == BSTopicTypePicture) { // 图片帖子
+            // 图片显示出来的宽度
             CGFloat pictureW = maxSize.width;
-            //图片显示的高度
+            // 显示显示出来的高度
             CGFloat pictureH = pictureW * self.height / self.width;
-
-            if (pictureH >= BSTopicCellPictureMaxH) {// 图片高度过长
+            if (pictureH >= BSTopicCellPictureMaxH) { // 图片高度过长
                 pictureH = BSTopicCellPictureBreakH;
-
-                self.bigPicture = YES;//大图
+                self.bigPicture = YES; //大图
             }
 
-            //计算图片控件的frame
+            // 计算图片控件的frame
             CGFloat pictureX = BSTopicCellMargin;
             CGFloat pictureY = BSTopicCellTextY + textH + BSTopicCellMargin;
             _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
 
             _cellHeight += pictureH + BSTopicCellMargin;
-        }
-        else if (self.type == BSTopicTypeVoice) { //声音帖子
+        } else if (self.type == BSTopicTypeVoice) { // 声音帖子
 
         }
 
-        //底部工具条的gaodu
+        // 底部工具条的高度
         _cellHeight += BSTopicCellBottomBarH + BSTopicCellMargin;
     }
     return _cellHeight;
