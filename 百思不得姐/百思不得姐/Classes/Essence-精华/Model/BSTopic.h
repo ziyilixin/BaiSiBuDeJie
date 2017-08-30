@@ -41,6 +41,8 @@
 @property (nonatomic, assign) BSTopicType type;
 /** 音频时长 */
 @property (nonatomic,assign) NSInteger voicetime;
+/** 视频时长 */
+@property (nonatomic,assign) NSInteger videotime;
 /** 播放次数 */
 @property (nonatomic,assign) NSInteger playcount;
 
@@ -56,4 +58,6 @@
 
 /** voice的frame */
 @property (nonatomic, assign, readonly) CGRect voiceF;
+/** video的frame */
+@property (nonatomic, assign, readonly) CGRect videoF;
 @end

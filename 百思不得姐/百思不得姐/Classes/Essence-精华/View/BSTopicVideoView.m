@@ -1,24 +1,25 @@
 //
-//  BSTopicVoiceView.m
+//  BSTopicVideoView.m
 //  百思不得姐
 //
 //  Created by WCF on 2017/8/30.
 //  Copyright © 2017年 WCF. All rights reserved.
 //
 
-#import "BSTopicVoiceView.h"
+#import "BSTopicVideoView.h"
 #import "BSTopic.h"
 #import "BSShowPictureController.h"
 
-@interface BSTopicVoiceView ()
-@property (weak, nonatomic) IBOutlet UIImageView *voiceImageView;
+@interface BSTopicVideoView ()
+@property (weak, nonatomic) IBOutlet UIImageView *videoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *playCountLab;
 @property (weak, nonatomic) IBOutlet UILabel *playTimeLab;
+
 @end
 
-@implementation BSTopicVoiceView
+@implementation BSTopicVideoView
 
-+ (instancetype)voiceView
++ (instancetype)videoView
 {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
@@ -28,8 +29,8 @@
     [super awakeFromNib];
     self.autoresizingMask = UIViewAutoresizingNone;
 
-    self.voiceImageView.userInteractionEnabled = YES;
-    [self.voiceImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPicture)]];
+    self.videoImageView.userInteractionEnabled = YES;
+    [self.videoImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPicture)]];
 }
 
 - (void)showPicture
@@ -43,7 +44,7 @@
 {
     _topic = topic;
 
-    [self.voiceImageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil];
+    [self.videoImageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil];
 
     //播放次数
     self.playCountLab.text = [NSString stringWithFormat:@"%zd播放",topic.playcount];

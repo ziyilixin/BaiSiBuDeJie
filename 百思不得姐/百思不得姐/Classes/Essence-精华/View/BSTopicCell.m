@@ -10,6 +10,7 @@
 #import "BSTopic.h"
 #import "BSTopicPictureView.h"
 #import "BSTopicVoiceView.h"
+#import "BSTopicVideoView.h"
 
 @interface BSTopicCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;//头像
@@ -25,6 +26,8 @@
 @property (nonatomic,weak) BSTopicPictureView *pictureView;
 /** 声音帖子中间的内容 */
 @property (nonatomic,weak) BSTopicVoiceView *voiceView;
+/** 视频帖子中间的内容 */
+@property (nonatomic,weak) BSTopicVideoView *videoView;
 @end
 
 @implementation BSTopicCell
@@ -59,41 +62,66 @@
     return _voiceView;
 }
 
-- (void)setFrame:(CGRect)frame
+- (BSTopicVideoView *)videoView
 {
-    frame.origin.x = BSTopicCellMargin;
-    frame.size.width -= 2*BSTopicCellMargin;
-    frame.size.height -= BSTopicCellMargin;
-    frame.origin.y += BSTopicCellMargin;
-
-    [super setFrame:frame];
+    if (!_videoView) {
+        BSTopicVideoView *videoView = [BSTopicVideoView videoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
 }
 
 - (void)setTopic:(BSTopic *)topic
 {
     _topic = topic;
 
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
-    
+    //加V
     self.sinavImageView.hidden = !topic.isSina_v;
+
+    //头像
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+
+    //名字
     self.nickaNameLabel.text = topic.name;
+
+    //设置帖子的创建时间
     self.timeLabel.text = topic.created_at;
 
     [self setUpButton:self.dingButton count:topic.ding placeHolder:@"顶"];
     [self setUpButton:self.caiButton count:topic.cai placeHolder:@"踩"];
     [self setUpButton:self.shareButton count:topic.repost placeHolder:@"分享"];
     [self setUpButton:self.commentButton count:topic.comment placeHolder:@"评论"];
-    
+
+    // 设置帖子的文字内容
     self.text_Label.text = topic.text;
 
     //根据模型类型(帖子类型)添加对应的内容到cell的中间
     if (topic.type == BSTopicTypePicture) {// 图片帖子
+        self.pictureView.hidden = NO;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
         self.pictureView.topic = topic;
         self.pictureView.frame = topic.pictureF;
     }
     else if (topic.type == BSTopicTypeVoice) {//声音帖子
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = NO;
+        self.videoView.hidden = YES;
         self.voiceView.topic = topic;
         self.voiceView.frame = topic.voiceF;
+    }
+    else if (topic.type == BSTopicTypeVideo) {//视频帖子
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = NO;
+        self.videoView.topic = topic;
+        self.videoView.frame = topic.videoF;
+    }
+    else { //段子
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
     }
 
 }
@@ -107,6 +135,16 @@
         placeHolder = [NSString stringWithFormat:@"%zd",count];
     }
     [button setTitle:placeHolder forState:UIControlStateNormal];
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    frame.origin.x = BSTopicCellMargin;
+    frame.size.width -= 2*BSTopicCellMargin;
+    frame.size.height -= BSTopicCellMargin;
+    frame.origin.y += BSTopicCellMargin;
+
+    [super setFrame:frame];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

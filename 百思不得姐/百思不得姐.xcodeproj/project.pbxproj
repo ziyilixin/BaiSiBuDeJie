@@ -33,6 +33,8 @@
 		54565CD81F18E415007513A0 /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565CD71F18E415007513A0 /* BSNavigationController.m */; };
 		545A8AB21F570A3000B283AC /* BSTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 545A8AB11F570A3000B283AC /* BSTopicVoiceView.m */; };
 		545A8AB41F570A3C00B283AC /* BSTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545A8AB31F570A3C00B283AC /* BSTopicVoiceView.xib */; };
+		545A8AB71F57186100B283AC /* BSTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 545A8AB61F57186100B283AC /* BSTopicVideoView.m */; };
+		545A8AB91F57186F00B283AC /* BSTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545A8AB81F57186F00B283AC /* BSTopicVideoView.xib */; };
 		5480AD8E1F484D7A0060F274 /* BSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480AD8D1F484D7A0060F274 /* BSProgressView.m */; };
 		5480AD921F4850D10060F274 /* BSShowPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480AD901F4850D10060F274 /* BSShowPictureController.m */; };
 		5480AD931F4850D10060F274 /* BSShowPictureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5480AD911F4850D10060F274 /* BSShowPictureController.xib */; };
@@ -129,6 +131,9 @@
 		545A8AB01F570A3000B283AC /* BSTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicVoiceView.h; sourceTree = "<group>"; };
 		545A8AB11F570A3000B283AC /* BSTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicVoiceView.m; sourceTree = "<group>"; };
 		545A8AB31F570A3C00B283AC /* BSTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicVoiceView.xib; sourceTree = "<group>"; };
+		545A8AB51F57186100B283AC /* BSTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicVideoView.h; sourceTree = "<group>"; };
+		545A8AB61F57186100B283AC /* BSTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicVideoView.m; sourceTree = "<group>"; };
+		545A8AB81F57186F00B283AC /* BSTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicVideoView.xib; sourceTree = "<group>"; };
 		5480AD8C1F484D7A0060F274 /* BSProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSProgressView.h; sourceTree = "<group>"; };
 		5480AD8D1F484D7A0060F274 /* BSProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSProgressView.m; sourceTree = "<group>"; };
 		5480AD8F1F4850D10060F274 /* BSShowPictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSShowPictureController.h; sourceTree = "<group>"; };
@@ -318,6 +323,9 @@
 				545A8AB01F570A3000B283AC /* BSTopicVoiceView.h */,
 				545A8AB11F570A3000B283AC /* BSTopicVoiceView.m */,
 				545A8AB31F570A3C00B283AC /* BSTopicVoiceView.xib */,
+				545A8AB51F57186100B283AC /* BSTopicVideoView.h */,
+				545A8AB61F57186100B283AC /* BSTopicVideoView.m */,
+				545A8AB81F57186F00B283AC /* BSTopicVideoView.xib */,
 				5480AD8C1F484D7A0060F274 /* BSProgressView.h */,
 				5480AD8D1F484D7A0060F274 /* BSProgressView.m */,
 			);
@@ -635,6 +643,7 @@
 				5480AD931F4850D10060F274 /* BSShowPictureController.xib in Resources */,
 				54E2F6441F1E58EE00CEE98D /* BSFriendTrendsViewController.xib in Resources */,
 				5441825D1F2058B400AE35A1 /* BSRecommendUserCell.xib in Resources */,
+				545A8AB91F57186F00B283AC /* BSTopicVideoView.xib in Resources */,
 				545062141F30CD0B00D29706 /* BSPushGuideView.xib in Resources */,
 				544002D61F4357CA00BABF1C /* BSTopicPictureView.xib in Resources */,
 				544182551F2045B200AE35A1 /* BSRecommendCategoryCell.xib in Resources */,
@@ -725,6 +734,7 @@
 				54E482491F29C2FF00292E84 /* BSLoginRegisterViewController.m in Sources */,
 				54565CC91F18CD05007513A0 /* BSEssenceViewController.m in Sources */,
 				54565CCE1F18CD05007513A0 /* UIBarButtonItem+BSExtension.m in Sources */,
+				545A8AB71F57186100B283AC /* BSTopicVideoView.m in Sources */,
 				549B02871F259C6A008EE7EA /* BSRecommendTagsCell.m in Sources */,
 				5480AD921F4850D10060F274 /* BSShowPictureController.m in Sources */,
 				54565CD81F18E415007513A0 /* BSNavigationController.m in Sources */,
