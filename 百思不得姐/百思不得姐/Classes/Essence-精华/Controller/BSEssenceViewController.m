@@ -44,11 +44,16 @@
  */
 - (void)addChildViewController
 {
+    BSTopicViewController *voiceVC = [[BSTopicViewController alloc] init];
+    voiceVC.navigationItem.title = @"声音";
+    voiceVC.type = BSTopicTypeVoice;
+    [self addChildViewController:voiceVC];
+
     BSTopicViewController *pictureVC = [[BSTopicViewController alloc] init];
     pictureVC.navigationItem.title = @"图片";
     pictureVC.type = BSTopicTypePicture;
     [self addChildViewController:pictureVC];
-
+    
     BSTopicViewController *allVC = [[BSTopicViewController alloc] init];
     allVC.navigationItem.title = @"全部";
     allVC.type = BSTopicTypeAll;
@@ -59,10 +64,6 @@
     videoVC.type = BSTopicTypeVideo;
     [self addChildViewController:videoVC];
 
-    BSTopicViewController *voiceVC = [[BSTopicViewController alloc] init];
-    voiceVC.navigationItem.title = @"声音";
-    voiceVC.type = BSTopicTypeVoice;
-    [self addChildViewController:voiceVC];
 
 
     BSTopicViewController *wordVC = [[BSTopicViewController alloc] init];

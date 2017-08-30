@@ -9,6 +9,7 @@
 #import "BSTopicCell.h"
 #import "BSTopic.h"
 #import "BSTopicPictureView.h"
+#import "BSTopicVoiceView.h"
 
 @interface BSTopicCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;//头像
@@ -22,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *text_Label;
 /** 图片帖子中间的内容 */
 @property (nonatomic,weak) BSTopicPictureView *pictureView;
+/** 声音帖子中间的内容 */
+@property (nonatomic,weak) BSTopicVoiceView *voiceView;
 @end
 
 @implementation BSTopicCell
@@ -46,6 +49,16 @@
     return _pictureView;
 }
 
+- (BSTopicVoiceView *)voiceView
+{
+    if (!_voiceView) {
+        BSTopicVoiceView *voiceView = [BSTopicVoiceView voiceView];
+        [self.contentView addSubview:voiceView];
+        _voiceView = voiceView;
+    }
+    return _voiceView;
+}
+
 - (void)setFrame:(CGRect)frame
 {
     frame.origin.x = BSTopicCellMargin;
@@ -61,6 +74,7 @@
     _topic = topic;
 
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
     self.sinavImageView.hidden = !topic.isSina_v;
     self.nickaNameLabel.text = topic.name;
     self.timeLabel.text = topic.created_at;
@@ -78,7 +92,8 @@
         self.pictureView.frame = topic.pictureF;
     }
     else if (topic.type == BSTopicTypeVoice) {//声音帖子
-
+        self.voiceView.topic = topic;
+        self.voiceView.frame = topic.voiceF;
     }
 
 }

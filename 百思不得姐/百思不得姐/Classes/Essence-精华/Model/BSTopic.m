@@ -12,7 +12,6 @@
 @implementation BSTopic
 {
     CGFloat _cellHeight;
-    CGRect _pictureF;
 }
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName
@@ -90,7 +89,13 @@
 
             _cellHeight += pictureH + BSTopicCellMargin;
         } else if (self.type == BSTopicTypeVoice) { // 声音帖子
-
+            CGFloat voiceX = BSTopicCellMargin;
+            CGFloat voiceY = BSTopicCellTextY + textH + BSTopicCellMargin;
+            CGFloat voiceW = maxSize.width;
+            CGFloat voiceH = voiceW * self.height / self.width;
+            _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
+            
+            _cellHeight += voiceH + BSTopicCellMargin;
         }
 
         // 底部工具条的高度
