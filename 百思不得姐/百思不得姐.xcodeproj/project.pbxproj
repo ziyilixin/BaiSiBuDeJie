@@ -58,6 +58,8 @@
 		54E4824A1F29C2FF00292E84 /* BSLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E482481F29C2FF00292E84 /* BSLoginRegisterViewController.xib */; };
 		54E4824D1F29C7E900292E84 /* BSVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E4824C1F29C7E900292E84 /* BSVerticalButton.m */; };
 		54E482501F29E76300292E84 /* BSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E4824F1F29E76300292E84 /* BSTextField.m */; };
+		54F9D9EB1F795F6000C0800A /* BSComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F9D9EA1F795F6000C0800A /* BSComment.m */; };
+		54F9D9EE1F79600200C0800A /* BSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F9D9ED1F79600200C0800A /* BSUser.m */; };
 		EEE285A80606911C4551F17D /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 177C68AB4DF1865274ACE6F8 /* libPods-百思不得姐.a */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +174,10 @@
 		54E4824C1F29C7E900292E84 /* BSVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVerticalButton.m; sourceTree = "<group>"; };
 		54E4824E1F29E76300292E84 /* BSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextField.h; sourceTree = "<group>"; };
 		54E4824F1F29E76300292E84 /* BSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextField.m; sourceTree = "<group>"; };
+		54F9D9E91F795F6000C0800A /* BSComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSComment.h; sourceTree = "<group>"; };
+		54F9D9EA1F795F6000C0800A /* BSComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSComment.m; sourceTree = "<group>"; };
+		54F9D9EC1F79600200C0800A /* BSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUser.h; sourceTree = "<group>"; };
+		54F9D9ED1F79600200C0800A /* BSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSUser.m; sourceTree = "<group>"; };
 		E3BFDDBBE44FDD6BE96B3A73 /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -304,6 +310,10 @@
 				549B02821F259B2E008EE7EA /* BSRecommendTags.m */,
 				549AEF8A1F35BE4800E68D43 /* BSTopic.h */,
 				549AEF8B1F35BE4800E68D43 /* BSTopic.m */,
+				54F9D9E91F795F6000C0800A /* BSComment.h */,
+				54F9D9EA1F795F6000C0800A /* BSComment.m */,
+				54F9D9EC1F79600200C0800A /* BSUser.h */,
+				54F9D9ED1F79600200C0800A /* BSUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -750,11 +760,13 @@
 				544182501F20444F00AE35A1 /* BSRecommendCategory.m in Sources */,
 				54565CCF1F18CD05007513A0 /* UIView+BSExtension.m in Sources */,
 				544182581F20577600AE35A1 /* BSRecommendUser.m in Sources */,
+				54F9D9EB1F795F6000C0800A /* BSComment.m in Sources */,
 				54565CCB1F18CD05007513A0 /* BSMeViewController.m in Sources */,
 				54565CD21F18CD05007513A0 /* main.m in Sources */,
 				54E2F64B1F1E63C000CEE98D /* Foundation+Log.m in Sources */,
 				54D7B5941F41F77900B0541D /* BSTopicViewController.m in Sources */,
 				549AEF921F35D0B200E68D43 /* BSConst.m in Sources */,
+				54F9D9EE1F79600200C0800A /* BSUser.m in Sources */,
 				54565CD31F18CD05007513A0 /* BSTabBar.m in Sources */,
 				5485F9D71F36FFB0008AD53D /* BSTopicCell.m in Sources */,
 				54565CCD1F18CD05007513A0 /* AppDelegate.m in Sources */,

@@ -63,7 +63,7 @@
 
         //将下载完成的图片绘制到图形上下文
         CGFloat width = topic.pictureF.size.width;
-        CGFloat height = topic.pictureF.size.width * image.size.height / image.size.width;
+        CGFloat height = width * image.size.height / image.size.width;
         [image drawInRect:CGRectMake(0, 0, width, height)];
 
         //获得图片

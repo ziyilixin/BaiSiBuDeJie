@@ -45,6 +45,8 @@
 @property (nonatomic,assign) NSInteger videotime;
 /** 播放次数 */
 @property (nonatomic,assign) NSInteger playcount;
+/** 最热评论 */
+@property (nonatomic,strong) NSArray *top_cmt;
 
 /*************额外的辅助属性*************/
 /** cell的高度 */

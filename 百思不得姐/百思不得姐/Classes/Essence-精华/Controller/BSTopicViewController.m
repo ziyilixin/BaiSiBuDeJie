@@ -90,7 +90,7 @@ static NSString * const topicCellId = @"topic";
 
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (self.params != params) return;
-
+        
         //存储maxtime
         self.maxtime = responseObject[@"info"][@"maxtime"];
 

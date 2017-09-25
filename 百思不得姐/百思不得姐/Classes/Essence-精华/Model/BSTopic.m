@@ -8,6 +8,8 @@
 
 #import "BSTopic.h"
 #import <MJExtension.h>
+#import "BSComment.h"
+#import "BSUser.h"
 
 @implementation BSTopic
 {
@@ -21,6 +23,11 @@
              @"middle_image":@"image1",
              @"large_image":@"image2",
              };
+}
+
++ (NSDictionary *)mj_objectClassInArray
+{
+    return @{@"top_cmt" : [BSComment class]};
 }
 
 - (NSString *)created_at
@@ -105,6 +112,13 @@
             _videoF = CGRectMake(videoX, videoY, videoW, videoH);
 
             _cellHeight += videoH + BSTopicCellMargin;
+        }
+
+        BSComment *comment = [self.top_cmt firstObject];
+        if (comment) {
+            NSString *content = [NSString stringWithFormat:@"%@:%@",comment.user.username,comment.content];
+            CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+            _cellHeight += BSTopicCellTopCmtTitleH + contentH + BSTopicCellMargin;
         }
 
         // 底部工具条的高度

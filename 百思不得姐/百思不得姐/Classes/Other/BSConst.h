@@ -25,3 +25,10 @@ UIKIT_EXTERN CGFloat const BSTopicCellBottomBarH;
 UIKIT_EXTERN CGFloat const BSTopicCellPictureMaxH;
 /** 精华-cell-图片帖子一旦超过最大高度,就是用Break */
 UIKIT_EXTERN CGFloat const BSTopicCellPictureBreakH;
+
+/** BSUser模型-性别属性值 */
+UIKIT_EXTERN NSString * const BSUserSexMale;
+UIKIT_EXTERN NSString * const BSUserSexFemale;
+
+/** 精华-cell-最热评论标题的高度 */
+UIKIT_EXTERN CGFloat const BSTopicCellTopCmtTitleH;

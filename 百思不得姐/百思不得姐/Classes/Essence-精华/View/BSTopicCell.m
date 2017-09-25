@@ -11,6 +11,8 @@
 #import "BSTopicPictureView.h"
 #import "BSTopicVoiceView.h"
 #import "BSTopicVideoView.h"
+#import "BSComment.h"
+#import "BSUser.h"
 
 @interface BSTopicCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;//头像
@@ -28,6 +30,10 @@
 @property (nonatomic,weak) BSTopicVoiceView *voiceView;
 /** 视频帖子中间的内容 */
 @property (nonatomic,weak) BSTopicVideoView *videoView;
+/** 最热评论的内容 */
+@property (weak, nonatomic) IBOutlet UILabel *topCmtContentLabel;
+/** 最热评论的整体 */
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
 @end
 
 @implementation BSTopicCell
@@ -122,6 +128,16 @@
         self.pictureView.hidden = YES;
         self.voiceView.hidden = YES;
         self.videoView.hidden = YES;
+    }
+
+    // 处理最热评论
+    BSComment *comment = [topic.top_cmt firstObject];
+    if (comment) {
+        self.topCmtView.hidden = NO;
+        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@:%@",comment.user.username,comment.content];
+    }
+    else {
+        self.topCmtView.hidden = YES;
     }
 
 }
