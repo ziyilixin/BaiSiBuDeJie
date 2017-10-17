@@ -11,7 +11,7 @@ CGFloat const BSTopicCellMargin = 10;
 /** 精华-cell-文字内容的Y值 */
 CGFloat const BSTopicCellTextY = 55;
 /** 精华-cell-底部工具条的高度 */
-CGFloat const BSTopicCellBottomBarH = 44;
+CGFloat const BSTopicCellBottomBarH = 35;
 
 /** 精华-cell-图片帖子的最大高度 */
 CGFloat const BSTopicCellPictureMaxH = 1000;
