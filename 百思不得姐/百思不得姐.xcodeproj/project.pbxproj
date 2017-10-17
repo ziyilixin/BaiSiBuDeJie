@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		541103FE1F9656AB0011A532 /* BSCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 541103FC1F9656AB0011A532 /* BSCommentViewController.m */; };
+		541103FF1F9656AB0011A532 /* BSCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 541103FD1F9656AB0011A532 /* BSCommentViewController.xib */; };
 		544002D41F4357BF00BABF1C /* BSTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544002D31F4357BF00BABF1C /* BSTopicPictureView.m */; };
 		544002D61F4357CA00BABF1C /* BSTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544002D51F4357CA00BABF1C /* BSTopicPictureView.xib */; };
 		544182501F20444F00AE35A1 /* BSRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5441824F1F20444F00AE35A1 /* BSRecommendCategory.m */; };
@@ -83,6 +85,9 @@
 /* Begin PBXFileReference section */
 		0C822E6A8100C00FA58B20BB /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
 		177C68AB4DF1865274ACE6F8 /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		541103FB1F9656AB0011A532 /* BSCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentViewController.h; sourceTree = "<group>"; };
+		541103FC1F9656AB0011A532 /* BSCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentViewController.m; sourceTree = "<group>"; };
+		541103FD1F9656AB0011A532 /* BSCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSCommentViewController.xib; sourceTree = "<group>"; };
 		544002D21F4357BF00BABF1C /* BSTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicPictureView.h; sourceTree = "<group>"; };
 		544002D31F4357BF00BABF1C /* BSTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicPictureView.m; sourceTree = "<group>"; };
 		544002D51F4357CA00BABF1C /* BSTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicPictureView.xib; sourceTree = "<group>"; };
@@ -299,6 +304,9 @@
 				5480AD8F1F4850D10060F274 /* BSShowPictureController.h */,
 				5480AD901F4850D10060F274 /* BSShowPictureController.m */,
 				5480AD911F4850D10060F274 /* BSShowPictureController.xib */,
+				541103FB1F9656AB0011A532 /* BSCommentViewController.h */,
+				541103FC1F9656AB0011A532 /* BSCommentViewController.m */,
+				541103FD1F9656AB0011A532 /* BSCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -653,6 +661,7 @@
 				5480AD931F4850D10060F274 /* BSShowPictureController.xib in Resources */,
 				54E2F6441F1E58EE00CEE98D /* BSFriendTrendsViewController.xib in Resources */,
 				5441825D1F2058B400AE35A1 /* BSRecommendUserCell.xib in Resources */,
+				541103FF1F9656AB0011A532 /* BSCommentViewController.xib in Resources */,
 				545A8AB91F57186F00B283AC /* BSTopicVideoView.xib in Resources */,
 				545062141F30CD0B00D29706 /* BSPushGuideView.xib in Resources */,
 				544002D61F4357CA00BABF1C /* BSTopicPictureView.xib in Resources */,
@@ -749,6 +758,7 @@
 				5480AD921F4850D10060F274 /* BSShowPictureController.m in Sources */,
 				54565CD81F18E415007513A0 /* BSNavigationController.m in Sources */,
 				54565CCA1F18CD05007513A0 /* BSFriendTrendsViewController.m in Sources */,
+				541103FE1F9656AB0011A532 /* BSCommentViewController.m in Sources */,
 				549B02801F2598BE008EE7EA /* BSRecommendTagsViewController.m in Sources */,
 				54565CCC1F18CD05007513A0 /* BSNewViewController.m in Sources */,
 				545A8AB21F570A3000B283AC /* BSTopicVoiceView.m in Sources */,

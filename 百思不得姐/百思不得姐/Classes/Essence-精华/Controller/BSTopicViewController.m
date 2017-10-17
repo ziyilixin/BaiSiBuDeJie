@@ -9,6 +9,7 @@
 #import "BSTopicViewController.h"
 #import "BSTopic.h"
 #import "BSTopicCell.h"
+#import "BSCommentViewController.h"
 
 @interface BSTopicViewController ()
 /** 帖子数据 */
@@ -175,6 +176,12 @@ static NSString * const topicCellId = @"topic";
     //取出帖子模型
     BSTopic *topic = self.topics[indexPath.row];
     return topic.cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BSCommentViewController *bscommentVC = [[BSCommentViewController alloc] init];
+    [self.navigationController pushViewController:bscommentVC animated:YES];
 }
 
 @end
