@@ -181,6 +181,7 @@ static NSString * const topicCellId = @"topic";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BSCommentViewController *bscommentVC = [[BSCommentViewController alloc] init];
+    bscommentVC.topic = self.topics[indexPath.row];
     [self.navigationController pushViewController:bscommentVC animated:YES];
 }
 

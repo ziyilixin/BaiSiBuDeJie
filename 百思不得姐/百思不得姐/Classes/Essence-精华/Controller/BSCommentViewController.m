@@ -7,10 +7,17 @@
 //
 
 #import "BSCommentViewController.h"
+#import "BSTopic.h"
+#import "BSTopicCell.h"
+#import "BSComment.h"
 
-@interface BSCommentViewController () <UITableViewDelegate>
+@interface BSCommentViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSapce;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+/** 最热评论 */
+@property (nonatomic,strong) NSArray *hotComments;
+/** 最新评论 */
+@property (nonatomic,strong) NSMutableArray *latestComments;
 @end
 
 @implementation BSCommentViewController
@@ -20,6 +27,10 @@
     // Do any additional setup after loading the view from its nib.
 
     [self setupBasic];
+
+    [self setupHeader];
+
+    [self setupRefresh];
 }
 
 - (void)setupBasic
@@ -28,6 +39,52 @@
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"comment_nav_item_share_icon" highImage:@"comment_nav_item_share_icon_click" target:self action:nil];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+
+    self.tableView.backgroundColor = BSGlobalBg;
+}
+
+- (void)setupHeader
+{
+    UIView *header = [[UIView alloc] init];
+    BSTopicCell *cell = [BSTopicCell cell];
+    cell.topic = self.topic;
+    cell.size = CGSizeMake(kScreenW, self.topic.cellHeight);
+    [header addSubview:cell];
+
+    header.height = self.topic.cellHeight + BSTopicCellMargin;
+
+    self.tableView.tableHeaderView = header;
+}
+
+- (void)setupRefresh
+{
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewComments)];
+    [self.tableView.mj_header beginRefreshing];
+}
+
+- (void)loadNewComments
+{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"dataList";
+    params[@"c"] = @"comment";
+    params[@"data_id"] = self.topic.ID;
+    params[@"hot"] = @"1";
+
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //最热评论
+        self.hotComments = [BSComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
+        //最新评论
+        self.latestComments = [BSComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        //刷新数据
+        [self.tableView reloadData];
+        //结束刷新
+        [self.tableView.mj_header endRefreshing];
+
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self.tableView.mj_header endRefreshing];
+    }];
 }
 
 - (void)keyboardWillChangeFrame:(NSNotification *)note
@@ -47,6 +104,64 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    NSInteger hotCount = self.hotComments.count;
+    NSInteger latestCount = self.latestComments.count;
+
+    if (hotCount) return 2;//有“最热评论” + “最新评论” 2组
+    if (latestCount) return 1;//有最新评论 1组
+    return 0;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSInteger hotCount = self.hotComments.count;
+    NSInteger latestCout = self.latestComments.count;
+    if (section == 0) {
+        return hotCount ? hotCount : latestCout;
+    }
+    return latestCout;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSInteger hotCount = self.hotComments.count;
+    if (section == 0) {
+        return hotCount ? @"最热评论" : @"最新评论";
+    }
+    return @"最新评论";
+}
+
+/**
+ * 返回第section组的所有评论数组
+ */
+- (NSArray *)commentsInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return self.hotComments.count ? self.hotComments : self.latestComments;
+    }
+    return self.latestComments;
+}
+
+- (BSComment *)commentInIndexPath:(NSIndexPath *)indexPath
+{
+    return [self commentsInSection:indexPath.section][indexPath.row];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"comment"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"comment"];
+    }
+    BSComment *comment = [self commentInIndexPath:indexPath];
+    cell.textLabel.text = comment.content;
+    return cell;
 }
 
 #pragma mark - UITableVieDelegate

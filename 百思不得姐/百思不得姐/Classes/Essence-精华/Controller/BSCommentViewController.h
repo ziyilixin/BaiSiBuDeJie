@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BSCommentViewController : UIViewController
+@class BSTopic;
 
+@interface BSCommentViewController : UIViewController
+@property (nonatomic,strong) BSTopic *topic;
 @end

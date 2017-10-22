@@ -48,6 +48,11 @@
 
 }
 
++ (instancetype)cell
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
+}
+
 - (BSTopicPictureView *)pictureView
 {
     if (!_pictureView) {
@@ -157,10 +162,17 @@
 {
     frame.origin.x = BSTopicCellMargin;
     frame.size.width -= 2*BSTopicCellMargin;
-    frame.size.height -= BSTopicCellMargin;
+    //frame.size.height -= BSTopicCellMargin;
+    frame.size.height = self.topic.cellHeight - BSTopicCellMargin;
     frame.origin.y += BSTopicCellMargin;
 
     [super setFrame:frame];
+}
+
+- (IBAction)more:(id)sender {
+
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"收藏",@"举报", nil];
+    [actionSheet showInView:self.window];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
