@@ -10,6 +10,7 @@
 #import "BSTopic.h"
 #import "BSTopicCell.h"
 #import "BSComment.h"
+#import "BSCommentHeaderView.h"
 
 @interface BSCommentViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSapce;
@@ -128,13 +129,17 @@
     return latestCout;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    BSCommentHeaderView *headerView = [BSCommentHeaderView headerViewWithTableView:tableView];
     NSInteger hotCount = self.hotComments.count;
     if (section == 0) {
-        return hotCount ? @"最热评论" : @"最新评论";
+        headerView.title = hotCount ? @"最热评论" : @"最新评论";
     }
-    return @"最新评论";
+    else {
+        headerView.title = @"最新评论";
+    }
+    return headerView;
 }
 
 /**

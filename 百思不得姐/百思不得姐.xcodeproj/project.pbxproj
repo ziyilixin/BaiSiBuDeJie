@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		541103FE1F9656AB0011A532 /* BSCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 541103FC1F9656AB0011A532 /* BSCommentViewController.m */; };
 		541103FF1F9656AB0011A532 /* BSCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 541103FD1F9656AB0011A532 /* BSCommentViewController.xib */; };
+		54346A251F9C953A00E56B65 /* BSCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54346A241F9C953A00E56B65 /* BSCommentHeaderView.m */; };
 		544002D41F4357BF00BABF1C /* BSTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544002D31F4357BF00BABF1C /* BSTopicPictureView.m */; };
 		544002D61F4357CA00BABF1C /* BSTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544002D51F4357CA00BABF1C /* BSTopicPictureView.xib */; };
 		544182501F20444F00AE35A1 /* BSRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5441824F1F20444F00AE35A1 /* BSRecommendCategory.m */; };
@@ -88,6 +89,8 @@
 		541103FB1F9656AB0011A532 /* BSCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentViewController.h; sourceTree = "<group>"; };
 		541103FC1F9656AB0011A532 /* BSCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentViewController.m; sourceTree = "<group>"; };
 		541103FD1F9656AB0011A532 /* BSCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSCommentViewController.xib; sourceTree = "<group>"; };
+		54346A231F9C953A00E56B65 /* BSCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentHeaderView.h; sourceTree = "<group>"; };
+		54346A241F9C953A00E56B65 /* BSCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentHeaderView.m; sourceTree = "<group>"; };
 		544002D21F4357BF00BABF1C /* BSTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicPictureView.h; sourceTree = "<group>"; };
 		544002D31F4357BF00BABF1C /* BSTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicPictureView.m; sourceTree = "<group>"; };
 		544002D51F4357CA00BABF1C /* BSTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicPictureView.xib; sourceTree = "<group>"; };
@@ -346,6 +349,8 @@
 				545A8AB81F57186F00B283AC /* BSTopicVideoView.xib */,
 				5480AD8C1F484D7A0060F274 /* BSProgressView.h */,
 				5480AD8D1F484D7A0060F274 /* BSProgressView.m */,
+				54346A231F9C953A00E56B65 /* BSCommentHeaderView.h */,
+				54346A241F9C953A00E56B65 /* BSCommentHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -751,6 +756,7 @@
 				5480AD971F495A960060F274 /* BSPublishViewController.m in Sources */,
 				54E2F6481F1E616D00CEE98D /* BSRecommendViewController.m in Sources */,
 				54E482491F29C2FF00292E84 /* BSLoginRegisterViewController.m in Sources */,
+				54346A251F9C953A00E56B65 /* BSCommentHeaderView.m in Sources */,
 				54565CC91F18CD05007513A0 /* BSEssenceViewController.m in Sources */,
 				54565CCE1F18CD05007513A0 /* UIBarButtonItem+BSExtension.m in Sources */,
 				545A8AB71F57186100B283AC /* BSTopicVideoView.m in Sources */,
