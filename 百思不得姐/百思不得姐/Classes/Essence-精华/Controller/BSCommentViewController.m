@@ -11,6 +11,7 @@
 #import "BSTopicCell.h"
 #import "BSComment.h"
 #import "BSCommentHeaderView.h"
+#import "BSCommentCell.h"
 
 @interface BSCommentViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSapce;
@@ -20,8 +21,10 @@
 /** 最新评论 */
 @property (nonatomic,strong) NSMutableArray *latestComments;\
 /** 保存帖子的top_cmt */
-@property (nonatomic,strong) NSArray *saved_top_cmt;
+@property (nonatomic,strong) BSComment *saved_top_cmt;
 @end
+
+static NSString * const BSCommentId = @"comment";
 
 @implementation BSCommentViewController
 
@@ -43,6 +46,11 @@
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
 
+    self.tableView.estimatedRowHeight = 44;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSCommentCell class]) bundle:nil] forCellReuseIdentifier:BSCommentId];
+
     self.tableView.backgroundColor = BSGlobalBg;
 }
 
@@ -51,7 +59,7 @@
     UIView *header = [[UIView alloc] init];
 
     //清空top_cmt
-    if (self.topic.top_cmt.count) {
+    if (self.topic.top_cmt) {
         self.saved_top_cmt = self.topic.top_cmt;
         self.topic.top_cmt = nil;
         [self.topic setValue:@0 forKeyPath:@"cellHeight"];
@@ -116,7 +124,7 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     //恢复帖子的top_cmt
-    if (self.saved_top_cmt.count) {
+    if (self.saved_top_cmt) {
         self.topic.top_cmt = self.saved_top_cmt;
         [self.topic setValue:@0 forKeyPath:@"cellHeight"];
     }
@@ -176,12 +184,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"comment"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"comment"];
-    }
-    BSComment *comment = [self commentInIndexPath:indexPath];
-    cell.textLabel.text = comment.content;
+    BSCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:BSCommentId];
+    cell.comment = [self commentInIndexPath:indexPath];
     return cell;
 }
 

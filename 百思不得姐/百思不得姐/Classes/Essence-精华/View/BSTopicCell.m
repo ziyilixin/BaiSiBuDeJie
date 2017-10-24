@@ -136,10 +136,9 @@
     }
 
     // 处理最热评论
-    BSComment *comment = [topic.top_cmt firstObject];
-    if (comment) {
+    if (topic.top_cmt) {
         self.topCmtView.hidden = NO;
-        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@:%@",comment.user.username,comment.content];
+        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@:%@",topic.top_cmt.user.username,topic.top_cmt.content];
     }
     else {
         self.topCmtView.hidden = YES;
