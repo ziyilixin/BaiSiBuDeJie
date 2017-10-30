@@ -24,6 +24,11 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+
+    UIImageView *bgView = [[UIImageView alloc] init];
+    bgView.image = [UIImage imageNamed:@"mainCellBackground"];
+    self.backgroundView = bgView;
+
 }
 
 - (void)setComment:(BSComment *)comment
@@ -44,6 +49,14 @@
         self.voiceButton.hidden = YES;
     }
 
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    frame.origin.x = BSTopicCellMargin;
+    frame.size.width -= 2*BSTopicCellMargin;
+
+    [super setFrame:frame];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
