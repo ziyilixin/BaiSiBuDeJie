@@ -114,7 +114,6 @@ static NSString * const BSCommentId = @"comment";
     params[@"a"] = @"dataList";
     params[@"c"] = @"comment";
     params[@"data_id"] = self.topic.ID;
-    params[@"hot"] = @"1";
     params[@"page"] = @(page);
     BSComment *comment = [self.latestComments lastObject];
     params[@"lastcid"] = comment.ID;
@@ -122,6 +121,12 @@ static NSString * const BSCommentId = @"comment";
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
 
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+
+        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+            self.tableView.mj_footer.hidden = YES;
+            return;
+        }
+
         //最新评论
         NSArray *newComments = [BSComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
         [self.latestComments addObjectsFromArray:newComments];
@@ -161,6 +166,7 @@ static NSString * const BSCommentId = @"comment";
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
 
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
         //最热评论
         self.hotComments = [BSComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
         //最新评论
