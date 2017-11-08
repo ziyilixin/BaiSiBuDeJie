@@ -35,6 +35,8 @@
 @property (nonatomic, assign) CGFloat width;
 /** 图片的高度 */
 @property (nonatomic, assign) CGFloat height;
+/** 最热评论 */
+@property (nonatomic,strong) BSComment *top_cmt;
 /** 小图的url */
 @property (nonatomic, copy) NSString *small_image;
 /** 中图的url */
@@ -49,8 +51,7 @@
 @property (nonatomic,assign) NSInteger videotime;
 /** 播放次数 */
 @property (nonatomic,assign) NSInteger playcount;
-/** 最热评论 */
-@property (nonatomic,strong) BSComment *top_cmt;
+
 
 /*************额外的辅助属性*************/
 /** cell的高度 */

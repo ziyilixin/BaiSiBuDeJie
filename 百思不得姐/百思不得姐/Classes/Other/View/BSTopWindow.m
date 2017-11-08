@@ -25,24 +25,29 @@ static UIWindow *window_;
     window_.hidden = NO;
 }
 
++ (void)hide
+{
+    window_.hidden = YES;
+}
+
 + (void)windowClick
 {
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [self searchScrollViewInView:window];
 }
 
-+ (void)searchScrollViewInView:(UIView *)superView
++ (void)searchScrollViewInView:(UIView *)superview
 {
-    for (UIScrollView *subView in superView.subviews) {
+    for (UIScrollView *subview in superview.subviews) {
         // 如果是scrollview, 滚动最顶部
-        if ([subView isKindOfClass:[UIScrollView class]]) {
-            CGPoint offset = subView.contentOffset;
-            offset.y = -subView.contentInset.top;
-            [subView setContentOffset:offset animated:YES];
+        if ([subview isKindOfClass:[UIScrollView class]] && subview.isShowingOnKeyWindow) {
+            CGPoint offset = subview.contentOffset;
+            offset.y = - subview.contentInset.top;
+            [subview setContentOffset:offset animated:YES];
         }
 
-        //继续查找子控件
-        [self searchScrollViewInView:superView];
+        // 继续查找子控件
+        [self searchScrollViewInView:subview];
     }
 }
 

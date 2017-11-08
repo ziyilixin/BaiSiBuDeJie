@@ -10,4 +10,5 @@
 
 @interface BSTopWindow : NSObject
 + (void)show;
++ (void)hide;
 @end
