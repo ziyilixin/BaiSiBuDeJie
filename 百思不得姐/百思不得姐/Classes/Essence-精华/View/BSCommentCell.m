@@ -31,6 +31,16 @@
 
 }
 
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    return NO;
+}
+
 - (void)setComment:(BSComment *)comment
 {
     _comment = comment;
