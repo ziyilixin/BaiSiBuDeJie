@@ -20,6 +20,8 @@
 @property (nonatomic,strong) NSMutableDictionary *params;
 /** 页码 */
 @property (nonatomic,assign) NSInteger page;
+/** 上次选中的索引(或者控制器) */
+@property (nonatomic, assign) NSInteger lastSelectedIndex;
 @end
 
 static NSString * const topicCellId = @"topic";
@@ -60,6 +62,18 @@ static NSString * const topicCellId = @"topic";
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
 
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSTopicCell class]) bundle:nil] forCellReuseIdentifier:topicCellId];
+
+    [BSNotificationCenter addObserver:self selector:@selector(tabBarSelect) name:BSTabBarDidSelectNotification object:nil];
+}
+
+- (void)tabBarSelect
+{
+    if (self.lastSelectedIndex == self.tabBarController.selectedIndex && self.view.isShowingOnKeyWindow)
+    {
+        [self.tableView.mj_header beginRefreshing];
+    }
+    
+    self.lastSelectedIndex = self.tabBarController.selectedIndex;
 }
 
 /**

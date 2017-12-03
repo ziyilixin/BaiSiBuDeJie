@@ -24,3 +24,6 @@ CGFloat const BSTopicCellPictureBreakH = 250;
 
 /** 精华-cell-最热评论标题的高度 */
 CGFloat const BSTopicCellTopCmtTitleH = 20;
+
+/** tabBar被选中的通知名字 */
+NSString * const BSTabBarDidSelectNotification = @"BSTabBarDidSelectNotification";

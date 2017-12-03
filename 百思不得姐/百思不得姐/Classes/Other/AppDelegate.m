@@ -11,7 +11,7 @@
 #import "BSPushGuideView.h"
 #import "BSTopWindow.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()//<UITabBarControllerDelegate>
 
 @end
 
@@ -25,6 +25,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
     //设置窗口的根控制器
+//    BSTabBarController *tabBarController = [[BSTabBarController alloc] init];
+//    tabBarController.delegate = self;
     self.window.rootViewController = [[BSTabBarController alloc] init];
 
     //显示窗口
@@ -35,6 +37,11 @@
 
     return YES;
 }
+
+//- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+//{
+//    [BSNotificationCenter postNotificationName:BSTabBarDidSelectNotification object:nil userInfo:nil];
+//}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

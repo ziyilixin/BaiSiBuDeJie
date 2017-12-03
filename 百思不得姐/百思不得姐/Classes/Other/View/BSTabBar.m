@@ -43,6 +43,9 @@
 {
     [super layoutSubviews];
 
+    //标记按钮是否已经添加过监听器
+    static BOOL added = NO;
+
     //设置发布按钮的frame
     CGFloat width = self.width;
     CGFloat height = self.height;
@@ -55,7 +58,7 @@
 
     NSInteger index = 0;
     
-    for (UIView *button in self.subviews) {
+    for (UIControl *button in self.subviews) {
 
         if (![button isKindOfClass:[UIControl class]] || button == self.publishButton)  continue;
 
@@ -65,8 +68,20 @@
 
         //增加索引
         index++;
+
+        if (added == NO) {
+            [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+        }
         
     }
+    
+    added = YES;
+}
+
+- (void)buttonClick
+{
+    //发出一个通知
+    [BSNotificationCenter postNotificationName:BSTabBarDidSelectNotification object:nil userInfo:nil];
 }
 
 @end
