@@ -26,8 +26,9 @@
 - (void)setRecommendTag:(BSRecommendTags *)recommendTag
 {
     _recommendTag = recommendTag;
-
-    [self.imagelistImg sd_setImageWithURL:[NSURL URLWithString:recommendTag.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    [self.imagelistImg setHeader:recommendTag.image_list];
+    
     self.nameLabel.text = recommendTag.theme_name;
     NSString *subNumber = nil;
     if (recommendTag.sub_number < 10000) {
@@ -42,8 +43,6 @@
 
 - (void)setFrame:(CGRect)frame
 {
-    frame.origin.x = 10;
-    frame.size.width -= 2*frame.origin.x;
     frame.size.height -= 1;
 
     [super setFrame:frame];

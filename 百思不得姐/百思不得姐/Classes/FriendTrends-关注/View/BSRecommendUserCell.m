@@ -25,8 +25,8 @@
 - (void)setUser:(BSRecommendUser *)user
 {
     _user = user;
-
-    [self.headImg sd_setImageWithURL:[NSURL URLWithString:user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    [self.headImg setHeader:user.header];
     self.screenNameLab.text = user.screen_name;
 
     NSString *fansNumber = nil;

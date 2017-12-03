@@ -44,8 +44,9 @@
 - (void)setComment:(BSComment *)comment
 {
     _comment = comment;
+    
+    [self.headImgeView setHeader:comment.user.profile_image];
 
-    [self.headImgeView sd_setImageWithURL:[NSURL URLWithString:comment.user.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     self.sexImgeView.image = [comment.user.sex isEqualToString:BSUserSexMale] ? [UIImage imageNamed:@"Profile_manIcon"] : [UIImage imageNamed:@"Profile_womanIcon"];
     self.contentLab.text = comment.content;
     self.nameLab.text = comment.user.username;
@@ -59,14 +60,6 @@
         self.voiceButton.hidden = YES;
     }
 
-}
-
-- (void)setFrame:(CGRect)frame
-{
-    frame.origin.x = BSTopicCellMargin;
-    frame.size.width -= 2*BSTopicCellMargin;
-
-    [super setFrame:frame];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

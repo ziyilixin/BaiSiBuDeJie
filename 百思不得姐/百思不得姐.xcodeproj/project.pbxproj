@@ -40,6 +40,8 @@
 		545A8AB41F570A3C00B283AC /* BSTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545A8AB31F570A3C00B283AC /* BSTopicVoiceView.xib */; };
 		545A8AB71F57186100B283AC /* BSTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 545A8AB61F57186100B283AC /* BSTopicVideoView.m */; };
 		545A8AB91F57186F00B283AC /* BSTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545A8AB81F57186F00B283AC /* BSTopicVideoView.xib */; };
+		545FEAF31FD3C9A20078252E /* UIImage+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 545FEAF21FD3C9A20078252E /* UIImage+BSExtension.m */; };
+		545FEAF61FD3CD920078252E /* UIImageView+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 545FEAF51FD3CD920078252E /* UIImageView+BSExtension.m */; };
 		5480AD8E1F484D7A0060F274 /* BSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480AD8D1F484D7A0060F274 /* BSProgressView.m */; };
 		5480AD921F4850D10060F274 /* BSShowPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480AD901F4850D10060F274 /* BSShowPictureController.m */; };
 		5480AD931F4850D10060F274 /* BSShowPictureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5480AD911F4850D10060F274 /* BSShowPictureController.xib */; };
@@ -150,6 +152,10 @@
 		545A8AB51F57186100B283AC /* BSTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicVideoView.h; sourceTree = "<group>"; };
 		545A8AB61F57186100B283AC /* BSTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicVideoView.m; sourceTree = "<group>"; };
 		545A8AB81F57186F00B283AC /* BSTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicVideoView.xib; sourceTree = "<group>"; };
+		545FEAF11FD3C9A20078252E /* UIImage+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BSExtension.h"; sourceTree = "<group>"; };
+		545FEAF21FD3C9A20078252E /* UIImage+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BSExtension.m"; sourceTree = "<group>"; };
+		545FEAF41FD3CD920078252E /* UIImageView+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+BSExtension.h"; sourceTree = "<group>"; };
+		545FEAF51FD3CD920078252E /* UIImageView+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+BSExtension.m"; sourceTree = "<group>"; };
 		5480AD8C1F484D7A0060F274 /* BSProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSProgressView.h; sourceTree = "<group>"; };
 		5480AD8D1F484D7A0060F274 /* BSProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSProgressView.m; sourceTree = "<group>"; };
 		5480AD8F1F4850D10060F274 /* BSShowPictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSShowPictureController.h; sourceTree = "<group>"; };
@@ -512,6 +518,10 @@
 				54565CBF1F18CD05007513A0 /* UIView+BSExtension.m */,
 				54827D901F3B618D00081047 /* NSDate+BSExtension.h */,
 				54827D911F3B618D00081047 /* NSDate+BSExtension.m */,
+				545FEAF11FD3C9A20078252E /* UIImage+BSExtension.h */,
+				545FEAF21FD3C9A20078252E /* UIImage+BSExtension.m */,
+				545FEAF41FD3CD920078252E /* UIImageView+BSExtension.h */,
+				545FEAF51FD3CD920078252E /* UIImageView+BSExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -798,11 +808,13 @@
 				54E2F64B1F1E63C000CEE98D /* Foundation+Log.m in Sources */,
 				54D7B5941F41F77900B0541D /* BSTopicViewController.m in Sources */,
 				549AEF921F35D0B200E68D43 /* BSConst.m in Sources */,
+				545FEAF31FD3C9A20078252E /* UIImage+BSExtension.m in Sources */,
 				54F9D9EE1F79600200C0800A /* BSUser.m in Sources */,
 				54565CD31F18CD05007513A0 /* BSTabBar.m in Sources */,
 				5485F9D71F36FFB0008AD53D /* BSTopicCell.m in Sources */,
 				54565CCD1F18CD05007513A0 /* AppDelegate.m in Sources */,
 				54827D921F3B618D00081047 /* NSDate+BSExtension.m in Sources */,
+				545FEAF61FD3CD920078252E /* UIImageView+BSExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

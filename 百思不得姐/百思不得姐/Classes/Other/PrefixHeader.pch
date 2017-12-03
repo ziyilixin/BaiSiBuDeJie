@@ -34,6 +34,8 @@
 #import <UIImageView+WebCache.h>
 #import "DALabeledCircularProgressView.h"
 #import <POP.h>
+#import "UIImage+BSExtension.h"
+#import "UIImageView+BSExtension.h"
 
 #import "BSConst.h"
 

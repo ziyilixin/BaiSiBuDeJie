@@ -91,7 +91,7 @@
     self.sinavImageView.hidden = !topic.isSina_v;
 
     //头像
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.headImageView setHeader:topic.profile_image];
 
     //名字
     self.nickaNameLabel.text = topic.name;
@@ -159,9 +159,6 @@
 
 - (void)setFrame:(CGRect)frame
 {
-    frame.origin.x = BSTopicCellMargin;
-    frame.size.width -= 2*BSTopicCellMargin;
-    //frame.size.height -= BSTopicCellMargin;
     frame.size.height = self.topic.cellHeight - BSTopicCellMargin;
     frame.origin.y += BSTopicCellMargin;
 
