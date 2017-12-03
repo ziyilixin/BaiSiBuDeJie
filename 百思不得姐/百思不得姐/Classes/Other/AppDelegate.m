@@ -11,7 +11,7 @@
 #import "BSPushGuideView.h"
 #import "BSTopWindow.h"
 
-@interface AppDelegate ()//<UITabBarControllerDelegate>
+@interface AppDelegate ()///<UITabBarControllerDelegate>
 
 @end
 

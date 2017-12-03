@@ -10,6 +10,7 @@
 #import "BSTopic.h"
 #import "BSTopicCell.h"
 #import "BSCommentViewController.h"
+#import "BSNewViewController.h"
 
 @interface BSTopicViewController ()
 /** 帖子数据 */
@@ -96,7 +97,7 @@ static NSString * const topicCellId = @"topic";
 
     //参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.a;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     self.params = params;
@@ -136,7 +137,7 @@ static NSString * const topicCellId = @"topic";
 
     //参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.a;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     params[@"maxtime"] = self.maxtime;
@@ -170,6 +171,11 @@ static NSString * const topicCellId = @"topic";
         //结束刷新
         [self.tableView.mj_footer endRefreshing];
     }];
+}
+
+- (NSString *)a
+{
+    return [self.parentViewController isKindOfClass:[BSNewViewController class] ]  ? @"newlist" : @"list";
 }
 
 #pragma mark - Table view data source

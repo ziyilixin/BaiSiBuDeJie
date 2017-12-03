@@ -166,6 +166,11 @@ static NSString * const BSCommentId = @"comment";
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
 
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+
+        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+            [self.tableView.mj_header endRefreshing];
+            return;
+        }
         
         //最热评论
         self.hotComments = [BSComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
