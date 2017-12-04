@@ -66,6 +66,10 @@
 		54E4824A1F29C2FF00292E84 /* BSLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E482481F29C2FF00292E84 /* BSLoginRegisterViewController.xib */; };
 		54E4824D1F29C7E900292E84 /* BSVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E4824C1F29C7E900292E84 /* BSVerticalButton.m */; };
 		54E482501F29E76300292E84 /* BSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E4824F1F29E76300292E84 /* BSTextField.m */; };
+		54F16A261FD59FCC0098E14C /* BSMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F16A251FD59FCC0098E14C /* BSMeCell.m */; };
+		54F16A291FD5A0D30098E14C /* BSMeFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F16A281FD5A0D30098E14C /* BSMeFootView.m */; };
+		54F16A2C1FD5A5300098E14C /* BSSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F16A2B1FD5A5300098E14C /* BSSquare.m */; };
+		54F16A2F1FD5A6A50098E14C /* BSSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F16A2E1FD5A6A50098E14C /* BSSquareButton.m */; };
 		54F9D9EB1F795F6000C0800A /* BSComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F9D9EA1F795F6000C0800A /* BSComment.m */; };
 		54F9D9EE1F79600200C0800A /* BSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F9D9ED1F79600200C0800A /* BSUser.m */; };
 		EEE285A80606911C4551F17D /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 177C68AB4DF1865274ACE6F8 /* libPods-百思不得姐.a */; };
@@ -196,6 +200,14 @@
 		54E4824C1F29C7E900292E84 /* BSVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVerticalButton.m; sourceTree = "<group>"; };
 		54E4824E1F29E76300292E84 /* BSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextField.h; sourceTree = "<group>"; };
 		54E4824F1F29E76300292E84 /* BSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextField.m; sourceTree = "<group>"; };
+		54F16A241FD59FCC0098E14C /* BSMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeCell.h; sourceTree = "<group>"; };
+		54F16A251FD59FCC0098E14C /* BSMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeCell.m; sourceTree = "<group>"; };
+		54F16A271FD5A0D30098E14C /* BSMeFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeFootView.h; sourceTree = "<group>"; };
+		54F16A281FD5A0D30098E14C /* BSMeFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeFootView.m; sourceTree = "<group>"; };
+		54F16A2A1FD5A5300098E14C /* BSSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSSquare.h; sourceTree = "<group>"; };
+		54F16A2B1FD5A5300098E14C /* BSSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSquare.m; sourceTree = "<group>"; };
+		54F16A2D1FD5A6A50098E14C /* BSSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSSquareButton.h; sourceTree = "<group>"; };
+		54F16A2E1FD5A6A50098E14C /* BSSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSquareButton.m; sourceTree = "<group>"; };
 		54F9D9E91F795F6000C0800A /* BSComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSComment.h; sourceTree = "<group>"; };
 		54F9D9EA1F795F6000C0800A /* BSComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSComment.m; sourceTree = "<group>"; };
 		54F9D9EC1F79600200C0800A /* BSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUser.h; sourceTree = "<group>"; };
@@ -448,6 +460,8 @@
 		54565CB01F18CD05007513A0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				54F16A2A1FD5A5300098E14C /* BSSquare.h */,
+				54F16A2B1FD5A5300098E14C /* BSSquare.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -455,6 +469,12 @@
 		54565CB11F18CD05007513A0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				54F16A241FD59FCC0098E14C /* BSMeCell.h */,
+				54F16A251FD59FCC0098E14C /* BSMeCell.m */,
+				54F16A271FD5A0D30098E14C /* BSMeFootView.h */,
+				54F16A281FD5A0D30098E14C /* BSMeFootView.m */,
+				54F16A2D1FD5A6A50098E14C /* BSSquareButton.h */,
+				54F16A2E1FD5A6A50098E14C /* BSSquareButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -785,6 +805,7 @@
 				540FD2851F9F8AD800242999 /* BSCommentCell.m in Sources */,
 				54565CCE1F18CD05007513A0 /* UIBarButtonItem+BSExtension.m in Sources */,
 				545A8AB71F57186100B283AC /* BSTopicVideoView.m in Sources */,
+				54F16A2C1FD5A5300098E14C /* BSSquare.m in Sources */,
 				549B02871F259C6A008EE7EA /* BSRecommendTagsCell.m in Sources */,
 				5480AD921F4850D10060F274 /* BSShowPictureController.m in Sources */,
 				54565CD81F18E415007513A0 /* BSNavigationController.m in Sources */,
@@ -804,7 +825,9 @@
 				544182581F20577600AE35A1 /* BSRecommendUser.m in Sources */,
 				54F9D9EB1F795F6000C0800A /* BSComment.m in Sources */,
 				54565CCB1F18CD05007513A0 /* BSMeViewController.m in Sources */,
+				54F16A291FD5A0D30098E14C /* BSMeFootView.m in Sources */,
 				54565CD21F18CD05007513A0 /* main.m in Sources */,
+				54F16A2F1FD5A6A50098E14C /* BSSquareButton.m in Sources */,
 				54E2F64B1F1E63C000CEE98D /* Foundation+Log.m in Sources */,
 				54D7B5941F41F77900B0541D /* BSTopicViewController.m in Sources */,
 				549AEF921F35D0B200E68D43 /* BSConst.m in Sources */,
@@ -812,6 +835,7 @@
 				54F9D9EE1F79600200C0800A /* BSUser.m in Sources */,
 				54565CD31F18CD05007513A0 /* BSTabBar.m in Sources */,
 				5485F9D71F36FFB0008AD53D /* BSTopicCell.m in Sources */,
+				54F16A261FD59FCC0098E14C /* BSMeCell.m in Sources */,
 				54565CCD1F18CD05007513A0 /* AppDelegate.m in Sources */,
 				54827D921F3B618D00081047 /* NSDate+BSExtension.m in Sources */,
 				545FEAF61FD3CD920078252E /* UIImageView+BSExtension.m in Sources */,
