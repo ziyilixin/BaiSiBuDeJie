@@ -9,6 +9,7 @@
 #import "BSMeFootView.h"
 #import "BSSquare.h"
 #import "BSSquareButton.h"
+#import "BSWebViewController.h"
 
 @implementation BSMeFootView
 
@@ -75,7 +76,15 @@
 
 - (void)buttonClick:(BSSquareButton *)button
 {
+    if (![button.square.url hasPrefix:@"http:"]) return;
 
+    BSWebViewController *webVC = [[BSWebViewController alloc] init];
+    webVC.navigationItem.title = button.square.name;
+    webVC.url = button.square.url;
+
+    UITabBarController *tabBarController = (UITabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    UINavigationController *nav = (UINavigationController *)tabBarController.selectedViewController;
+    [nav pushViewController:webVC animated:YES];
 }
 
 @end

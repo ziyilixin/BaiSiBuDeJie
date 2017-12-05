@@ -57,6 +57,8 @@
 		549B02871F259C6A008EE7EA /* BSRecommendTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B02851F259C6A008EE7EA /* BSRecommendTagsCell.m */; };
 		549B02881F259C6A008EE7EA /* BSRecommendTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 549B02861F259C6A008EE7EA /* BSRecommendTagsCell.xib */; };
 		54D01CBD1FB0B38600653E3E /* BSTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D01CBC1FB0B38600653E3E /* BSTopWindow.m */; };
+		54D23ADA1FD6F763002E3EE3 /* BSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D23AD81FD6F763002E3EE3 /* BSWebViewController.m */; };
+		54D23ADB1FD6F763002E3EE3 /* BSWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D23AD91FD6F763002E3EE3 /* BSWebViewController.xib */; };
 		54D7B5941F41F77900B0541D /* BSTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D7B5931F41F77900B0541D /* BSTopicViewController.m */; };
 		54E2F6441F1E58EE00CEE98D /* BSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E2F6431F1E58EE00CEE98D /* BSFriendTrendsViewController.xib */; };
 		54E2F6481F1E616D00CEE98D /* BSRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F6461F1E616D00CEE98D /* BSRecommendViewController.m */; };
@@ -186,6 +188,9 @@
 		549B02861F259C6A008EE7EA /* BSRecommendTagsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommendTagsCell.xib; sourceTree = "<group>"; };
 		54D01CBB1FB0B38600653E3E /* BSTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopWindow.h; sourceTree = "<group>"; };
 		54D01CBC1FB0B38600653E3E /* BSTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopWindow.m; sourceTree = "<group>"; };
+		54D23AD71FD6F763002E3EE3 /* BSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSWebViewController.h; sourceTree = "<group>"; };
+		54D23AD81FD6F763002E3EE3 /* BSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSWebViewController.m; sourceTree = "<group>"; };
+		54D23AD91FD6F763002E3EE3 /* BSWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSWebViewController.xib; sourceTree = "<group>"; };
 		54D7B5921F41F77900B0541D /* BSTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicViewController.h; sourceTree = "<group>"; };
 		54D7B5931F41F77900B0541D /* BSTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicViewController.m; sourceTree = "<group>"; };
 		54E2F6431F1E58EE00CEE98D /* BSFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSFriendTrendsViewController.xib; sourceTree = "<group>"; };
@@ -453,6 +458,9 @@
 			children = (
 				54565CAE1F18CD05007513A0 /* BSMeViewController.h */,
 				54565CAF1F18CD05007513A0 /* BSMeViewController.m */,
+				54D23AD71FD6F763002E3EE3 /* BSWebViewController.h */,
+				54D23AD81FD6F763002E3EE3 /* BSWebViewController.m */,
+				54D23AD91FD6F763002E3EE3 /* BSWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -710,6 +718,7 @@
 				54E2F6441F1E58EE00CEE98D /* BSFriendTrendsViewController.xib in Resources */,
 				5441825D1F2058B400AE35A1 /* BSRecommendUserCell.xib in Resources */,
 				541103FF1F9656AB0011A532 /* BSCommentViewController.xib in Resources */,
+				54D23ADB1FD6F763002E3EE3 /* BSWebViewController.xib in Resources */,
 				545A8AB91F57186F00B283AC /* BSTopicVideoView.xib in Resources */,
 				545062141F30CD0B00D29706 /* BSPushGuideView.xib in Resources */,
 				544002D61F4357CA00BABF1C /* BSTopicPictureView.xib in Resources */,
@@ -826,6 +835,7 @@
 				54F9D9EB1F795F6000C0800A /* BSComment.m in Sources */,
 				54565CCB1F18CD05007513A0 /* BSMeViewController.m in Sources */,
 				54F16A291FD5A0D30098E14C /* BSMeFootView.m in Sources */,
+				54D23ADA1FD6F763002E3EE3 /* BSWebViewController.m in Sources */,
 				54565CD21F18CD05007513A0 /* main.m in Sources */,
 				54F16A2F1FD5A6A50098E14C /* BSSquareButton.m in Sources */,
 				54E2F64B1F1E63C000CEE98D /* Foundation+Log.m in Sources */,
