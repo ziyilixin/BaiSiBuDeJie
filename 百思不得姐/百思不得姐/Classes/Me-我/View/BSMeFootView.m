@@ -35,22 +35,25 @@
 }
 
 //创建方块
-- (void)createSquares:(NSArray *)squares
+- (void)createSquares:(NSArray *)sqaures
 {
     //一行最多4列
     int maxCols = 4;
 
-    //宽度和高度
+    // 宽度和高度
     CGFloat buttonW = kScreenW / maxCols;
     CGFloat buttonH = buttonW;
 
-    for (int i = 0; i < squares.count; i++) {
+    for (int i = 0; i<sqaures.count; i++) {
+        // 创建按钮
         BSSquareButton *button = [BSSquareButton buttonWithType:UIButtonTypeCustom];
+        // 监听点击
         [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-
-        button.square = squares[i];
+        // 传递模型
+        button.square = sqaures[i];
         [self addSubview:button];
 
+        // 计算frame
         int col = i % maxCols;
         int row = i / maxCols;
 
@@ -60,14 +63,14 @@
         button.height = buttonH;
     }
 
-    //总页数 = （总个数 + 每页的最大数 - 1） / 每页的最大数
-    NSUInteger rows = (squares.count + maxCols - 1) / maxCols;
+    // 总页数 == (总个数 + 每页的最大数 - 1) / 每页最大数
+    NSUInteger rows = (sqaures.count + maxCols - 1) / maxCols;
 
+    // 计算footer的高度
     self.height = rows * buttonH;
 
-    //重绘
+    // 重绘
     [self setNeedsDisplay];
-
 }
 
 - (void)buttonClick:(BSSquareButton *)button

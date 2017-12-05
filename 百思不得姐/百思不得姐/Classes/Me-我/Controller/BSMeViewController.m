@@ -50,8 +50,7 @@ static NSString * const meId = @"me";
 
     self.tableView.sectionHeaderHeight = 0;
     self.tableView.sectionFooterHeight = BSTopicCellMargin;
-    self.tableView.contentInset = UIEdgeInsetsMake((BSTopicCellMargin - 35), 0, 0, 0);
-
+    self.tableView.contentInset = UIEdgeInsetsMake((BSTopicCellMargin - 35), 0, 2*kScreenH, 0);
     self.tableView.tableFooterView = [[BSMeFootView alloc] init];
 }
 
@@ -79,6 +78,7 @@ static NSString * const meId = @"me";
 {
     BSMeCell *cell = [tableView dequeueReusableCellWithIdentifier:meId];
     if (indexPath.section == 0) {
+        cell.imageView.image = [UIImage imageNamed:@"setup-head-default"];
         cell.textLabel.text = @"登录/注册";
     }
     else if (indexPath.section == 1) {
