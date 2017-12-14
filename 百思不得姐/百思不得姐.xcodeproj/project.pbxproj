@@ -11,6 +11,10 @@
 		540FD2861F9F8AD800242999 /* BSCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 540FD2841F9F8AD800242999 /* BSCommentCell.xib */; };
 		541103FE1F9656AB0011A532 /* BSCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 541103FC1F9656AB0011A532 /* BSCommentViewController.m */; };
 		541103FF1F9656AB0011A532 /* BSCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 541103FD1F9656AB0011A532 /* BSCommentViewController.xib */; };
+		54194F471FE2A9560052AB45 /* BSPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54194F461FE2A9560052AB45 /* BSPlaceHolderTextView.m */; };
+		5429E5731FDD21F6002B5C91 /* BSPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5429E56F1FDD21F6002B5C91 /* BSPublishViewController.m */; };
+		5429E5741FDD21F6002B5C91 /* BSPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5429E5701FDD21F6002B5C91 /* BSPublishViewController.xib */; };
+		5429E5771FDD2215002B5C91 /* BSPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5429E5761FDD2215002B5C91 /* BSPostWordViewController.m */; };
 		54346A251F9C953A00E56B65 /* BSCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54346A241F9C953A00E56B65 /* BSCommentHeaderView.m */; };
 		544002D41F4357BF00BABF1C /* BSTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544002D31F4357BF00BABF1C /* BSTopicPictureView.m */; };
 		544002D61F4357CA00BABF1C /* BSTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 544002D51F4357CA00BABF1C /* BSTopicPictureView.xib */; };
@@ -45,8 +49,6 @@
 		5480AD8E1F484D7A0060F274 /* BSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480AD8D1F484D7A0060F274 /* BSProgressView.m */; };
 		5480AD921F4850D10060F274 /* BSShowPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480AD901F4850D10060F274 /* BSShowPictureController.m */; };
 		5480AD931F4850D10060F274 /* BSShowPictureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5480AD911F4850D10060F274 /* BSShowPictureController.xib */; };
-		5480AD971F495A960060F274 /* BSPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480AD951F495A960060F274 /* BSPublishViewController.m */; };
-		5480AD981F495A960060F274 /* BSPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5480AD961F495A960060F274 /* BSPublishViewController.xib */; };
 		54827D921F3B618D00081047 /* NSDate+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 54827D911F3B618D00081047 /* NSDate+BSExtension.m */; };
 		5485F9D71F36FFB0008AD53D /* BSTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5485F9D51F36FFB0008AD53D /* BSTopicCell.m */; };
 		5485F9D81F36FFB0008AD53D /* BSTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5485F9D61F36FFB0008AD53D /* BSTopicCell.xib */; };
@@ -103,6 +105,13 @@
 		541103FB1F9656AB0011A532 /* BSCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentViewController.h; sourceTree = "<group>"; };
 		541103FC1F9656AB0011A532 /* BSCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentViewController.m; sourceTree = "<group>"; };
 		541103FD1F9656AB0011A532 /* BSCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSCommentViewController.xib; sourceTree = "<group>"; };
+		54194F451FE2A9560052AB45 /* BSPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPlaceHolderTextView.h; sourceTree = "<group>"; };
+		54194F461FE2A9560052AB45 /* BSPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPlaceHolderTextView.m; sourceTree = "<group>"; };
+		5429E56E1FDD21F6002B5C91 /* BSPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPublishViewController.h; sourceTree = "<group>"; };
+		5429E56F1FDD21F6002B5C91 /* BSPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPublishViewController.m; sourceTree = "<group>"; };
+		5429E5701FDD21F6002B5C91 /* BSPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPublishViewController.xib; sourceTree = "<group>"; };
+		5429E5751FDD2215002B5C91 /* BSPostWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPostWordViewController.h; sourceTree = "<group>"; };
+		5429E5761FDD2215002B5C91 /* BSPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPostWordViewController.m; sourceTree = "<group>"; };
 		54346A231F9C953A00E56B65 /* BSCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentHeaderView.h; sourceTree = "<group>"; };
 		54346A241F9C953A00E56B65 /* BSCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentHeaderView.m; sourceTree = "<group>"; };
 		544002D21F4357BF00BABF1C /* BSTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicPictureView.h; sourceTree = "<group>"; };
@@ -167,9 +176,6 @@
 		5480AD8F1F4850D10060F274 /* BSShowPictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSShowPictureController.h; sourceTree = "<group>"; };
 		5480AD901F4850D10060F274 /* BSShowPictureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSShowPictureController.m; sourceTree = "<group>"; };
 		5480AD911F4850D10060F274 /* BSShowPictureController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSShowPictureController.xib; sourceTree = "<group>"; };
-		5480AD941F495A960060F274 /* BSPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPublishViewController.h; sourceTree = "<group>"; };
-		5480AD951F495A960060F274 /* BSPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPublishViewController.m; sourceTree = "<group>"; };
-		5480AD961F495A960060F274 /* BSPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPublishViewController.xib; sourceTree = "<group>"; };
 		54827D901F3B618D00081047 /* NSDate+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BSExtension.h"; sourceTree = "<group>"; };
 		54827D911F3B618D00081047 /* NSDate+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BSExtension.m"; sourceTree = "<group>"; };
 		5485F9D41F36FFB0008AD53D /* BSTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicCell.h; sourceTree = "<group>"; };
@@ -246,6 +252,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5429E56C1FDD21F6002B5C91 /* Publish-发表 */ = {
+			isa = PBXGroup;
+			children = (
+				5429E56D1FDD21F6002B5C91 /* Controller */,
+				5429E5711FDD21F6002B5C91 /* Model */,
+				5429E5721FDD21F6002B5C91 /* View */,
+			);
+			path = "Publish-发表";
+			sourceTree = "<group>";
+		};
+		5429E56D1FDD21F6002B5C91 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5429E56E1FDD21F6002B5C91 /* BSPublishViewController.h */,
+				5429E56F1FDD21F6002B5C91 /* BSPublishViewController.m */,
+				5429E5701FDD21F6002B5C91 /* BSPublishViewController.xib */,
+				5429E5751FDD2215002B5C91 /* BSPostWordViewController.h */,
+				5429E5761FDD2215002B5C91 /* BSPostWordViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5429E5711FDD21F6002B5C91 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5429E5721FDD21F6002B5C91 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				54194F451FE2A9560052AB45 /* BSPlaceHolderTextView.h */,
+				54194F461FE2A9560052AB45 /* BSPlaceHolderTextView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		54565C061F185106007513A0 = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +351,7 @@
 		54565C9F1F18CD05007513A0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5429E56C1FDD21F6002B5C91 /* Publish-发表 */,
 				54565CA01F18CD05007513A0 /* Essence-精华 */,
 				54565CA61F18CD05007513A0 /* FriendTrends-关注 */,
 				54565CAC1F18CD05007513A0 /* Me-我 */,
@@ -561,9 +606,6 @@
 				54565CC21F18CD05007513A0 /* BSTabBarController.m */,
 				54565CD61F18E415007513A0 /* BSNavigationController.h */,
 				54565CD71F18E415007513A0 /* BSNavigationController.m */,
-				5480AD941F495A960060F274 /* BSPublishViewController.h */,
-				5480AD951F495A960060F274 /* BSPublishViewController.m */,
-				5480AD961F495A960060F274 /* BSPublishViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -724,10 +766,10 @@
 				544002D61F4357CA00BABF1C /* BSTopicPictureView.xib in Resources */,
 				544182551F2045B200AE35A1 /* BSRecommendCategoryCell.xib in Resources */,
 				540FD2861F9F8AD800242999 /* BSCommentCell.xib in Resources */,
-				5480AD981F495A960060F274 /* BSPublishViewController.xib in Resources */,
 				54E2F6491F1E616D00CEE98D /* BSRecommendViewController.xib in Resources */,
 				549B02881F259C6A008EE7EA /* BSRecommendTagsCell.xib in Resources */,
 				54E4824A1F29C2FF00292E84 /* BSLoginRegisterViewController.xib in Resources */,
+				5429E5741FDD21F6002B5C91 /* BSPublishViewController.xib in Resources */,
 				54565C1F1F185106007513A0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -806,7 +848,6 @@
 				5441825C1F2058B400AE35A1 /* BSRecommendUserCell.m in Sources */,
 				549B02831F259B2E008EE7EA /* BSRecommendTags.m in Sources */,
 				544182541F2045B200AE35A1 /* BSRecommendCategoryCell.m in Sources */,
-				5480AD971F495A960060F274 /* BSPublishViewController.m in Sources */,
 				54E2F6481F1E616D00CEE98D /* BSRecommendViewController.m in Sources */,
 				54E482491F29C2FF00292E84 /* BSLoginRegisterViewController.m in Sources */,
 				54346A251F9C953A00E56B65 /* BSCommentHeaderView.m in Sources */,
@@ -834,6 +875,7 @@
 				544182581F20577600AE35A1 /* BSRecommendUser.m in Sources */,
 				54F9D9EB1F795F6000C0800A /* BSComment.m in Sources */,
 				54565CCB1F18CD05007513A0 /* BSMeViewController.m in Sources */,
+				5429E5771FDD2215002B5C91 /* BSPostWordViewController.m in Sources */,
 				54F16A291FD5A0D30098E14C /* BSMeFootView.m in Sources */,
 				54D23ADA1FD6F763002E3EE3 /* BSWebViewController.m in Sources */,
 				54565CD21F18CD05007513A0 /* main.m in Sources */,
@@ -843,12 +885,14 @@
 				549AEF921F35D0B200E68D43 /* BSConst.m in Sources */,
 				545FEAF31FD3C9A20078252E /* UIImage+BSExtension.m in Sources */,
 				54F9D9EE1F79600200C0800A /* BSUser.m in Sources */,
+				54194F471FE2A9560052AB45 /* BSPlaceHolderTextView.m in Sources */,
 				54565CD31F18CD05007513A0 /* BSTabBar.m in Sources */,
 				5485F9D71F36FFB0008AD53D /* BSTopicCell.m in Sources */,
 				54F16A261FD59FCC0098E14C /* BSMeCell.m in Sources */,
 				54565CCD1F18CD05007513A0 /* AppDelegate.m in Sources */,
 				54827D921F3B618D00081047 /* NSDate+BSExtension.m in Sources */,
 				545FEAF61FD3CD920078252E /* UIImageView+BSExtension.m in Sources */,
+				5429E5731FDD21F6002B5C91 /* BSPublishViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

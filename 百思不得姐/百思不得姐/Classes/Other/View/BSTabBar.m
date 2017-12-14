@@ -8,6 +8,8 @@
 
 #import "BSTabBar.h"
 #import "BSPublishViewController.h"
+#import "BSPostWordViewController.h"
+#import "BSNavigationController.h"
 
 @interface BSTabBar ()
 @property (nonatomic,weak) UIButton *publishButton;
@@ -37,6 +39,12 @@
 {
     BSPublishViewController *publishVC = [[BSPublishViewController alloc] init];
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publishVC animated:YES completion:nil];
+
+//    BSPostWordViewController *postWordVC = [[BSPostWordViewController alloc] init];
+//    BSNavigationController *nav = [[BSNavigationController alloc] initWithRootViewController:postWordVC];
+//    UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
+//    [root presentViewController:nav animated:YES completion:nil];
+
 }
 
 - (void)layoutSubviews
