@@ -8,7 +8,24 @@
 
 #import "BSPlaceHolderTextView.h"
 
+@interface BSPlaceHolderTextView ()
+@property (nonatomic,weak) UILabel *placeHolderLab;
+@end
+
 @implementation BSPlaceHolderTextView
+
+- (UILabel *)placeHolderLab
+{
+    if (!_placeHolderLab) {
+        UILabel *placeHolderLab = [[UILabel alloc] init];
+        placeHolderLab.x = 4;
+        placeHolderLab.y = 7;
+        placeHolderLab.numberOfLines = 0;
+        [self addSubview:placeHolderLab];
+        _placeHolderLab = placeHolderLab;
+    }
+    return _placeHolderLab;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -30,9 +47,10 @@
     return self;
 }
 
+//监听占位文字改变
 - (void)textDidChange
 {
-    [self setNeedsDisplay];
+    self.placeHolderLab.hidden = self.hasText;
 }
 
 - (void)dealloc
@@ -40,56 +58,50 @@
     [BSNotificationCenter removeObserver:self];
 }
 
-/**
- * 绘制占位文字，每次绘制占位文字之前，会自动清除之前绘制的内容
- */
-- (void)drawRect:(CGRect)rect
+//更新占位文字的改变
+- (void)updatePlaceHolderLabelSize
 {
-    if (self.hasText) return;
-
-    rect.origin.x = 3;
-    rect.origin.y = 7;
-    rect.size.width -= 2*rect.origin.x;
-
-    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-    attrs[NSFontAttributeName] = self.font;
-    attrs[NSForegroundColorAttributeName] = self.placeHolderColor;
-    [self.placeHolder drawInRect:rect withAttributes:attrs];
+    CGSize maxSize = CGSizeMake(kScreenW - 2 * self.placeHolderLab.x, MAXFLOAT);
+    self.placeHolderLab.size = [self.placeHolder boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.font} context:nil].size;
 }
 
 - (void)setPlaceHolderColor:(UIColor *)placeHolderColor
 {
     _placeHolderColor = placeHolderColor;
 
-    [self setNeedsDisplay];
+    self.placeHolderLab.textColor = placeHolderColor;
 }
 
 - (void)setPlaceHolder:(NSString *)placeHolder
 {
     _placeHolder = [placeHolder copy];
 
-    [self setNeedsDisplay];
+    self.placeHolderLab.text = placeHolder;
+
+    [self updatePlaceHolderLabelSize];
 }
 
 - (void)setFont:(UIFont *)font
 {
     [super setFont:font];
 
-    [self setNeedsDisplay];
+    self.placeHolderLab.font = font;
+
+    [self updatePlaceHolderLabelSize];
 }
 
 - (void)setText:(NSString *)text
 {
     [super setText:text];
 
-    [self setNeedsDisplay];
+    [self textDidChange];
 }
 
 - (void)setAttributedText:(NSAttributedString *)attributedText
 {
     [super setAttributedText:attributedText];
 
-    [self setNeedsDisplay];
+    [self textDidChange];
 }
 
 @end
