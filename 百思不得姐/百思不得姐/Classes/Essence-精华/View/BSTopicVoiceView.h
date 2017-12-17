@@ -11,7 +11,6 @@
 @class BSTopic;
 
 @interface BSTopicVoiceView : UIView
-+ (instancetype)voiceView;
 
 /** 帖子数据 */
 @property (nonatomic,strong) BSTopic *topic;

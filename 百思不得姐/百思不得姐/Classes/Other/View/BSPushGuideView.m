@@ -15,11 +15,6 @@
 
 @implementation BSPushGuideView
 
-+ (instancetype)guideView
-{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
-}
-
 + (void)show
 {
     NSString *key = @"CFBundleShortVersionString";
@@ -30,7 +25,7 @@
 
     if (![currentVersion isEqualToString:sanboxVersion]) {
         UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        BSPushGuideView *guideView = [BSPushGuideView guideView];
+        BSPushGuideView *guideView = [BSPushGuideView viewFromXib];
         guideView.frame = window.bounds;
         [window addSubview:guideView];
 

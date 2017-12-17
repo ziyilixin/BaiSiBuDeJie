@@ -11,7 +11,6 @@
 @class BSTopic;
 
 @interface BSTopicPictureView : UIView
-+ (instancetype)pictureView;
 
 /** 帖子数据 */
 @property (nonatomic,strong) BSTopic *topic;

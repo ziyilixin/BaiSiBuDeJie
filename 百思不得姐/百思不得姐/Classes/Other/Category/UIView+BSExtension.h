@@ -23,4 +23,6 @@
  */
 - (BOOL)isShowingOnKeyWindow;
 
++ (instancetype)viewFromXib;
+
 @end

@@ -82,7 +82,7 @@ static NSString * const BSCommentId = @"comment";
         [self.topic setValue:@0 forKeyPath:@"cellHeight"];
     }
 
-    BSTopicCell *cell = [BSTopicCell cell];
+    BSTopicCell *cell = [BSTopicCell viewFromXib];
     cell.topic = self.topic;
     cell.size = CGSizeMake(kScreenW, self.topic.cellHeight);
     [header addSubview:cell];

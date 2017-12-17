@@ -11,7 +11,6 @@
 @class BSTopic;
 
 @interface BSTopicVideoView : UIView
-+ (instancetype)videoView;
 
 /** 帖子数据 */
 @property (nonatomic,strong) BSTopic *topic;

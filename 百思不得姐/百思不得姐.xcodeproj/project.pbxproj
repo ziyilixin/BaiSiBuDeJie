@@ -58,6 +58,9 @@
 		549B02831F259B2E008EE7EA /* BSRecommendTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B02821F259B2E008EE7EA /* BSRecommendTags.m */; };
 		549B02871F259C6A008EE7EA /* BSRecommendTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B02851F259C6A008EE7EA /* BSRecommendTagsCell.m */; };
 		549B02881F259C6A008EE7EA /* BSRecommendTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 549B02861F259C6A008EE7EA /* BSRecommendTagsCell.xib */; };
+		54CF95461FE655B8005B2AD3 /* BSAddTagToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CF95451FE655B8005B2AD3 /* BSAddTagToolbar.m */; };
+		54CF95481FE655CC005B2AD3 /* BSAddTagToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CF95471FE655CC005B2AD3 /* BSAddTagToolbar.xib */; };
+		54CF954B1FE6679E005B2AD3 /* BSAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CF954A1FE6679E005B2AD3 /* BSAddTagViewController.m */; };
 		54D01CBD1FB0B38600653E3E /* BSTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D01CBC1FB0B38600653E3E /* BSTopWindow.m */; };
 		54D23ADA1FD6F763002E3EE3 /* BSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D23AD81FD6F763002E3EE3 /* BSWebViewController.m */; };
 		54D23ADB1FD6F763002E3EE3 /* BSWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D23AD91FD6F763002E3EE3 /* BSWebViewController.xib */; };
@@ -192,6 +195,11 @@
 		549B02841F259C6A008EE7EA /* BSRecommendTagsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendTagsCell.h; sourceTree = "<group>"; };
 		549B02851F259C6A008EE7EA /* BSRecommendTagsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendTagsCell.m; sourceTree = "<group>"; };
 		549B02861F259C6A008EE7EA /* BSRecommendTagsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommendTagsCell.xib; sourceTree = "<group>"; };
+		54CF95441FE655B8005B2AD3 /* BSAddTagToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAddTagToolbar.h; sourceTree = "<group>"; };
+		54CF95451FE655B8005B2AD3 /* BSAddTagToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAddTagToolbar.m; sourceTree = "<group>"; };
+		54CF95471FE655CC005B2AD3 /* BSAddTagToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSAddTagToolbar.xib; sourceTree = "<group>"; };
+		54CF95491FE6679E005B2AD3 /* BSAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAddTagViewController.h; sourceTree = "<group>"; };
+		54CF954A1FE6679E005B2AD3 /* BSAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAddTagViewController.m; sourceTree = "<group>"; };
 		54D01CBB1FB0B38600653E3E /* BSTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopWindow.h; sourceTree = "<group>"; };
 		54D01CBC1FB0B38600653E3E /* BSTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopWindow.m; sourceTree = "<group>"; };
 		54D23AD71FD6F763002E3EE3 /* BSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSWebViewController.h; sourceTree = "<group>"; };
@@ -270,6 +278,8 @@
 				5429E5701FDD21F6002B5C91 /* BSPublishViewController.xib */,
 				5429E5751FDD2215002B5C91 /* BSPostWordViewController.h */,
 				5429E5761FDD2215002B5C91 /* BSPostWordViewController.m */,
+				54CF95491FE6679E005B2AD3 /* BSAddTagViewController.h */,
+				54CF954A1FE6679E005B2AD3 /* BSAddTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -286,6 +296,9 @@
 			children = (
 				54194F451FE2A9560052AB45 /* BSPlaceHolderTextView.h */,
 				54194F461FE2A9560052AB45 /* BSPlaceHolderTextView.m */,
+				54CF95441FE655B8005B2AD3 /* BSAddTagToolbar.h */,
+				54CF95451FE655B8005B2AD3 /* BSAddTagToolbar.m */,
+				54CF95471FE655CC005B2AD3 /* BSAddTagToolbar.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -755,6 +768,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5485F9D81F36FFB0008AD53D /* BSTopicCell.xib in Resources */,
+				54CF95481FE655CC005B2AD3 /* BSAddTagToolbar.xib in Resources */,
 				545A8AB41F570A3C00B283AC /* BSTopicVoiceView.xib in Resources */,
 				5480AD931F4850D10060F274 /* BSShowPictureController.xib in Resources */,
 				54E2F6441F1E58EE00CEE98D /* BSFriendTrendsViewController.xib in Resources */,
@@ -868,6 +882,7 @@
 				54E4824D1F29C7E900292E84 /* BSVerticalButton.m in Sources */,
 				54565CD01F18CD05007513A0 /* BSTabBarController.m in Sources */,
 				54E482501F29E76300292E84 /* BSTextField.m in Sources */,
+				54CF95461FE655B8005B2AD3 /* BSAddTagToolbar.m in Sources */,
 				549AEF8C1F35BE4800E68D43 /* BSTopic.m in Sources */,
 				545062121F30CD0100D29706 /* BSPushGuideView.m in Sources */,
 				544182501F20444F00AE35A1 /* BSRecommendCategory.m in Sources */,
@@ -878,6 +893,7 @@
 				5429E5771FDD2215002B5C91 /* BSPostWordViewController.m in Sources */,
 				54F16A291FD5A0D30098E14C /* BSMeFootView.m in Sources */,
 				54D23ADA1FD6F763002E3EE3 /* BSWebViewController.m in Sources */,
+				54CF954B1FE6679E005B2AD3 /* BSAddTagViewController.m in Sources */,
 				54565CD21F18CD05007513A0 /* main.m in Sources */,
 				54F16A2F1FD5A6A50098E14C /* BSSquareButton.m in Sources */,
 				54E2F64B1F1E63C000CEE98D /* Foundation+Log.m in Sources */,

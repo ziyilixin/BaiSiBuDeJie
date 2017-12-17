@@ -10,8 +10,6 @@
 
 @interface BSPushGuideView : UIView
 
-+ (instancetype)guideView;
-
 + (void)show;
 
 @end

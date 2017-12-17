@@ -18,11 +18,6 @@
 
 @implementation BSTopicVoiceView
 
-+ (instancetype)voiceView
-{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
-}
-
 - (void)awakeFromNib
 {
     [super awakeFromNib];

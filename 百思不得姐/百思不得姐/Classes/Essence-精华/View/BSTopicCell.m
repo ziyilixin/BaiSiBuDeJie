@@ -48,15 +48,10 @@
 
 }
 
-+ (instancetype)cell
-{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
-}
-
 - (BSTopicPictureView *)pictureView
 {
     if (!_pictureView) {
-        BSTopicPictureView *pictureView = [BSTopicPictureView pictureView];
+        BSTopicPictureView *pictureView = [BSTopicPictureView viewFromXib];
         [self.contentView addSubview:pictureView];
         _pictureView = pictureView;
     }
@@ -66,7 +61,7 @@
 - (BSTopicVoiceView *)voiceView
 {
     if (!_voiceView) {
-        BSTopicVoiceView *voiceView = [BSTopicVoiceView voiceView];
+        BSTopicVoiceView *voiceView = [BSTopicVoiceView viewFromXib];
         [self.contentView addSubview:voiceView];
         _voiceView = voiceView;
     }
@@ -76,7 +71,7 @@
 - (BSTopicVideoView *)videoView
 {
     if (!_videoView) {
-        BSTopicVideoView *videoView = [BSTopicVideoView videoView];
+        BSTopicVideoView *videoView = [BSTopicVideoView viewFromXib];
         [self.contentView addSubview:videoView];
         _videoView = videoView;
     }
