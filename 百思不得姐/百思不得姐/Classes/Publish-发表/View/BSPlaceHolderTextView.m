@@ -58,11 +58,12 @@
     [BSNotificationCenter removeObserver:self];
 }
 
-//更新占位文字的改变
-- (void)updatePlaceHolderLabelSize
+- (void)layoutSubviews
 {
-    CGSize maxSize = CGSizeMake(kScreenW - 2 * self.placeHolderLab.x, MAXFLOAT);
-    self.placeHolderLab.size = [self.placeHolder boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.font} context:nil].size;
+    [super layoutSubviews];
+
+    self.placeHolderLab.width = self.width - 2 * self.placeHolderLab.x;
+    [self.placeHolderLab sizeToFit];
 }
 
 - (void)setPlaceHolderColor:(UIColor *)placeHolderColor
@@ -78,7 +79,7 @@
 
     self.placeHolderLab.text = placeHolder;
 
-    [self updatePlaceHolderLabelSize];
+    [self setNeedsLayout];
 }
 
 - (void)setFont:(UIFont *)font
@@ -87,7 +88,7 @@
 
     self.placeHolderLab.font = font;
 
-    [self updatePlaceHolderLabelSize];
+    [self setNeedsLayout];
 }
 
 - (void)setText:(NSString *)text
@@ -103,5 +104,10 @@
 
     [self textDidChange];
 }
+
+/**
+ * setNeedsDisplay方法 : 会在恰当的时刻自动调用drawRect:方法
+ * setNeedsLayout方法 : 会在恰当的时刻调用layoutSubviews方法
+ */
 
 @end

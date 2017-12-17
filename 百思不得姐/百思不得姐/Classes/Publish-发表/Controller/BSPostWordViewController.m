@@ -39,8 +39,8 @@
 - (void)setupTextView
 {
     BSPlaceHolderTextView *textView = [[BSPlaceHolderTextView alloc] init];
-    textView.frame = self.view.bounds;
     textView.placeHolder = @"把好玩的图片，好笑的段子或糗事发到这里，接受千万网友膜拜吧！发布违反国家法律内容的，我们将依法提交给有关部门处理。";
+    textView.frame = self.view.bounds;
     [self.view addSubview:textView];
     self.textView = textView;
 }
