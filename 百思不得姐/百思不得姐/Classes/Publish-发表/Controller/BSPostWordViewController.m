@@ -40,13 +40,6 @@
     [self.textView becomeFirstResponder];
 }
 
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-
-    [self.textView resignFirstResponder];
-}
-
 - (void)setupNav
 {
     self.navigationItem.title = @"发表文字";
