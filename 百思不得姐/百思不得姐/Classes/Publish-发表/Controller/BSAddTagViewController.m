@@ -116,18 +116,18 @@
 //监听“添加按钮”点击
 - (void)addButtonClick
 {
-    //添加一个标签按钮
+    // 添加一个"标签按钮"
     BSTagButton *tagButton = [BSTagButton buttonWithType:UIButtonTypeCustom];
-    [tagButton setTitle:self.textField.text forState:UIControlStateNormal];
     [tagButton addTarget:self action:@selector(tagButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [tagButton setTitle:self.textField.text forState:UIControlStateNormal];
     tagButton.height = self.textField.height;
     [self.contentView addSubview:tagButton];
     [self.tagButtons addObject:tagButton];
 
-    //更新标签按钮的文字
+    // 更新标签按钮的frame
     [self updateTagButtonFrame];
 
-    //清空textField的文字
+    // 清空textField文字
     self.textField.text = nil;
     self.addButton.hidden = YES;
 
@@ -136,42 +136,41 @@
 //更新标签按钮的frame
 - (void)updateTagButtonFrame
 {
-    for (int i = 0; i < self.tagButtons.count; i++) {
+    // 更新标签按钮的frame
+    for (int i = 0; i<self.tagButtons.count; i++) {
         BSTagButton *tagButton = self.tagButtons[i];
-        if (i == 0) {//最前面的标签按钮
+
+        if (i == 0) { // 最前面的标签按钮
             tagButton.x = 0;
             tagButton.y = 0;
-        }
-        else {
+        } else { // 其他标签按钮
             BSTagButton *lastTagButton = self.tagButtons[i - 1];
-            //计算当前行左边的宽度
+            // 计算当前行左边的宽度
             CGFloat leftWidth = CGRectGetMaxX(lastTagButton.frame) + BSTagMargin;
-            //计算当前行右边的宽度
+            // 计算当前行右边的宽度
             CGFloat rightWidth = self.contentView.width - leftWidth;
-            if (rightWidth >= tagButton.width) {//按钮在当前行
-                tagButton.x = leftWidth;
+            if (rightWidth >= tagButton.width) { // 按钮显示在当前行
                 tagButton.y = lastTagButton.y;
-            }
-            else {//按钮在下一行
+                tagButton.x = leftWidth;
+            } else { // 按钮显示在下一行
                 tagButton.x = 0;
                 tagButton.y = CGRectGetMaxY(lastTagButton.frame) + BSTagMargin;
             }
         }
     }
 
-    //最后一个标签按钮
+    // 最后一个标签按钮
     BSTagButton *lastTagButton = [self.tagButtons lastObject];
     CGFloat leftWidth = CGRectGetMaxX(lastTagButton.frame) + BSTagMargin;
-    //更新textField的frame
+
+    // 更新textField的frame
     if (self.contentView.width - leftWidth >= [self textFieldTextWidth]) {
-        self.textField.x = leftWidth;
         self.textField.y = lastTagButton.y;
-    }
-    else {
+        self.textField.x = leftWidth;
+    } else {
         self.textField.x = 0;
         self.textField.y = CGRectGetMaxY(lastTagButton.frame) + BSTagMargin;
     }
-
 }
 
 //标签按钮的点击
@@ -180,7 +179,7 @@
     [tagButton removeFromSuperview];
     [self.tagButtons removeObject:tagButton];
 
-    //重新更新所有标签按钮的frame
+    // 重新更新所有标签按钮的frame
     [UIView animateWithDuration:0.25 animations:^{
         [self updateTagButtonFrame];
     }];
