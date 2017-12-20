@@ -27,3 +27,6 @@ CGFloat const BSTopicCellTopCmtTitleH = 20;
 
 /** tabBar被选中的通知名字 */
 NSString * const BSTabBarDidSelectNotification = @"BSTabBarDidSelectNotification";
+
+/** 标签-间距 */
+CGFloat const BSTagMargin = 5;

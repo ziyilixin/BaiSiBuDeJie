@@ -24,7 +24,7 @@
     [addButton setImage:[UIImage imageNamed:@"tag_add_icon"] forState:UIControlStateNormal];
     [addButton addTarget:self action:@selector(addButtonClick) forControlEvents:UIControlEventTouchUpInside];
     addButton.size = addButton.currentImage.size;
-    addButton.x = BSTopicCellMargin;
+    addButton.x = BSTagMargin;
     [self.topView addSubview:addButton];
 }
 
