@@ -30,3 +30,6 @@ NSString * const BSTabBarDidSelectNotification = @"BSTabBarDidSelectNotification
 
 /** 标签-间距 */
 CGFloat const BSTagMargin = 5;
+
+/** 标签-高度 */
+CGFloat const BSTagHeigt = 25;

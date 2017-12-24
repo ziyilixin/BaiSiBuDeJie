@@ -8,12 +8,13 @@
 
 #import "BSAddTagViewController.h"
 #import "BSTagButton.h"
+#import "BSTagTextField.h"
 
-@interface BSAddTagViewController ()
+@interface BSAddTagViewController ()<UITextFieldDelegate>
 //内容
 @property (nonatomic,weak) UIView *contentView;
 //文本输入框
-@property (nonatomic,weak) UITextField *textField;
+@property (nonatomic,weak) BSTagTextField *textField;
 //添加按钮
 @property (nonatomic,weak) UIButton *addButton;
 //所有的标签按钮
@@ -38,7 +39,7 @@
         addButton.height = 35;
         [addButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [addButton addTarget:self action:@selector(addButtonClick) forControlEvents:UIControlEventTouchUpInside];
-        addButton.titleLabel.font = [UIFont systemFontOfSize:14];
+        addButton.titleLabel.font = BSTagFont;
         addButton.contentEdgeInsets = UIEdgeInsetsMake(0, BSTagMargin, 0, BSTagMargin);
         //让按钮内部的文字和图片都左对齐
         addButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
@@ -58,6 +59,8 @@
     [self setupContentView];
 
     [self setupTextField];
+
+    [self setupTags];
 }
 
 - (void)setupNav
@@ -80,42 +83,73 @@
 
 - (void)setupTextField
 {
-    UITextField *textField = [[UITextField alloc] init];
-    textField.width = kScreenW;
-    textField.height = 25;
-    textField.placeholder = @"多个标签用逗号或者换行隔开";
-    // 设置了占位文字内容以后, 才能设置占位文字的颜色
-    [textField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
+    __weak typeof(self) weakSelf = self;
+    BSTagTextField *textField = [[BSTagTextField alloc] init];
+    textField.width = self.contentView.width;
+    textField.delegate = self;
+    textField.deleteBlock = ^{
+        if (weakSelf.textField.hasText) return;
+        [weakSelf tagButtonClick:[weakSelf.tagButtons lastObject]];
+    };
     [textField addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
     [textField becomeFirstResponder];
     [self.contentView addSubview:textField];
     self.textField = textField;
 }
 
+- (void)setupTags
+{
+    for (NSString *tag in self.tags) {
+        self.textField.text = tag;
+        [self addButtonClick];
+    }
+}
+
 - (void)textDidChange
 {
+    //更新TextField的frame
+    [self updateTextFieldFrame];
+
     if (self.textField.hasText) {//有文字
         self.addButton.hidden = NO;
         self.addButton.y = CGRectGetMaxY(self.textField.frame) + BSTagMargin;
         [self.addButton setTitle:[NSString stringWithFormat:@"添加标签:%@",self.textField.text] forState:UIControlStateNormal];
+
+        //获取最后一个字符
+        NSString *text = self.textField.text;
+        NSUInteger len = text.length;
+        NSString *lastLetter = [text substringFromIndex:len -1];
+        if ([lastLetter isEqualToString:@"，"] || [lastLetter isEqualToString:@","]) {
+            //去除逗号
+            self.textField.text = [text substringToIndex:len -1];
+
+            [self addButtonClick];
+        }
     }
     else {//没有文字
         self.addButton.hidden = YES;
     }
 
-    //更新标签和文本框的frame
-    [self updateTagButtonFrame];
-
 }
 
 - (void)done
 {
+    //传递tags给这个block
+    NSArray *tags = [self.tagButtons valueForKeyPath:@"currentTitle"];
+    !self.tagsBlock ? : self.tagsBlock(tags);
 
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 //监听“添加按钮”点击
 - (void)addButtonClick
 {
+
+    if (self.tagButtons.count == 5) {
+        [SVProgressHUD showErrorWithStatus:@"最多添加5个标签"];
+        return;
+    }
+
     // 添加一个"标签按钮"
     BSTagButton *tagButton = [BSTagButton buttonWithType:UIButtonTypeCustom];
     [tagButton addTarget:self action:@selector(tagButtonClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -124,12 +158,15 @@
     [self.contentView addSubview:tagButton];
     [self.tagButtons addObject:tagButton];
 
-    // 更新标签按钮的frame
-    [self updateTagButtonFrame];
-
     // 清空textField文字
     self.textField.text = nil;
     self.addButton.hidden = YES;
+
+    // 更新标签按钮的frame
+    [self updateTagButtonFrame];
+
+    //更新TextField的frame
+    [self updateTextFieldFrame];
 
 }
 
@@ -158,7 +195,11 @@
             }
         }
     }
+}
 
+//更新TextField的frame
+- (void)updateTextFieldFrame
+{
     // 最后一个标签按钮
     BSTagButton *lastTagButton = [self.tagButtons lastObject];
     CGFloat leftWidth = CGRectGetMaxX(lastTagButton.frame) + BSTagMargin;
@@ -182,6 +223,7 @@
     // 重新更新所有标签按钮的frame
     [UIView animateWithDuration:0.25 animations:^{
         [self updateTagButtonFrame];
+        [self updateTextFieldFrame];
     }];
 }
 
@@ -190,6 +232,18 @@
 {
     CGFloat textW = [self.textField.text sizeWithAttributes:@{NSFontAttributeName : self.textField.font}].width;
     return MAX(100, textW);
+}
+
+#pragma mark - UITextFieldDelegate
+/**
+ * 监听键盘最右下角按钮的点击（return key， 比如“换行”、“完成”等等）
+ */
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField.hasText) {
+        [self addButtonClick];
+    }
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {

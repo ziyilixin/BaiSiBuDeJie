@@ -15,7 +15,7 @@
     if (self = [super initWithFrame:frame]) {
         [self setImage:[UIImage imageNamed:@"chose_tag_close_icon"] forState:UIControlStateNormal];
         self.backgroundColor = BSTagBg;
-        self.titleLabel.font = [UIFont systemFontOfSize:14];
+        self.titleLabel.font = BSTagFont;
     }
     return self;
 }

@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7C-kG-KUb" userLabel="顶部">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+                    <rect key="frame" x="5" y="0.0" width="365" height="94"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Gw-kS-Eon" userLabel="底部">
@@ -59,12 +59,12 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="4Gw-kS-Eon" secondAttribute="trailing" id="01J-xy-8J8"/>
-                <constraint firstItem="z7C-kG-KUb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HaW-90-sVi"/>
+                <constraint firstItem="z7C-kG-KUb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="HaW-90-sVi"/>
                 <constraint firstItem="4Gw-kS-Eon" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VUD-h2-BNa"/>
                 <constraint firstAttribute="bottom" secondItem="4Gw-kS-Eon" secondAttribute="bottom" id="Zcu-XP-A3J"/>
                 <constraint firstItem="z7C-kG-KUb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mF9-UW-f7f"/>
                 <constraint firstItem="4Gw-kS-Eon" firstAttribute="top" secondItem="z7C-kG-KUb" secondAttribute="bottom" id="o40-gk-OFH"/>
-                <constraint firstAttribute="trailing" secondItem="z7C-kG-KUb" secondAttribute="trailing" id="rz1-tW-66i"/>
+                <constraint firstAttribute="trailing" secondItem="z7C-kG-KUb" secondAttribute="trailing" constant="5" id="rz1-tW-66i"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

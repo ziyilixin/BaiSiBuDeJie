@@ -26,6 +26,8 @@
 
 #define BSTagBg BSRGBColor(74,139,209)
 
+#define BSTagFont [UIFont systemFontOfSize:14]
+
 #define BSNotificationCenter [NSNotificationCenter defaultCenter]
 
 #define kScreenW [UIScreen mainScreen].bounds.size.width

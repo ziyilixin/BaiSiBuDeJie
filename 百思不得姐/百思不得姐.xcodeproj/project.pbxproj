@@ -59,6 +59,7 @@
 		549B02831F259B2E008EE7EA /* BSRecommendTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B02821F259B2E008EE7EA /* BSRecommendTags.m */; };
 		549B02871F259C6A008EE7EA /* BSRecommendTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 549B02851F259C6A008EE7EA /* BSRecommendTagsCell.m */; };
 		549B02881F259C6A008EE7EA /* BSRecommendTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 549B02861F259C6A008EE7EA /* BSRecommendTagsCell.xib */; };
+		54C9952E1FEFA4A80087FEE2 /* BSTagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C9952D1FEFA4A80087FEE2 /* BSTagTextField.m */; };
 		54CF95461FE655B8005B2AD3 /* BSAddTagToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CF95451FE655B8005B2AD3 /* BSAddTagToolbar.m */; };
 		54CF95481FE655CC005B2AD3 /* BSAddTagToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54CF95471FE655CC005B2AD3 /* BSAddTagToolbar.xib */; };
 		54CF954B1FE6679E005B2AD3 /* BSAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54CF954A1FE6679E005B2AD3 /* BSAddTagViewController.m */; };
@@ -198,6 +199,8 @@
 		549B02841F259C6A008EE7EA /* BSRecommendTagsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendTagsCell.h; sourceTree = "<group>"; };
 		549B02851F259C6A008EE7EA /* BSRecommendTagsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendTagsCell.m; sourceTree = "<group>"; };
 		549B02861F259C6A008EE7EA /* BSRecommendTagsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommendTagsCell.xib; sourceTree = "<group>"; };
+		54C9952C1FEFA4A80087FEE2 /* BSTagTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTagTextField.h; sourceTree = "<group>"; };
+		54C9952D1FEFA4A80087FEE2 /* BSTagTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTagTextField.m; sourceTree = "<group>"; };
 		54CF95441FE655B8005B2AD3 /* BSAddTagToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAddTagToolbar.h; sourceTree = "<group>"; };
 		54CF95451FE655B8005B2AD3 /* BSAddTagToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAddTagToolbar.m; sourceTree = "<group>"; };
 		54CF95471FE655CC005B2AD3 /* BSAddTagToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSAddTagToolbar.xib; sourceTree = "<group>"; };
@@ -304,6 +307,8 @@
 				54CF95471FE655CC005B2AD3 /* BSAddTagToolbar.xib */,
 				542BD8E71FEAABF300F851B6 /* BSTagButton.h */,
 				542BD8E81FEAABF300F851B6 /* BSTagButton.m */,
+				54C9952C1FEFA4A80087FEE2 /* BSTagTextField.h */,
+				54C9952D1FEFA4A80087FEE2 /* BSTagTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -891,6 +896,7 @@
 				54CF95461FE655B8005B2AD3 /* BSAddTagToolbar.m in Sources */,
 				549AEF8C1F35BE4800E68D43 /* BSTopic.m in Sources */,
 				545062121F30CD0100D29706 /* BSPushGuideView.m in Sources */,
+				54C9952E1FEFA4A80087FEE2 /* BSTagTextField.m in Sources */,
 				544182501F20444F00AE35A1 /* BSRecommendCategory.m in Sources */,
 				54565CCF1F18CD05007513A0 /* UIView+BSExtension.m in Sources */,
 				544182581F20577600AE35A1 /* BSRecommendUser.m in Sources */,

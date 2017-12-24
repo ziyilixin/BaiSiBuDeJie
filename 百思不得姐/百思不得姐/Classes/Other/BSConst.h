@@ -39,3 +39,6 @@ UIKIT_EXTERN NSString * const BSTabBarDidSelectNotification;
 /** 标签-间距 */
 UIKIT_EXTERN CGFloat const BSTagMargin;
 
+/** 标签-高度 */
+UIKIT_EXTERN CGFloat const BSTagHeigt;
+
