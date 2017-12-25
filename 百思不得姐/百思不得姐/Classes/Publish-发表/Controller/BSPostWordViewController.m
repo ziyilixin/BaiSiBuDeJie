@@ -37,6 +37,10 @@
 {
     [super viewDidAppear:animated];
 
+    //先退出之前的键盘
+    [self.view endEditing:YES];
+
+    //再叫出键盘
     [self.textView becomeFirstResponder];
 }
 

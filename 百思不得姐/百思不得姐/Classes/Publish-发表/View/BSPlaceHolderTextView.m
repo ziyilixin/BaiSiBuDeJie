@@ -41,8 +41,8 @@
         self.placeHolderColor = [UIColor grayColor];
 
         //监听文字改变
-        [BSNotificationCenter addObserver:self selector:@selector(textDidChange) name:UITextViewTextDidChangeNotification object:nil];
-
+        [BSNotificationCenter addObserver:self selector:@selector(textDidChange) name:UITextViewTextDidChangeNotification object:self];
+        
     }
     return self;
 }

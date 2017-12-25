@@ -39,6 +39,8 @@
     addButton.x = BSTagMargin;
     [self.topView addSubview:addButton];
     self.addButton = addButton;
+
+    [self createLabels:@[@"吐槽",@"糗事"]];
 }
 
 - (void)addButtonClick
@@ -54,27 +56,12 @@
     [nav pushViewController:addTagVC animated:YES];
 }
 
-/**
- * 创建标签
- */
-- (void)createLabels:(NSArray *)tags
+- (void)layoutSubviews
 {
-    [self.tagLabels makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    [self.tagLabels removeAllObjects];
-    
-    for (int i = 0; i < tags.count; i++) {
-        UILabel *tagLabel = [[UILabel alloc] init];
-        [self.tagLabels addObject:tagLabel];
-        tagLabel.backgroundColor = BSTagBg;
-        tagLabel.textAlignment = NSTextAlignmentCenter;
-        tagLabel.text = tags[i];
-        tagLabel.font = BSTagFont;
-        //应该要先设置文字和字体后，再进行计算
-        [tagLabel sizeToFit];
-        tagLabel.textColor = [UIColor whiteColor];
-        tagLabel.width += 2 * BSTagMargin;
-        tagLabel.height = BSTagHeigt;
-        [self.topView addSubview:tagLabel];
+    [super layoutSubviews];
+
+    for (int i = 0; i < self.tagLabels.count; i++) {
+        UILabel *tagLabel = self.tagLabels[i];
 
         if (i == 0) { // 最前面的标签按钮
             tagLabel.x = 0;
@@ -107,6 +94,39 @@
         self.addButton.x = 0;
         self.addButton.y = CGRectGetMaxY(lastTagLabel.frame) + BSTagMargin;
     }
+
+    //整体的高度
+    CGFloat oldH = self.height;
+    self.height = CGRectGetMaxY(self.addButton.frame) + 45;
+    self.y -= self.height - oldH;
+}
+
+/**
+ * 创建标签
+ */
+- (void)createLabels:(NSArray *)tags
+{
+    [self.tagLabels makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self.tagLabels removeAllObjects];
+    
+    for (int i = 0; i < tags.count; i++) {
+        UILabel *tagLabel = [[UILabel alloc] init];
+        [self.tagLabels addObject:tagLabel];
+        tagLabel.backgroundColor = BSTagBg;
+        tagLabel.textAlignment = NSTextAlignmentCenter;
+        tagLabel.text = tags[i];
+        tagLabel.font = BSTagFont;
+        //应该要先设置文字和字体后，再进行计算
+        [tagLabel sizeToFit];
+        tagLabel.textColor = [UIColor whiteColor];
+        tagLabel.width += 2 * BSTagMargin;
+        tagLabel.height = BSTagHeigt;
+        tagLabel.textColor = [UIColor whiteColor];
+        [self.topView addSubview:tagLabel];
+    }
+
+    //重新布局子控件
+    [self setNeedsLayout];
 }
 
 @end

@@ -31,11 +31,38 @@
     return _tagButtons;
 }
 
+- (UIView *)contentView
+{
+    if (!_contentView) {
+        UIView *contentView = [[UIView alloc] init];
+        [self.view addSubview:contentView];
+        _contentView = contentView;
+    }
+    return _contentView;
+}
+
+- (BSTagTextField *)textField
+{
+    if (!_textField) {
+        __weak typeof(self) weakSelf = self;
+        BSTagTextField *textField = [[BSTagTextField alloc] init];
+        textField.delegate = self;
+        textField.deleteBlock = ^{
+            if (weakSelf.textField.hasText) return;
+            [weakSelf tagButtonClick:[weakSelf.tagButtons lastObject]];
+        };
+        [textField addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
+        [textField becomeFirstResponder];
+        [self.contentView addSubview:textField];
+        _textField = textField;
+    }
+    return _textField;
+}
+
 - (UIButton *)addButton
 {
     if (!_addButton) {
         UIButton *addButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        addButton.width = self.contentView.width;
         addButton.height = 35;
         [addButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [addButton addTarget:self action:@selector(addButtonClick) forControlEvents:UIControlEventTouchUpInside];
@@ -55,12 +82,6 @@
     // Do any additional setup after loading the view.
 
     [self setupNav];
-
-    [self setupContentView];
-
-    [self setupTextField];
-
-    [self setupTags];
 }
 
 - (void)setupNav
@@ -70,39 +91,32 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
 }
 
-- (void)setupContentView
-{
-    UIView *contentView = [[UIView alloc] init];
-    contentView.x = BSTagMargin;
-    contentView.width = self.view.width - 2 * contentView.x;
-    contentView.y = 64 + BSTagMargin;
-    contentView.height = kScreenH;
-    [self.view addSubview:contentView];
-    self.contentView = contentView;
-}
-
-- (void)setupTextField
-{
-    __weak typeof(self) weakSelf = self;
-    BSTagTextField *textField = [[BSTagTextField alloc] init];
-    textField.width = self.contentView.width;
-    textField.delegate = self;
-    textField.deleteBlock = ^{
-        if (weakSelf.textField.hasText) return;
-        [weakSelf tagButtonClick:[weakSelf.tagButtons lastObject]];
-    };
-    [textField addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
-    [textField becomeFirstResponder];
-    [self.contentView addSubview:textField];
-    self.textField = textField;
-}
-
 - (void)setupTags
 {
-    for (NSString *tag in self.tags) {
-        self.textField.text = tag;
-        [self addButtonClick];
+    if (self.tags.count) {
+        for (NSString *tag in self.tags) {
+            self.textField.text = tag;
+            [self addButtonClick];
+        }
     }
+
+    self.tags = nil;
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+
+    self.contentView.x = BSTagMargin;
+    self.contentView.width = self.view.width - 2 * self.contentView.x;
+    self.contentView.y = 64 + BSTagMargin;
+    self.contentView.height = kScreenH;
+
+    self.textField.width = self.contentView.width;
+
+    self.addButton.width = self.contentView.width;
+
+    [self setupTags];
 }
 
 - (void)textDidChange
@@ -112,7 +126,6 @@
 
     if (self.textField.hasText) {//有文字
         self.addButton.hidden = NO;
-        self.addButton.y = CGRectGetMaxY(self.textField.frame) + BSTagMargin;
         [self.addButton setTitle:[NSString stringWithFormat:@"添加标签:%@",self.textField.text] forState:UIControlStateNormal];
 
         //获取最后一个字符
@@ -212,6 +225,9 @@
         self.textField.x = 0;
         self.textField.y = CGRectGetMaxY(lastTagButton.frame) + BSTagMargin;
     }
+
+    //更新“添加标签”的frame
+    self.addButton.y = CGRectGetMaxY(self.textField.frame) + BSTagMargin;
 }
 
 //标签按钮的点击
