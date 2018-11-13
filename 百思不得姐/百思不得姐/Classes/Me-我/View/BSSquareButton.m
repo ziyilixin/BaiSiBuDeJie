@@ -53,9 +53,11 @@
 - (void)setSquare:(BSSquare *)square
 {
     _square = square;
-
-    [self setTitle:_square.name forState:UIControlStateNormal];
-    [self sd_setImageWithURL:[NSURL URLWithString:_square.icon] forState:UIControlStateNormal];
+    
+//    if ((square.name.length > 0) && (square.icon.length > 0)) {
+//        [self setTitle:_square.name forState:UIControlStateNormal];
+//        [self sd_setImageWithURL:[NSURL URLWithString:_square.icon] forState:UIControlStateNormal];
+//    }
 }
 
 @end

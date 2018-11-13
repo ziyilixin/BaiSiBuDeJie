@@ -262,6 +262,11 @@ static NSString * const BSCommentId = @"comment";
     return headerView;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 44.0;
+}
+
 /**
  * 返回第section组的所有评论数组
  */

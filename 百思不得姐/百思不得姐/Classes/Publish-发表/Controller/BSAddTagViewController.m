@@ -109,7 +109,7 @@
 
     self.contentView.x = BSTagMargin;
     self.contentView.width = self.view.width - 2 * self.contentView.x;
-    self.contentView.y = 64 + BSTagMargin;
+    self.contentView.y = kNavigationBarHeight + BSTagMargin;
     self.contentView.height = kScreenH;
 
     self.textField.width = self.contentView.width;

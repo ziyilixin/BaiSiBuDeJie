@@ -54,7 +54,7 @@ static NSString * const topicCellId = @"topic";
 {
     //设置内边距
     CGFloat bottom = self.tabBarController.tabBar.height;
-    CGFloat top = BSTitlesViewH + BSTitlesViewY;
+    CGFloat top = BSTitlesViewH + kNavigationBarHeight;
     self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
     //设置滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;

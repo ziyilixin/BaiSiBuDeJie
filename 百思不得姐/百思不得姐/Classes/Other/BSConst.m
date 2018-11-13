@@ -4,7 +4,7 @@
 /** 精华-顶部标题的高度 */
 CGFloat const BSTitlesViewH = 35;
 /** 精华-顶部标题的Y值 */
-CGFloat const BSTitlesViewY = 64;
+//CGFloat const BSTitlesViewY = 64;
 
 /** 精华-cell-间距 */
 CGFloat const BSTopicCellMargin = 10;

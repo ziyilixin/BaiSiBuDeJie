@@ -25,7 +25,7 @@
         [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            NSArray *squares = [BSSquare mj_objectArrayWithKeyValuesArray:responseObject[@"square_list"]];
+            NSMutableArray *squares = [BSSquare mj_objectArrayWithKeyValuesArray:responseObject[@"square_list"]];
             [self createSquares:squares];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 
@@ -36,7 +36,7 @@
 }
 
 //创建方块
-- (void)createSquares:(NSArray *)sqaures
+- (void)createSquares:(NSMutableArray *)sqaures
 {
     //一行最多4列
     int maxCols = 4;
