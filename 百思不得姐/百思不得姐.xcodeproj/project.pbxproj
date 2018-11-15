@@ -81,6 +81,12 @@
 		54F16A2F1FD5A6A50098E14C /* BSSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F16A2E1FD5A6A50098E14C /* BSSquareButton.m */; };
 		54F9D9EB1F795F6000C0800A /* BSComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F9D9EA1F795F6000C0800A /* BSComment.m */; };
 		54F9D9EE1F79600200C0800A /* BSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F9D9ED1F79600200C0800A /* BSUser.m */; };
+		BB8D512D219D53E700E51379 /* 4.gif in Resources */ = {isa = PBXBuildFile; fileRef = BB8D5127219D53E600E51379 /* 4.gif */; };
+		BB8D512E219D53E700E51379 /* 5.gif in Resources */ = {isa = PBXBuildFile; fileRef = BB8D5128219D53E600E51379 /* 5.gif */; };
+		BB8D512F219D53E700E51379 /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = BB8D5129219D53E600E51379 /* 1.gif */; };
+		BB8D5130219D53E700E51379 /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = BB8D512A219D53E700E51379 /* 3.gif */; };
+		BB8D5131219D53E700E51379 /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = BB8D512B219D53E700E51379 /* 2.gif */; };
+		BB8D5132219D53E700E51379 /* 6.gif in Resources */ = {isa = PBXBuildFile; fileRef = BB8D512C219D53E700E51379 /* 6.gif */; };
 		EEE285A80606911C4551F17D /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 177C68AB4DF1865274ACE6F8 /* libPods-百思不得姐.a */; };
 /* End PBXBuildFile section */
 
@@ -237,6 +243,12 @@
 		54F9D9EA1F795F6000C0800A /* BSComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSComment.m; sourceTree = "<group>"; };
 		54F9D9EC1F79600200C0800A /* BSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUser.h; sourceTree = "<group>"; };
 		54F9D9ED1F79600200C0800A /* BSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSUser.m; sourceTree = "<group>"; };
+		BB8D5127219D53E600E51379 /* 4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 4.gif; sourceTree = "<group>"; };
+		BB8D5128219D53E600E51379 /* 5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 5.gif; sourceTree = "<group>"; };
+		BB8D5129219D53E600E51379 /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
+		BB8D512A219D53E700E51379 /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3.gif; sourceTree = "<group>"; };
+		BB8D512B219D53E700E51379 /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2.gif; sourceTree = "<group>"; };
+		BB8D512C219D53E700E51379 /* 6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 6.gif; sourceTree = "<group>"; };
 		E3BFDDBBE44FDD6BE96B3A73 /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -367,6 +379,7 @@
 		54565C9F1F18CD05007513A0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BB8D5126219D53D600E51379 /* Picture */,
 				5429E56C1FDD21F6002B5C91 /* Publish-发表 */,
 				54565CA01F18CD05007513A0 /* Essence-精华 */,
 				54565CA61F18CD05007513A0 /* FriendTrends-关注 */,
@@ -657,6 +670,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BB8D5126219D53D600E51379 /* Picture */ = {
+			isa = PBXGroup;
+			children = (
+				BB8D5129219D53E600E51379 /* 1.gif */,
+				BB8D512B219D53E700E51379 /* 2.gif */,
+				BB8D512A219D53E700E51379 /* 3.gif */,
+				BB8D5127219D53E600E51379 /* 4.gif */,
+				BB8D5128219D53E600E51379 /* 5.gif */,
+				BB8D512C219D53E700E51379 /* 6.gif */,
+			);
+			path = Picture;
+			sourceTree = "<group>";
+		};
 		BBC03507219AC69100BD332C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -776,6 +802,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8D5130219D53E700E51379 /* 3.gif in Resources */,
 				5485F9D81F36FFB0008AD53D /* BSTopicCell.xib in Resources */,
 				54CF95481FE655CC005B2AD3 /* BSAddTagToolbar.xib in Resources */,
 				545A8AB41F570A3C00B283AC /* BSTopicVoiceView.xib in Resources */,
@@ -785,15 +812,20 @@
 				541103FF1F9656AB0011A532 /* BSCommentViewController.xib in Resources */,
 				54D23ADB1FD6F763002E3EE3 /* BSWebViewController.xib in Resources */,
 				545A8AB91F57186F00B283AC /* BSTopicVideoView.xib in Resources */,
+				BB8D5131219D53E700E51379 /* 2.gif in Resources */,
 				545062141F30CD0B00D29706 /* BSPushGuideView.xib in Resources */,
+				BB8D512E219D53E700E51379 /* 5.gif in Resources */,
 				544002D61F4357CA00BABF1C /* BSTopicPictureView.xib in Resources */,
 				544182551F2045B200AE35A1 /* BSRecommendCategoryCell.xib in Resources */,
+				BB8D5132219D53E700E51379 /* 6.gif in Resources */,
 				540FD2861F9F8AD800242999 /* BSCommentCell.xib in Resources */,
 				54E2F6491F1E616D00CEE98D /* BSRecommendViewController.xib in Resources */,
 				549B02881F259C6A008EE7EA /* BSRecommendTagsCell.xib in Resources */,
 				54E4824A1F29C2FF00292E84 /* BSLoginRegisterViewController.xib in Resources */,
 				5429E5741FDD21F6002B5C91 /* BSPublishViewController.xib in Resources */,
+				BB8D512F219D53E700E51379 /* 1.gif in Resources */,
 				54565C1F1F185106007513A0 /* Assets.xcassets in Resources */,
+				BB8D512D219D53E700E51379 /* 4.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
