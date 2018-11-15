@@ -87,8 +87,16 @@
             // 显示显示出来的高度
             CGFloat pictureH = pictureW * self.height / self.width;
             if (pictureH >= (kScreenH / 2)) { // 图片高度过长
-                pictureH = BSTopicCellPictureBreakH;
-                self.bigPicture = YES; //大图
+                NSString *extension = self.large_image.pathExtension;
+                //判断是否是GIF
+                if (![extension.lowercaseString isEqualToString:@"gif"]) {
+                    pictureH = BSTopicCellPictureBreakH;
+                    self.bigPicture = YES; //大图
+                }
+                else {
+                    self.bigPicture = NO;
+                }
+                
             }
 
             // 计算图片控件的frame

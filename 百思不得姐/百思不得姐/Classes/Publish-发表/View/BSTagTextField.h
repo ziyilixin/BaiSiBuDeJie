@@ -10,5 +10,5 @@
 
 @interface BSTagTextField : UITextField
 //按了删除按钮的回调
-@property (nonatomic,copy) void (^deleteBlock)();
+@property (nonatomic,copy) void (^deleteBlock)(void);
 @end

@@ -127,7 +127,7 @@ static CGFloat const XMGSpringFactor = 10;
 /**
  * 先执行退出动画, 动画完毕后执行completionBlock
  */
-- (void)cancelWithCompletionBlock:(void (^)())completionBlock
+- (void)cancelWithCompletionBlock:(void (^)(void))completionBlock
 {
     // 让控制器的view不能被点击
     self.view.userInteractionEnabled = NO;

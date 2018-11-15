@@ -41,7 +41,7 @@
     _topic = topic;
     
     //立马显示最新的进度值(防止因为网速慢, 导致显示的是其他图片的下载进度)
-    [self.progressView setProgress:topic.pictureProgress animated:NO];
+//    [self.progressView setProgress:topic.pictureProgress animated:NO];
     
     //设置图片
     [self.pictureImageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
