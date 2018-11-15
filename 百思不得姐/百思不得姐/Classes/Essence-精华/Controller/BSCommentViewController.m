@@ -68,7 +68,7 @@ static NSString * const BSCommentId = @"comment";
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
-    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, BSTopicCellMargin, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(kNavigationBarHeight, 0, BSTopicCellMargin, 0);
 }
 
 - (void)setupHeader

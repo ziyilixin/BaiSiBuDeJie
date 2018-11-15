@@ -11,7 +11,7 @@
 #import "BSUser.h"
 
 @interface BSCommentCell ()
-@property (weak, nonatomic) IBOutlet UIImageView *headImgeView;
+@property (weak, nonatomic) IBOutlet FLAnimatedImageView *headImgeView;
 @property (weak, nonatomic) IBOutlet UIImageView *sexImgeView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLab;
 @property (weak, nonatomic) IBOutlet UILabel *likeCountLab;

@@ -11,7 +11,7 @@
 #import "BSShowPictureController.h"
 
 @interface BSTopicVoiceView ()
-@property (weak, nonatomic) IBOutlet UIImageView *voiceImageView;
+@property (weak, nonatomic) IBOutlet FLAnimatedImageView *voiceImageView;
 @property (weak, nonatomic) IBOutlet UILabel *playCountLab;
 @property (weak, nonatomic) IBOutlet UILabel *playTimeLab;
 @end

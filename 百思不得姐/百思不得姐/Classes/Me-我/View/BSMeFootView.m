@@ -25,7 +25,8 @@
         [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            NSMutableArray *squares = [BSSquare mj_objectArrayWithKeyValuesArray:responseObject[@"square_list"]];
+            NSMutableArray *squareList = responseObject[@"square_list"];
+            NSMutableArray *squares = [BSSquare mj_objectArrayWithKeyValuesArray:squareList];
             [self createSquares:squares];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 
@@ -50,18 +51,20 @@
         BSSquareButton *button = [BSSquareButton buttonWithType:UIButtonTypeCustom];
         // 监听点击
         [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-        // 传递模型
-        button.square = sqaures[i];
-        [self addSubview:button];
-
-        // 计算frame
-        int col = i % maxCols;
-        int row = i / maxCols;
-
-        button.x = col * buttonW;
-        button.y = row * buttonH;
-        button.width = buttonW;
-        button.height = buttonH;
+        if ([sqaures[i] isKindOfClass:[BSSquare class]]) {
+            // 传递模型
+            button.square = sqaures[i];
+            [self addSubview:button];
+            
+            // 计算frame
+            int col = i % maxCols;
+            int row = i / maxCols;
+            
+            button.x = col * buttonW;
+            button.y = row * buttonH;
+            button.width = buttonW;
+            button.height = buttonH;
+        }
     }
 
     // 总页数 == (总个数 + 每页的最大数 - 1) / 每页最大数

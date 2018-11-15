@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - DACircularProgress (2.3.1)
+  - FLAnimatedImage (1.0.12)
   - MJExtension (3.0.15.1)
   - MJRefresh (3.1.15.7)
   - NJKWebViewProgress (0.2.3):
@@ -26,22 +27,28 @@ PODS:
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
+  - SDWebImage/GIF (4.4.2):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage/Core
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - AFNetworking
   - DACircularProgress
+  - FLAnimatedImage
   - MJExtension
   - MJRefresh
   - NJKWebViewProgress
   - pop
   - SDWebImage
+  - SDWebImage/GIF
   - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - DACircularProgress
+    - FLAnimatedImage
     - MJExtension
     - MJRefresh
     - NJKWebViewProgress
@@ -52,6 +59,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
@@ -59,6 +67,6 @@ SPEC CHECKSUMS:
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: bdd3ff06acfdaf4cd1dd61a49ded97cc36bc3df2
+PODFILE CHECKSUM: a0e436bf2af519c6ca0340d815471452407472f5
 
 COCOAPODS: 1.5.3

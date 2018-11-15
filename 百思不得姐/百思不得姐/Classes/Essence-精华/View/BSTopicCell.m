@@ -15,7 +15,7 @@
 #import "BSUser.h"
 
 @interface BSTopicCell ()
-@property (weak, nonatomic) IBOutlet UIImageView *headImageView;//头像
+@property (weak, nonatomic) IBOutlet FLAnimatedImageView *headImageView;//头像
 @property (weak, nonatomic) IBOutlet UILabel *nickaNameLabel;//昵称
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;//时间
 @property (weak, nonatomic) IBOutlet UIButton *dingButton;//顶
@@ -45,7 +45,6 @@
     UIImageView *backGroundView = [[UIImageView alloc] init];
     backGroundView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = backGroundView;
-
 }
 
 - (BSTopicPictureView *)pictureView
@@ -154,16 +153,32 @@
 
 - (void)setFrame:(CGRect)frame
 {
-    frame.size.height = self.topic.cellHeight - BSTopicCellMargin;
-    frame.origin.y += BSTopicCellMargin;
-
+    BSLog(@"-%f-",self.topic.cellHeight);
+    if (self.topic.cellHeight > 0) {
+        frame.size.height = self.topic.cellHeight - BSTopicCellMargin;
+        frame.origin.y += BSTopicCellMargin;
+    }
+    
     [super setFrame:frame];
 }
 
 - (IBAction)more:(id)sender {
-
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"收藏",@"举报", nil];
-    [actionSheet showInView:self.window];
+    
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    [actionSheet addAction:[UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    [actionSheet addAction:[UIAlertAction actionWithTitle:@"举报" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    
+    [actionSheet addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:actionSheet animated:YES completion:^{
+        
+    }];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

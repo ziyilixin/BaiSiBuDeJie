@@ -1,5 +1,5 @@
 //
-//  UIImageView+BSExtension.h
+//  FLAnimatedImageView+BSExtension.h
 //  百思不得姐
 //
 //  Created by WCF on 2017/12/3.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImageView (BSExtension)
+@interface FLAnimatedImageView (BSExtension)
 - (void)setHeader:(NSString *)url;
 @end

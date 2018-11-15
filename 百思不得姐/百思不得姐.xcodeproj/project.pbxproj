@@ -46,7 +46,7 @@
 		545A8AB71F57186100B283AC /* BSTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 545A8AB61F57186100B283AC /* BSTopicVideoView.m */; };
 		545A8AB91F57186F00B283AC /* BSTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545A8AB81F57186F00B283AC /* BSTopicVideoView.xib */; };
 		545FEAF31FD3C9A20078252E /* UIImage+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 545FEAF21FD3C9A20078252E /* UIImage+BSExtension.m */; };
-		545FEAF61FD3CD920078252E /* UIImageView+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 545FEAF51FD3CD920078252E /* UIImageView+BSExtension.m */; };
+		545FEAF61FD3CD920078252E /* FLAnimatedImageView+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 545FEAF51FD3CD920078252E /* FLAnimatedImageView+BSExtension.m */; };
 		5480AD8E1F484D7A0060F274 /* BSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480AD8D1F484D7A0060F274 /* BSProgressView.m */; };
 		5480AD921F4850D10060F274 /* BSShowPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480AD901F4850D10060F274 /* BSShowPictureController.m */; };
 		5480AD931F4850D10060F274 /* BSShowPictureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5480AD911F4850D10060F274 /* BSShowPictureController.xib */; };
@@ -140,10 +140,10 @@
 		54565C0F1F185106007513A0 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54565C1E1F185106007513A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54565C281F185106007513A0 /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		54565C2C1F185106007513A0 /* _____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _____Tests.m; sourceTree = "<group>"; };
+		54565C2C1F185106007513A0 /* _____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____Tests.m"; sourceTree = "<group>"; };
 		54565C2E1F185106007513A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54565C331F185106007513A0 /* 百思不得姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		54565C371F185106007513A0 /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _____UITests.m; sourceTree = "<group>"; };
+		54565C371F185106007513A0 /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		54565C391F185106007513A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54565CA21F18CD05007513A0 /* BSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceViewController.h; sourceTree = "<group>"; };
 		54565CA31F18CD05007513A0 /* BSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceViewController.m; sourceTree = "<group>"; };
@@ -176,8 +176,8 @@
 		545A8AB81F57186F00B283AC /* BSTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicVideoView.xib; sourceTree = "<group>"; };
 		545FEAF11FD3C9A20078252E /* UIImage+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BSExtension.h"; sourceTree = "<group>"; };
 		545FEAF21FD3C9A20078252E /* UIImage+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BSExtension.m"; sourceTree = "<group>"; };
-		545FEAF41FD3CD920078252E /* UIImageView+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+BSExtension.h"; sourceTree = "<group>"; };
-		545FEAF51FD3CD920078252E /* UIImageView+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+BSExtension.m"; sourceTree = "<group>"; };
+		545FEAF41FD3CD920078252E /* FLAnimatedImageView+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImageView+BSExtension.h"; sourceTree = "<group>"; };
+		545FEAF51FD3CD920078252E /* FLAnimatedImageView+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FLAnimatedImageView+BSExtension.m"; sourceTree = "<group>"; };
 		5480AD8C1F484D7A0060F274 /* BSProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSProgressView.h; sourceTree = "<group>"; };
 		5480AD8D1F484D7A0060F274 /* BSProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSProgressView.m; sourceTree = "<group>"; };
 		5480AD8F1F4850D10060F274 /* BSShowPictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSShowPictureController.h; sourceTree = "<group>"; };
@@ -609,8 +609,8 @@
 				54827D911F3B618D00081047 /* NSDate+BSExtension.m */,
 				545FEAF11FD3C9A20078252E /* UIImage+BSExtension.h */,
 				545FEAF21FD3C9A20078252E /* UIImage+BSExtension.m */,
-				545FEAF41FD3CD920078252E /* UIImageView+BSExtension.h */,
-				545FEAF51FD3CD920078252E /* UIImageView+BSExtension.m */,
+				545FEAF41FD3CD920078252E /* FLAnimatedImageView+BSExtension.h */,
+				545FEAF51FD3CD920078252E /* FLAnimatedImageView+BSExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -729,7 +729,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = BS;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = WCF;
 				TargetAttributes = {
 					54565C0E1F185106007513A0 = {
@@ -911,7 +911,7 @@
 				54F16A261FD59FCC0098E14C /* BSMeCell.m in Sources */,
 				54565CCD1F18CD05007513A0 /* AppDelegate.m in Sources */,
 				54827D921F3B618D00081047 /* NSDate+BSExtension.m in Sources */,
-				545FEAF61FD3CD920078252E /* UIImageView+BSExtension.m in Sources */,
+				545FEAF61FD3CD920078252E /* FLAnimatedImageView+BSExtension.m in Sources */,
 				5429E5731FDD21F6002B5C91 /* BSPublishViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -958,15 +958,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1006,15 +1014,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

@@ -11,7 +11,7 @@
 #import "BSShowPictureController.h"
 
 @interface BSTopicVideoView ()
-@property (weak, nonatomic) IBOutlet UIImageView *videoImageView;
+@property (weak, nonatomic) IBOutlet FLAnimatedImageView *videoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *playCountLab;
 @property (weak, nonatomic) IBOutlet UILabel *playTimeLab;
 

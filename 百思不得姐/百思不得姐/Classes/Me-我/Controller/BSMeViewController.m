@@ -50,7 +50,7 @@ static NSString * const meId = @"me";
 
     self.tableView.sectionHeaderHeight = 0;
     self.tableView.sectionFooterHeight = BSTopicCellMargin;
-    self.tableView.contentInset = UIEdgeInsetsMake((BSTopicCellMargin - 35), 0, 2*kScreenH, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(kNavigationBarHeight - 10, 0, 2*kScreenH, 0);
     self.tableView.tableFooterView = [[BSMeFootView alloc] init];
 }
 

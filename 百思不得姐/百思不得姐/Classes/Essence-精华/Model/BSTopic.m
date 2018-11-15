@@ -86,7 +86,7 @@
             CGFloat pictureW = maxSize.width;
             // 显示显示出来的高度
             CGFloat pictureH = pictureW * self.height / self.width;
-            if (pictureH >= BSTopicCellPictureMaxH) { // 图片高度过长
+            if (pictureH >= (kScreenH / 2)) { // 图片高度过长
                 pictureH = BSTopicCellPictureBreakH;
                 self.bigPicture = YES; //大图
             }

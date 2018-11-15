@@ -112,6 +112,10 @@ static NSString * const topicCellId = @"topic";
 
         //字典数组转模型数组
         self.topics = [BSTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        [self.topics enumerateObjectsUsingBlock:^(BSTopic *topic, NSUInteger idx, BOOL * _Nonnull stop) {
+            BSLog(@"%f",topic.cellHeight);
+        }];
 
         //刷新数据
         [self.tableView reloadData];
@@ -154,7 +158,11 @@ static NSString * const topicCellId = @"topic";
         //字典数组转模型数组
         NSArray *topicsArr = [BSTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.topics addObjectsFromArray:topicsArr];
-
+        
+        [self.topics enumerateObjectsUsingBlock:^(BSTopic *topic, NSUInteger idx, BOOL * _Nonnull stop) {
+            BSLog(@"%f",topic.cellHeight);
+        }];
+        
         self.maxtime = responseObject[@"info"][@"maxtime"];
 
         //刷新数据

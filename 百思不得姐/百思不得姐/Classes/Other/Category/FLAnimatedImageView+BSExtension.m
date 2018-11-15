@@ -1,14 +1,14 @@
 //
-//  UIImageView+BSExtension.m
+//  FLAnimatedImageView+BSExtension.m
 //  百思不得姐
 //
 //  Created by WCF on 2017/12/3.
 //  Copyright © 2017年 WCF. All rights reserved.
 //
 
-#import "UIImageView+BSExtension.h"
+#import "FLAnimatedImageView+BSExtension.h"
 
-@implementation UIImageView (BSExtension)
+@implementation FLAnimatedImageView (BSExtension)
 - (void)setHeader:(NSString *)url
 {
     UIImage *plahoder = [[UIImage imageNamed:@"defaultUserIcon"] cycleImage];
